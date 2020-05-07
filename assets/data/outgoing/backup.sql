@@ -1,0 +1,6 @@
+UPDATE `admin` SET `last_login` = '2020-05-07 23:37:27', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`) VALUES ('', 'KYBTG1', 'B0TASK', 'sohail', 'sohail', 'khan', 'sohail@gmail.com', '3dffa56bb72050f8104ef987ebd06cee', '4545457878787', '127.0.0.1', '1');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`) VALUES ('', 'WYITL9', 'KYBTG1', 'Kamal', 'Kamal', 'khan', 'kamal@gmail.com', '3dffa56bb72050f8104ef987ebd06cee', '45454545445', '127.0.0.1', '1');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`) VALUES ('', 'I4B39Q', 'KYBTG1', 'Jamal', 'jamal', 'khan', 'jamal@gmail.com', '3dffa56bb72050f8104ef987ebd06cee', '4574548787', '127.0.0.1', '1');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`) VALUES ('', 'I7RRKJ', 'KYBTG1', 'Kamal2', 'Kamal2', 'khan', 'kamal2@gmail.com', '3dffa56bb72050f8104ef987ebd06cee', '78787878', '127.0.0.1', '1');
