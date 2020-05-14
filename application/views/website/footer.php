@@ -3,8 +3,6 @@ $settings = $this->db->select("*")
     ->get('setting')
     ->row();
 ?>
-
-
         <footer class="footer">
             <div class="footer-breadcrumbs">
                 <div class="container">
@@ -21,7 +19,7 @@ $settings = $this->db->select("*")
                 </div>
             </div>
             <!-- /.End of breadcrumbs -->
-            <div class="action_btn_inner">
+            <div class="action_btn_inner" style="display:none;">
                 <a href="<?php echo base_url('register'); ?>#tab1" class="action_btn">
                     <span class="action_title"><?php echo display('register'); ?></span>
                     <span class="lnr lnr-chevron-right action_icon"></span>
@@ -40,13 +38,18 @@ $settings = $this->db->select("*")
                         <div class="col-sm-4 col-md-4">
                             <div class="widget-contact">
                                 <ul class="list-icon">
-                                    <li><i class="fa fa-map-marker"></i> <?php echo $settings->description ?></li>
+                                    <?php if(!empty($settings->description)){ ?>
+                                        <li><i class="fa fa-map-marker"></i> <?php echo $settings->description ?></li>
+                                    <?php } ?>
+                                    <?php if(!empty($settings->phone)){ ?>
                                     <li><i class="fa fa-phone"></i> <?php echo $settings->phone ?> </li>
-                                    <li><i class="fa fa-envelope"></i> <a href="mailto:<?php echo $settings->email ?>"><?php echo $settings->email ?></a>
-                                    </li>
-                                    <li>
-                                        <br><i class="fa fa-clock-o"></i><?php echo $settings->office_time ?>
-                                    </li>
+                                    <?php } ?>
+                                    <?php if(!empty($settings->email)){ ?>
+                                    <li><i class="fa fa-envelope"></i> <a href="mailto:<?php echo $settings->email ?>"><?php echo $settings->email ?></a></li>
+                                    <?php } ?>
+                                    <?php if(!empty($settings->office_time)){ ?>
+                                    <li><br><i class="fa fa-clock-o"></i><?php echo $settings->office_time ?></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </div>

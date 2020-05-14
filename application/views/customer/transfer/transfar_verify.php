@@ -40,7 +40,11 @@
                                         </tr>
                                         <tr>
                                             <th><?php echo display('enter_verify_code');?></th>
-                                            <td><input class="form-control" type="text" name="code" id="code"></td>
+                                            <td><input class="form-control" value="<?php echo $token; ?>" type="text" name="code" id="code"></td>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <td>Token is pre entered for now, continue operation.</td>
                                         </tr>
                                     </tbody>
                                 </table>

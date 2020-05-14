@@ -31,7 +31,7 @@
                                     <td>$<?php echo $value->deposit_amount;?></td>
                                     <td><?php echo $value->comments;?></td>
                                     <td>
-                                        <a class="btn btn-success" href="<?php echo base_url()?>backend/dashboard/credit/credit_details/<?php echo $value->deposit_id;?>"><?php echo display('view');?></a>
+                                        <a class="btn btn-success" href="<?php echo base_url()?>customer/credit/credit_details/<?php echo $value->deposit_id;?>"><?php echo display('view');?></a>
                                     </td>
                                 </tr>
                                 <?php } } ?>

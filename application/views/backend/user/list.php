@@ -15,6 +15,7 @@
                                 <th><?php echo display('sl_no') ?></th>
                                 <th><?php echo display('user_id') ?></th>
                                 <th><?php echo display('sponsor_id') ?></th>
+                                <th><?php echo display('parent') ?></th>
                                 <th><?php echo display('fullname') ?></th>
                                 <th><?php echo display('username') ?></th>
                                 <th><?php echo display('email') ?></th>

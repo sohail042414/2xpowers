@@ -71,9 +71,6 @@ if (!function_exists('display')) {
  
 }
 
-
- 
-
 // $autoload['helper'] =  array('language_helper');
 
 /*display a language*/

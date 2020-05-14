@@ -15,10 +15,16 @@
                             <th><?php echo display('package_deatils') ?></th>
                             <th><?php echo display('package_amount') ?></th>
                             <th><?php echo display('daily_roi') ?></th>
+                            <th><?php echo display('points') ?></th>
+                            <th><?php echo display('direct_bonus') ?></th>
+                            <th><?php echo display('indirect_bonus') ?></th>
+                            <th><?php echo display('period').'/duration'; ?></th>
+                            <?php /* ?>
                             <th><?php echo display('weekly_roi') ?></th>
                             <th><?php echo display('monthly_roi') ?></th>
                             <th><?php echo display('yearly_roi') ?></th>
                             <th><?php echo display('total_percent') ?></th>
+                            <?php */ ?>
                             <th><?php echo display('status') ?></th>
                             <th><?php echo display('action') ?></th> 
                         </tr>
@@ -33,10 +39,16 @@
                             <td><?php echo $value->package_deatils; ?></td>
                             <td><?php echo $value->package_amount; ?></td>
                             <td><?php echo $value->daily_roi; ?></td>
+                            <td><?php echo $value->points; ?></td>
+                            <td><?php echo $value->direct_bonus; ?></td>
+                            <td><?php echo $value->indirect_bonus; ?></td>
+                            <td><?php echo $value->period; ?></td>    
+                            <?php /* ?>
                             <td><?php echo $value->weekly_roi; ?></td>
                             <td><?php echo $value->monthly_roi; ?></td>
-                            <td><?php echo $value->yearly_roi; ?></td>
+                            <td><?php echo $value->yearly_roi; ?></td>                           
                             <td><?php echo $value->total_percent; ?></td>
+                             <?php */ ?>
                             <td><?php echo (($value->status==1)?display('active'):display('inactive')); ?></td>
                             <td>
                                 <a href="<?php echo base_url("backend/package/package/form/$value->package_id") ?>" class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="left" title="Update"><i class="fa fa-pencil" aria-hidden="true"></i></a>

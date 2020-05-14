@@ -51,7 +51,6 @@ $settings = $this->db->select("*")
                         </li>
                         <?php } else{ ?>
                         <li><a href="<?php echo base_url('register'); ?>#tab2" class="btn nav-btn"><?php echo display('login'); ?></a></li>
-                        <li><a href="<?php echo base_url('register'); ?>#tab1" class="btn nav-btn btn-orange"><?php echo display('sign_up'); ?></a></li>
                         <?php } ?>
 
                     </ul>

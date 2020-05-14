@@ -269,9 +269,9 @@ class Transfer extends CI_Controller
 
         $data = $this->transfer_model->get_verify_data($id);
 
-        
-
         if($data!=NULL){
+
+        $data['token'] = $data['v']->verify_code;
 
         $data['title']   = display('transfar_verify'); 
 

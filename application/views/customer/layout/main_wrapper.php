@@ -246,6 +246,20 @@ $unsen = $this->db->select('*')->from('notifications')->where('user_id',$user_id
 							</ul>
 						</li>
 
+						<li class="treeview <?php echo (($this->uri->segment(3) == "user") ? "active" : null) ?>">
+                            <a href="#">
+                                <i class="fa fa-users"></i> <span><?php echo display('users') ?></span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a> 
+                            <ul class="treeview-menu">
+                                <li><a href="<?php echo base_url("customer/user/user/form") ?>"> <?php echo display('add_user') ?> </a></li>
+								<li><a href="<?php echo base_url("customer/user/user/") ?>"> <?php echo display('user_list') ?> </a></li>
+								<li><a href="<?php echo base_url("customer/user/user/network") ?>">Network Tree <?php //echo display('user_list') ?> </a></li>
+                            </ul>
+                        </li>
+
 						<li class="treeview finance">
 							<a href="#">
 								<i class="ti-pie-chart"></i> <span><?php echo display('finance') ?></span>
@@ -261,8 +275,19 @@ $unsen = $this->db->select('*')->from('notifications')->where('user_id',$user_id
 								
 							</ul>
 						</li>
-						
-					    
+
+						<li style="display: none;" class="treeview <?php echo (($this->uri->segment(3) == "credit") ? "active" : null) ?>">
+                            <a href="#">
+                                <i class="fa fa-credit-card"></i> <span><?php echo display('credit') ?></span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a> 
+                            <ul class="treeview-menu">
+                                <li class="<?php echo (($this->uri->segment(4) == "add_credit") ? "active" : null) ?>"><a href="<?php echo base_url("customer/credit/add_credit") ?>"> <?php echo display('add_credit') ?> </a></li> 
+                                <li class="<?php echo (($this->uri->segment(4) == "language") ? "active" : null) ?>"><a href="<?php echo base_url("customer/credit/credit_list") ?>"> <?php echo display('credit_list') ?> </a></li> 
+                            </ul>
+                        </li>
 
 						<li class="treeview deposit">
 							<a href="#">
@@ -312,7 +337,9 @@ $unsen = $this->db->select('*')->from('notifications')->where('user_id',$user_id
                                 <li><a href="<?php echo base_url("customer/buy/form") ?>"><?php echo display('buy')?></a></li>
                                 <li><a href="<?php echo base_url("customer/sell/form") ?>"><?php echo display('sell')?></a></li>
                             </ul>  
-                        </li>
+						</li>
+						
+
 
                         <li class="treeview settings">
 							<a href="#">

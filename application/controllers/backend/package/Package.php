@@ -90,9 +90,14 @@ class Package extends CI_Controller {
 		$this->form_validation->set_rules('package_details', display('package_details'),'max_length[1000]');
 		$this->form_validation->set_rules('package_amount', display('package_amount'),'required|max_length[11]');
 		$this->form_validation->set_rules('daily_roi', display('daily_roi'),'required|max_length[11]');
-		$this->form_validation->set_rules('weekly_roi', display('weekly_roi'),'required|max_length[11]');
-		$this->form_validation->set_rules('monthly_roi', display('monthly_roi'),'required|max_length[11]');
-		$this->form_validation->set_rules('yearly_roi', display('yearly_roi'),'required|max_length[11]');
+		
+		$this->form_validation->set_rules('points', display('points'),'required|max_length[11]');
+		$this->form_validation->set_rules('direct_bonus', display('direct_bonus'),'required|max_length[11]');
+		$this->form_validation->set_rules('indirect_bonus', display('indirect_bonus'),'required|max_length[11]');
+		
+		//$this->form_validation->set_rules('weekly_roi', display('weekly_roi'),'required|max_length[11]');
+		//$this->form_validation->set_rules('monthly_roi', display('monthly_roi'),'required|max_length[11]');
+		//$this->form_validation->set_rules('yearly_roi', display('yearly_roi'),'required|max_length[11]');
 		$this->form_validation->set_rules('total_percent', display('total_percent'),'required|max_length[11]');
 		$this->form_validation->set_rules('status', display('status'),'required|max_length[1]');
 		$this->form_validation->set_rules('period', display('period'),'required');
@@ -105,9 +110,15 @@ class Package extends CI_Controller {
 			'package_deatils' => $this->input->post('package_deatils'), 
 			'package_amount'  => $this->input->post('package_amount'), 
 			'daily_roi' 	  => $this->input->post('daily_roi'),
-			'weekly_roi' 	  => $this->input->post('weekly_roi'),
-			'monthly_roi' 	  => $this->input->post('monthly_roi'), 
-			'yearly_roi' 	  => $this->input->post('yearly_roi'), 
+			'points' 	  => $this->input->post('points'),
+			'direct_bonus' 	  => $this->input->post('direct_bonus'),
+			'indirect_bonus' 	  => $this->input->post('indirect_bonus'),
+			// 'weekly_roi' 	  => $this->input->post('weekly_roi'),
+			// 'monthly_roi' 	  => $this->input->post('monthly_roi'), 
+			// 'yearly_roi' 	  => $this->input->post('yearly_roi'),
+			'weekly_roi' 	  => 0.0,
+			'monthly_roi' 	  => 0.0, 
+			'yearly_roi' 	  => 0.0, 
 			'total_percent'   => $this->input->post('total_percent'), 
 			'status'          => $this->input->post('status'),
 		);

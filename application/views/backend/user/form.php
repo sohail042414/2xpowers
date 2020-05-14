@@ -15,10 +15,46 @@
                         <div class="form-group col-lg-6">
                             <label><?php echo display("username") ?> *</label>
                             <input type="text" value="<?php echo $user->username ?>" class="form-control" name="username" placeholder="<?php echo display("username") ?>">
+                        </div>                        
+                        <div class="form-group col-lg-6">
+                            <label><?php echo display("package_id") ?> *</label>
+                            <select name="package_id" class="form-control">
+                                <?php foreach($packages as $id => $name){ ?>
+                                <option value="<?php echo $id; ?>" ><?php echo $name; ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
                         <div class="form-group col-lg-6">
                             <label><?php echo display("sponsor_id") ?> *</label>
+                            <?php /* ?>
                             <input type="text" value="<?php echo $user->sponsor_id!=''?$user->sponsor_id:$user_id->user_id ?>" class="form-control" <?php echo $user->uid?'readonly':'' ?> name="sponsor_id" placeholder="<?php echo display("sponsor_name") ?>">
+                            <?php */ ?>
+                            <select name="sponsor_id" class="form-control">
+                                <?php foreach($sponsers as $id => $name){ ?>
+                                <option value="<?php echo $id; ?>" ><?php echo $name; ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group col-lg-6">
+                            <label><?php echo display("parent") ?> *</label>
+                            <?php /* ?>
+                            <input type="text" value="<?php echo $user->sponsor_id!=''?$user->sponsor_id:$user_id->user_id ?>" class="form-control" <?php echo $user->uid?'readonly':'' ?> name="sponsor_id" placeholder="<?php echo display("sponsor_name") ?>">
+                            <?php */ ?>
+                            <select name="parent" class="form-control">
+                                <?php foreach($sponsers as $id => $name){ ?>
+                                <option value="<?php echo $id; ?>" ><?php echo $name; ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-lg-6">
+                            <label><?php echo display("position") ?> *</label>
+                            <select name="position" class="form-control">
+                                <?php foreach($positions as $id => $name){ ?>
+                                <option value="<?php echo $id; ?>" ><?php echo $name; ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
                         <div class="form-group col-lg-6">
                             <label><?php echo display("firstname") ?> *</label>

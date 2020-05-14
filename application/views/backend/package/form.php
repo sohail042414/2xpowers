@@ -45,6 +45,25 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label for="points" class="col-sm-4 col-form-label"><?php echo display('points') ?> *</label>
+                        <div class="col-sm-8">
+                            <input name="points" value="<?php echo $package->points ?>" class="form-control" placeholder="<?php echo display('points') ?>" type="text" id="points" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="direct_bonus" class="col-sm-4 col-form-label"><?php echo display('direct_bonus') ?> *</label>
+                        <div class="col-sm-8">
+                            <input name="direct_bonus" value="<?php echo $package->direct_bonus ?>" class="form-control" placeholder="<?php echo display('direct_bonus') ?>" type="text" id="direct_bonus">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="indirect_bonus" class="col-sm-4 col-form-label"><?php echo display('indirect_bonus') ?> *</label>
+                        <div class="col-sm-8">
+                            <input name="indirect_bonus" value="<?php echo $package->indirect_bonus ?>" class="form-control" placeholder="<?php echo display('indirect_bonus') ?>" type="text" id="indirect_bonus">
+                        </div>
+                    </div>
+                    <?php /* ?>
+                    <div class="form-group row">
                         <label for="weekly_roi" class="col-sm-4 col-form-label"><?php echo display('weekly_roi') ?> *</label>
                         <div class="col-sm-8">
                             <input name="weekly_roi" value="<?php echo $package->weekly_roi ?>" class="form-control" placeholder="<?php echo display('weekly_roi') ?>" type="text" id="weekly_roi" data-toggle="tooltip" title="<?php echo display('tooltip_package_weekly_roi') ?>" disabled>
@@ -62,6 +81,7 @@
                             <input name="yearly_roi" value="<?php echo $package->yearly_roi ?>" class="form-control" placeholder="<?php echo display('yearly_roi') ?>" type="text" id="yearly_roi" data-toggle="tooltip" title="<?php echo display('tooltip_package_yearly_roi') ?> " readonly>
                         </div>
                     </div>
+                    <?php */ ?>
                     <div class="form-group row">
                         <label for="total_percent" class="col-sm-4 col-form-label"><?php echo display('total_percent') ?> %*</label>
                         <div class="col-sm-8">

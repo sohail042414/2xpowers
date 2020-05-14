@@ -99,7 +99,6 @@ class Deposit extends CI_Controller
 
         $data['payment_gateway'] = $this->common_model->payment_gateway();
 
-
         $data['content'] = $this->load->view('customer/pages/diposit', $data, true);
         $this->load->view('customer/layout/main_wrapper', $data);  
 

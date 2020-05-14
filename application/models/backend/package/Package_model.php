@@ -57,5 +57,23 @@ class Package_model extends CI_Model {
 	// }
  
 
+	public function get_list(){
+
+		$data = $this->db->select("*")
+			->from('package')
+			->order_by('package_amount', 'asc')
+			->get()
+			->result();
+
+		$list = array();
+
+		foreach($data as $item){
+			$list[$item->package_id] = $item->package_name. "($".$item->package_amount.")";
+		}
+
+		return $list;
+
+	}
+
 
 }

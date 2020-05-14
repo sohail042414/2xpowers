@@ -11,7 +11,7 @@
                             </div>
                         </div>
                     <?php  if(@$level_info->level!=NULL AND $level_info->level!=0){ ?>
-                    <div class="form-group">
+                    <div class="form-group" style="display:none;">
                         <div class="col-sm-4 award-img">
                            <a href="<?php echo base_url()?>customer/commission/my_level_info"><img src="<?php echo base_url()?>assets/award/0<?php echo @$level_info->level;?>.png"></a>
                         </div>
@@ -79,7 +79,7 @@
 
                     </div>
 
-                    <div class="row">
+                    <div class="row" style="display: none;">
                         <div class="col-sm-12">
                             <h3 class="block_title"><?php echo display('package');?></h3>
                             <div class="owl-carousel owl-theme">
@@ -149,6 +149,44 @@
                                     <a href="<?php echo base_url()?>customer/commission/my_payout">See all | See Payout</a>
                                 </div>
                             </div>
+
+
+
+                        <div class="panel panel-bd lobidrag">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4><?php echo display('pending_withdraw');?></h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table  class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th><?php echo display('date');?></th>
+                                                    <th><?php echo display('amount');?></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php if($pending_withdraw){
+                                                    foreach ($pending_withdraw as $key => $value) {
+                                                ?>
+                                                
+                                                <tr>
+                                                    <td><?php echo $value->request_date;?></td>
+                                                    <td>$<?php echo $value->amount;?></td>
+                                                 </tr>
+
+                                                <?php  } }?>
+                                            </tbody>
+                                        </table>
+                                        <a href="<?php echo base_url("customer/withdraw/withdraw_list")?>">See all | Pending Withdraw</a>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+
+
                         </div>
                             
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -174,6 +212,7 @@
                                                             <td><?php echo display('username');?></td>
                                                             <td><?php echo @$info['sponser_info']->username;?></td>
                                                         </tr>
+                                                        <?php /* ?>
                                                         <tr>
                                                             <td><?php echo display('name');?></td>
                                                             <td><?php echo @$info['sponser_info']->f_name.' '.@$info['sponser_info']->l_name;?></td>
@@ -186,6 +225,7 @@
                                                             <td><?php echo display('mobile');?></td>
                                                             <td><?php echo @$info['sponser_info']->phone;?></td>
                                                         </tr>
+                                                         <?php */ ?>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -193,12 +233,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div> <!-- /.row -->
-                    <div class="row">
-                       
 
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="panel panel-bd lobidrag">
                                 <div class="panel-heading">
                                     <div class="panel-title">
@@ -237,42 +272,15 @@
                                 </div>
                             </div>
 
-                            
-                            <div class="panel panel-bd lobidrag">
-                                <div class="panel-heading">
-                                    <div class="panel-title">
-                                        <h4><?php echo display('pending_withdraw');?></h4>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="table-responsive">
-                                        <table  class="table table-striped table-bordered table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th><?php echo display('date');?></th>
-                                                    <th><?php echo display('amount');?></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php if($pending_withdraw){
-                                                    foreach ($pending_withdraw as $key => $value) {
-                                                ?>
-                                                
-                                                <tr>
-                                                    <td><?php echo $value->request_date;?></td>
-                                                    <td>$<?php echo $value->amount;?></td>
-                                                 </tr>
+                        </div>
+                    </div> <!-- /.row -->
+                    <div class="row">
+                       
 
-                                                <?php  } }?>
-                                            </tbody>
-                                        </table>
-                                        <a href="<?php echo base_url("customer/withdraw/withdraw_list")?>">See all | Pending Withdraw</a>
-                                    </div>
-                                   
-                                </div>
-                            </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <?php /* ?>
                             <div class="panel panel-bd lobidrag">
                                 <div class="panel-heading">
                                     <div class="panel-title">
@@ -305,7 +313,7 @@
                                     <a href="<?php echo base_url("customer/team")?>">See all | See Genealogy</a>
                                 </div>
                             </div>
-
+                            <?php */ ?>
                         </div>
                     </div>
                     

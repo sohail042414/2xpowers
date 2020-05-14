@@ -712,7 +712,7 @@ class Home extends CI_Controller
     }
 
     public function register()
-    {
+    {       
 
         if ($this->session->userdata('isLogIn'))
             redirect(base_url());

@@ -75,6 +75,7 @@ class User extends CI_Controller {
 			$row[] = $no;
 			$row[] = '<a href="'.base_url("backend/user/user/user_details/$users->uid").'">'.$users->user_id.'</a>';
 			$row[] = $users->sponsor_id;
+			$row[] = $users->parent;
 			$row[] = '<a href="'.base_url("backend/user/user/user_details/$users->uid").'">'.$users->f_name." ".$users->l_name.'</a>';
 			$row[] = '<a href="'.base_url("backend/user/user/user_details/$users->uid").'">'.$users->username.'</a>';
 			$row[] = $users->email;
@@ -131,9 +132,20 @@ class User extends CI_Controller {
 	public function form($uid = null)
 	{ 
 		$data['title']  = display('add_user');
+
+		$this->load->model(array(
+			'backend/package/package_model'  
+		));
+
+		$data['packages'] = $this->package_model->get_list();
+		$data['positions'] = $this->user_model->get_positions();
+
+		$data['sponsers'] = $this->user_model->get_sponser_list();
+
 		/*-----------------------------------*/
 		$this->form_validation->set_rules('username', display('username'),'required|max_length[20]');
 		$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),'required|max_length[6]');
+		$this->form_validation->set_rules('parent', display('parent'),'required|max_length[6]');
 		$this->form_validation->set_rules('f_name', display('firstname'),'required|max_length[50]');
 		$this->form_validation->set_rules('l_name', display('lastname'),'required|max_length[50]');
 		#------------------------#
@@ -162,6 +174,9 @@ class User extends CI_Controller {
 				'uid' 		  => $this->input->post('uid'),
 				'user_id' 	  => $this->randomID(),
 				'sponsor_id'  => $this->input->post('sponsor_id'),
+				'package_id'  => $this->input->post('package_id'),
+				'position'  => $this->input->post('position'),
+				'parent'  => $this->input->post('parent'),
 				'username'    => $this->input->post('username'),
 				'f_name' 	  => $this->input->post('f_name'),
 				'l_name' 	  => $this->input->post('l_name'),
@@ -178,6 +193,9 @@ class User extends CI_Controller {
 				'uid' 		  => $this->input->post('uid'),
 				'user_id' 	  => $this->input->post('user_id'),
 				'sponsor_id'  => $this->input->post('sponsor_id'),
+				'package_id'  => $this->input->post('package_id'),
+				'position'  => $this->input->post('position'),
+				'parent'  => $this->input->post('parent'),
 				'username'    => $this->input->post('username'),
 				'f_name' 	  => $this->input->post('f_name'),
 				'l_name' 	  => $this->input->post('l_name'),
@@ -197,7 +215,6 @@ class User extends CI_Controller {
 				$this->session->set_flashdata('exception', "Valid Sponsor Id Required");
 				redirect("backend/user/user/form");
 			}
-
 
 			if (empty($uid)) 
 			{
