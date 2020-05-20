@@ -19,109 +19,116 @@
         color: #fff;
     }
 </style>
-                    <!-- /.Social share -->
+
+<div class="row" style="margin-bottom: 20px;">
+    <div class="col-sm-6 col-md-3">
+        <a target="_blank" href="<?php echo base_url(); ?>customer/auto_commission/payout/" class="btn btn-primary">Update Daily ROIs </a>
+    </div>
+</div>
+
+<!-- /.Social share -->
+<div class="row">
+
+    <div class="col-sm-6 col-md-3">
+        <div class="count_panel panel-navy-blue">
+            <div class="stats-title">
+                <h4><?php echo display('total_user')?></h4>
+            </div>
+            <h1 class="currency_text "><?php echo (@$total_user?$total_user:'0'); ?></h1>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+        <div class="count_panel panel-orenge">
+            <div class="stats-title ">
+                <h4><?php echo display('total_roi')?></h4>
+            </div>
+            <h1 class="currency_text">$<?php echo (@$total_roi?number_format($total_roi, 2):'0.0');?></h1>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+        <div class="count_panel panel-blue">
+            <div class="stats-title ">
+                <h4><?php echo display('total_commission')?></h4>
+            </div>
+            <h1 class="currency_text">$<?php echo (@$commission?number_format($commission, 2):'0.0');?></h1>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3">
+        <div class="count_panel panel-sky">
+            <div class="stats-title ">
+                <h4><?php echo display('total_investment');?></h4>
+            </div>
+            <h1 class="currency_text">$<?php echo (@$total_investment?number_format($total_investment, 2):'0.0');?></h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!-- Line Chart -->
+    <div class="col-sm-12 col-md-8">
+        <div class="panel panel-bd lobidrag">
+            <div class="panel-heading">
+                <div class="panel-title">
                     <div class="row">
-
-                        <div class="col-sm-6 col-md-3">
-                            <div class="count_panel panel-navy-blue">
-                                <div class="stats-title">
-                                    <h4><?php echo display('total_user')?></h4>
-                                </div>
-                                <h1 class="currency_text "><?php echo (@$total_user?$total_user:'0'); ?></h1>
-                            </div>
+                        <div class="col-sm-6 col-md-8">
+                            <h4>Investmen, ROI, Refferal Bonus</h4>
                         </div>
-
-                        <div class="col-sm-6 col-md-3">
-                            <div class="count_panel panel-orenge">
-                                <div class="stats-title ">
-                                    <h4><?php echo display('total_roi')?></h4>
-                                </div>
-                                <h1 class="currency_text">$<?php echo (@$total_roi?number_format($total_roi, 2):'0.0');?></h1>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3">
-                            <div class="count_panel panel-blue">
-                                <div class="stats-title ">
-                                    <h4><?php echo display('total_commission')?></h4>
-                                </div>
-                                <h1 class="currency_text">$<?php echo (@$commission?number_format($commission, 2):'0.0');?></h1>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3">
-                            <div class="count_panel panel-sky">
-                                <div class="stats-title ">
-                                    <h4><?php echo display('total_investment');?></h4>
-                                </div>
-                                <h1 class="currency_text">$<?php echo (@$total_investment?number_format($total_investment, 2):'0.0');?></h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Line Chart -->
-                        <div class="col-sm-12 col-md-8">
-                            <div class="panel panel-bd lobidrag">
-                                <div class="panel-heading">
-                                    <div class="panel-title">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-md-8">
-                                                <h4>Investmen, ROI, Refferal Bonus</h4>
-                                            </div>
-                                            <div class="col-sm-6 col-md-4">
-                                            <?php echo form_open('#','id="invest_date_form" name="invest_date_form" '); ?>
-                                                <select class="form-control basic-single" name="invest_date" id="invest_date">
-                                                    <?php 
-
-                                                        $years =  date("Y", strtotime("-5 year"));
-                                                        $years_now =  date("Y");
-
-                                                        for($i = $years_now; $i>=$years; $i--)
-                                                            echo "<option value='".$i."'>".$i."</option>";
-                                                    ?>
-                                                    
-                                                </select>
-                                            <?php echo form_close() ?>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </div>
-                                <div class="panel-body">
-                                    <canvas id="lineChart" height="140"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Pie Chart -->
                         <div class="col-sm-6 col-md-4">
-                            <div class="panel panel-bd lobidisable">
-                                <div class="panel-heading">
-                                    <div class="panel-title">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-md-7">
-                                                <h4>Deposit &amp; Withdraw</h4>
-                                            </div>
-                                            <div class="col-sm-6 col-md-5">
-                                                <?php echo form_open('#','id="depowith_form" name="depowith_form" '); ?>
-                                                    <select class="form-control basic-single" name="depowith_year" id="depowith_year">                                                    
-                                                        <?php 
-                                                        $years =  date("Y", strtotime("-5 year"));
-                                                        $years_now =  date("Y");
+                        <?php echo form_open('#','id="invest_date_form" name="invest_date_form" '); ?>
+                            <select class="form-control basic-single" name="invest_date" id="invest_date">
+                                <?php 
 
-                                                        for($i = $years_now; $i>=$years; $i--)
-                                                            echo "<option value='".$i."'>".$i."</option>";
-                                                    ?>                                                   
-                                                    </select>
-                                                <?php echo form_close() ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <canvas id="pieChart" height="330"></canvas>
-                                </div>
-                            </div>
+                                    $years =  date("Y", strtotime("-5 year"));
+                                    $years_now =  date("Y");
+
+                                    for($i = $years_now; $i>=$years; $i--)
+                                        echo "<option value='".$i."'>".$i."</option>";
+                                ?>
+                                
+                            </select>
+                        <?php echo form_close() ?>
                         </div>
                     </div>
+                </div>  
+            </div>
+            <div class="panel-body">
+                <canvas id="lineChart" height="140"></canvas>
+            </div>
+        </div>
+    </div>
+    <!-- Pie Chart -->
+    <div class="col-sm-6 col-md-4">
+        <div class="panel panel-bd lobidisable">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-7">
+                            <h4>Deposit &amp; Withdraw</h4>
+                        </div>
+                        <div class="col-sm-6 col-md-5">
+                            <?php echo form_open('#','id="depowith_form" name="depowith_form" '); ?>
+                                <select class="form-control basic-single" name="depowith_year" id="depowith_year">                                                    
+                                    <?php 
+                                    $years =  date("Y", strtotime("-5 year"));
+                                    $years_now =  date("Y");
+
+                                    for($i = $years_now; $i>=$years; $i--)
+                                        echo "<option value='".$i."'>".$i."</option>";
+                                ?>                                                   
+                                </select>
+                            <?php echo form_close() ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <canvas id="pieChart" height="330"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <div class="row">

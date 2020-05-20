@@ -3,7 +3,7 @@
         <div class="panel panel-bd lobidrag">
             <div class="panel-heading ui-sortable-handle">
                 <div class="panel-title" style="max-width: calc(100% - 180px);">
-                    <h4><?php echo display('my_payout');?></h4>
+                    <h4><?php echo display('my_payout');?>/ROI</h4>
                 </div>
             </div>
             

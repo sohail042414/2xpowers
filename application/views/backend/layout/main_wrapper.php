@@ -174,8 +174,11 @@ $settings = $this->db->select("*")
                                 </span>
                             </a> 
                             <ul class="treeview-menu">
+                                <?php /*
                                 <li><a href="<?php echo base_url("backend/user/user/form") ?>"> <?php echo display('add_user') ?> </a></li>
+                                <?php */ ?>
                                 <li><a href="<?php echo base_url("backend/user/user/") ?>"> <?php echo display('user_list') ?> </a></li>
+                                <li><a href="<?php echo base_url("backend/user/user/network") ?>">Network Tree <?php //echo display('user_list') ?> </a></li>
                             </ul>
                         </li>
 

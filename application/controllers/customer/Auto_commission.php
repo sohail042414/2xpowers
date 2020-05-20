@@ -17,54 +17,47 @@ class Auto_commission extends CI_Controller
 
     }
 
-
     public function payout(){
 
         $day = date('N');
 
         $investment = $this->db->select("*")
         ->from('investment')
-        ->where('day',$day)
+        //->where('day',$day)
         ->order_by('order_id','DESC')
         ->get()
-        ->result();
+        ->result();            
+        //if it is not saturday or sunday.
 
-
-
-        if($investment!=NULL){
+        if(($day < 6) && ($investment!=NULL)){
 
             foreach ($investment as  $value) {
-
+               
+                //current date.
                 $date_1 = date_create(date('Y-m-d'));
                 $date_2 = date_create($value->invest_date);
+                        
                 $diff = date_diff($date_2, $date_1);
 
-                $package_periodp = $this->db->select('period')->from('package')->where('package_id',$value->package_id)->get()->row();
-                
+                //check if package has period set.
+                $package_periodp = $this->db->select('period')->from('package')->where('package_id',$value->package_id)->get()->row();                
                 if ($package_periodp) {
                     $package_period = $package_periodp->period;
-
                 }else{
-                    $package_period = 0;
-                    
+                    $package_period = 0;                    
                 }
 
-                if($diff->days>0  && $diff->days<=$package_period){
-                    $days = floor($diff->format("%R%a")%7);
-                
-                } else {
+                //if package period has not expired and at least 5 days passed since user subscribed for package.
 
-                    $days = 1;
+                if($diff->days >4  && $diff->days<=$package_period){             
 
-                }
-                
-                if($days==0){
-
-                    $rio = $this->db->select('package_id,weekly_roi')->from('package')->where('package_id',$value->package_id)->get()->row();
+                    //$rio = $this->db->select('package_id,weekly_roi')->from('package')->where('package_id',$value->package_id)->get()->row();
+                    $rio = $this->db->select('package_id,daily_roi')->from('package')->where('package_id',$value->package_id)->get()->row();
                     $user_info = $this->db->select('user_id,f_name,l_name,username,phone,email')->from('user_registration')->where('user_id',$value->user_id)->get()->row();
 
                     //$amount = ($value->amount/100)*$rio->weekly_roi;
-                    $amount = $rio->weekly_roi;
+                    //$amount = $rio->weekly_roi;
+                    $amount = $rio->daily_roi;
 
                     $paydata = array(
                         'user_id'       => $value->user_id,
@@ -76,6 +69,7 @@ class Auto_commission extends CI_Controller
                         'date'          => date('Y-m-d'),
                     );
 
+                    //check if already not inserted for this user. 
                     $check = $this->db->select('*')
                     ->from('earnings')
                     ->where('package_id',$value->package_id)
@@ -86,6 +80,8 @@ class Auto_commission extends CI_Controller
                     ->get()->num_rows();
 
                     if(empty($check)){
+
+                        echo "<br> Adding ROI for user ".$paydata['user_id']." on Package ".$paydata['package_id']." for date".date('Y-m-d',time());;
 
                         $this->db->insert('earnings',$paydata);
 
@@ -183,6 +179,8 @@ class Auto_commission extends CI_Controller
                             $this->db->insert('notifications',$n);    
                         }
 
+                    }else{
+                        echo "<br> ROI already exists for user ".$paydata['user_id']." on Package ".$paydata['package_id']." for date".date('Y-m-d',time());
                     }
                 }
             }

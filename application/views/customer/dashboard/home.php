@@ -22,7 +22,7 @@
 
                     <div class="social_share">
                         <ul>
-                            <li class="whatsapp"><a href="<?php echo base_url()?>customer/commission/my_payout"> <span><?php echo display('my_payout')?> $<?php echo (@$my_earns?number_format($my_earns, 2):'0.0');?></span></a></li>
+                            <li class="whatsapp"><a href="<?php echo base_url()?>customer/commission/my_payout"> <span><?php //echo display('my_payout')?>Daily ROI $<?php echo (@$my_earns?number_format($my_earns, 2):'0.0');?></span></a></li>
                             <li class="facebook"><a href="<?php echo base_url()?>customer/commission/my_commission"> <span><?php echo display('commission')?> $<?php echo (@$commission?number_format($commission, 2):'0.0');?></span></a></li>
                             <li class="twitter"><a href="<?php echo base_url()?>customer/commission/team_bonus"> <span><?php echo display('bonus')?>  $<?php echo ($team_bonus?number_format($team_bonus, 2):'0.0');?></span></a></li>
                         </ul>
@@ -117,7 +117,7 @@
                             <div class="panel panel-bd lobidrag">
                                 <div class="panel-heading">
                                     <div class="panel-title">
-                                        <h4><?php echo display('my_payout');?></h4>
+                                        <h4>Daily ROIs<?php //echo display('my_payout');?></h4>
                                     </div>
                                 </div>
                                 <div class="panel-body">
@@ -146,7 +146,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <a href="<?php echo base_url()?>customer/commission/my_payout">See all | See Payout</a>
+                                    <a href="<?php echo base_url()?>customer/commission/my_payout">See all | See Payout (ROI)</a>
                                 </div>
                             </div>
 

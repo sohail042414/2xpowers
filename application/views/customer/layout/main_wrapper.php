@@ -254,8 +254,10 @@ $unsen = $this->db->select('*')->from('notifications')->where('user_id',$user_id
                                 </span>
                             </a> 
                             <ul class="treeview-menu">
+								<?php /* ?>
                                 <li><a href="<?php echo base_url("customer/user/user/form") ?>"> <?php echo display('add_user') ?> </a></li>
 								<li><a href="<?php echo base_url("customer/user/user/") ?>"> <?php echo display('user_list') ?> </a></li>
+								<?php */ ?>
 								<li><a href="<?php echo base_url("customer/user/user/network") ?>">Network Tree <?php //echo display('user_list') ?> </a></li>
                             </ul>
                         </li>

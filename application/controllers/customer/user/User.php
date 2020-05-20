@@ -126,7 +126,41 @@ class User extends CI_Controller {
         } else {
             return true;
         }
+	} 
+
+	public function parent_check($parent,$position)
+    { 
+        $user_exists = $this->db->select('username')
+            ->where('position',$position) 
+            ->wherein('parent',$parent) 
+            ->get('user_registration')
+            ->num_rows();
+
+        if ($user_exists > 0) {
+            $this->form_validation->set_message('username_check', 'This parent {$parent} already has children at this position.');
+            return false;
+        } else {
+            return true;
+        }
     } 
+
+	
+	public function add_child(){
+
+		$parent = $this->input->get('parent');
+
+		if(!empty($parent)){
+			$this->session->set_userdata('parent',$parent);
+		}
+
+		$position = $this->input->get('position');
+
+		if(!empty($position)){
+			$this->session->set_userdata('position',$position);
+		}
+
+		redirect("customer/user/user/form");
+	}
 
  
 	public function form($uid = null)
@@ -137,10 +171,22 @@ class User extends CI_Controller {
 			'backend/package/package_model'  
 		));
 
-		$data['packages'] = $this->package_model->get_list();
-		$data['positions'] = $this->user_model->get_positions();
+		$parent = $this->session->userdata('parent');
+		$position = $this->session->userdata('position');
 
-		$data['sponsers'] = $this->user_model->get_user_sponser_list($user_id);
+		$data['packages'] = $this->package_model->get_list();
+		
+		//$data['positions'] = $this->user_model->get_positions();
+		//giv option to select only position choosen from tree, not all 
+		$data['positions'] = $this->user_model->get_positions($position);
+		//get sponsers based on parent selected. 
+		$data['sponsers'] = $this->user_model->get_sponser_list($parent);
+
+		//parent can only be one selected from tree
+		$parent = $this->user_model->get_by_user_id($parent);
+		$data['parents'] = [
+			$parent->user_id => $parent->f_name.' '.$parent->l_name."(".$parent->user_id.")"
+		];
 
 		$data['title']  = display('add_user');
 		/*-----------------------------------*/
@@ -148,6 +194,7 @@ class User extends CI_Controller {
 		$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),'required|max_length[6]');
 		$this->form_validation->set_rules('f_name', display('firstname'),'required|max_length[50]');
 		$this->form_validation->set_rules('l_name', display('lastname'),'required|max_length[50]');
+		
 		#------------------------#
 		if (!empty($uid)) {   
        		$this->form_validation->set_rules('username', display("username"), "required|max_length[100]|callback_username_check[$uid]|trim"); 

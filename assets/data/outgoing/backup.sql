@@ -154,3 +154,289 @@ INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `am
 INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('764Y80', 0, 0, 1, '2020-05-14 08:57:52');
 INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('764Y80', 0, 0, 1, '2020-05-14 08:57:52');
 INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('RNZQI1', '764Y80', 'type1', '1', 0, '2020-05-14');
+UPDATE `admin` SET `last_login` = '2020-05-16 13:07:44', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_login` = '2020-05-17 00:00:55', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+DELETE from transections Where
+				transection_catetory IN('reciver','transfer')
+				AND releted_id=;
+DELETE from transections Where
+				transection_catetory IN('reciver','transfer')
+				AND releted_id=;
+DELETE from transections Where
+				transection_catetory IN('reciver','transfer')
+				AND releted_id=6;
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=6;
+DELETE FROM `investment`
+WHERE `user_id` = '764Y80';
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=6;
+DELETE FROM `investment`
+WHERE `user_id` = '764Y80';
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=5;
+DELETE FROM `investment`
+WHERE `user_id` = 'WFSYBC';
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=6;
+DELETE FROM `investment`
+WHERE `user_id` = '764Y80';
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=6;
+DELETE FROM `investment`
+WHERE `user_id` = '764Y80';
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=6;
+DELETE FROM `transfer`
+WHERE `sender_user_id` = '764Y80'
+OR `receiver_user_id` = '764Y80';
+DELETE FROM `transfer`
+WHERE `sender_user_id` = '764Y80'
+OR `receiver_user_id` = '764Y80';
+DELETE FROM `transfer`
+WHERE `sender_user_id` = '764Y80'
+OR `receiver_user_id` = '764Y80';
+DELETE FROM `investment`
+WHERE `user_id` = '764Y80';
+DELETE FROM `transections`
+WHERE `user_id` = '764Y80'
+AND `transection_category` = 'investment';
+DELETE FROM `earnings`
+WHERE `user_id` = '764Y80';
+DELETE FROM `team_bonus_details`
+WHERE `user_id` = '764Y80';
+DELETE FROM `team_bonus`
+WHERE `user_id` = '764Y80';
+DELETE FROM `user_registration`
+WHERE `user_id` = '764Y80';
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=4;
+DELETE FROM `transfer`
+WHERE `sender_user_id` = 'R0KALA'
+OR `receiver_user_id` = 'R0KALA';
+DELETE FROM `investment`
+WHERE `user_id` = 'R0KALA';
+DELETE FROM `transections`
+WHERE `user_id` = 'R0KALA'
+AND `transection_category` = 'investment';
+DELETE FROM `earnings`
+WHERE `user_id` = 'R0KALA';
+DELETE FROM `team_bonus_details`
+WHERE `user_id` = 'R0KALA';
+DELETE FROM `team_bonus`
+WHERE `user_id` = 'R0KALA';
+DELETE FROM `user_registration`
+WHERE `user_id` = 'R0KALA';
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=5;
+DELETE FROM `transfer`
+WHERE `sender_user_id` = 'WFSYBC'
+OR `receiver_user_id` = 'WFSYBC';
+DELETE FROM `investment`
+WHERE `user_id` = 'WFSYBC';
+DELETE FROM `transections`
+WHERE `user_id` = 'WFSYBC'
+AND `transection_category` = 'investment';
+DELETE FROM `earnings`
+WHERE `user_id` = 'WFSYBC';
+DELETE FROM `team_bonus_details`
+WHERE `user_id` = 'WFSYBC';
+DELETE FROM `team_bonus`
+WHERE `user_id` = 'WFSYBC';
+DELETE FROM `user_registration`
+WHERE `user_id` = 'WFSYBC';
+UPDATE `admin` SET `last_login` = '2020-05-17 16:34:09', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`, `points`) VALUES ('', 'UHSUXU', 'RNZQI1', 'right', 'RNZQI1', 'right_michal', 'Right ', 'michal', 'right_michal@gmail.com', '29bb8e660de8d51d13e4cd4035cc0e5f', '2342424233', '127.0.0.1', 1, '0');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`) VALUES ('RNZQI1', 'UHSUXU', '400', 0, '127.0.0.1', '2020-05-17 05:29:40', 'Initial account create transfer from parent to child', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('RNZQI1', 'transfer', 4, '400', 'Initial transfer to UHSUXU on account creation from parent', '2020-05-17 05:29:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UHSUXU', 'reciver', 4, '400', 'Initial transfer to UHSUXU on account creation from parent', '2020-05-17 05:29:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`) VALUES ('UHSUXU', 'RNZQI1', '3', '400', '2020-05-17', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UHSUXU', 'investment', 7, '400', '2020-05-17', 1, 'User UHSUXU Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('UHSUXU', 0, 0, 1, '2020-05-17 05:29:40');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('UHSUXU', 0, 0, 1, '2020-05-17 05:29:40');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('RNZQI1', 'UHSUXU', 'type1', '3', 0, '2020-05-17');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`, `points`) VALUES ('', 'NFFFJL', 'I4B39Q', 'left', 'RNZQI1', 'left_michal', 'Left ', 'michal', 'left_michal@gmail.com', '755744c24764b507de47d526da3d9499', '343434', '127.0.0.1', 1, '400');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`) VALUES ('I4B39Q', 'NFFFJL', '500', 0, '127.0.0.1', '2020-05-17 05:30:43', 'Initial account create transfer from parent to child', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('I4B39Q', 'transfer', 5, '500', 'Initial transfer to NFFFJL on account creation from parent', '2020-05-17 05:30:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('NFFFJL', 'reciver', 5, '500', 'Initial transfer to NFFFJL on account creation from parent', '2020-05-17 05:30:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`) VALUES ('NFFFJL', 'I4B39Q', '11', '500', '2020-05-17', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('NFFFJL', 'investment', 8, '500', '2020-05-17', 1, 'User NFFFJL Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('NFFFJL', 0, 0, 1, '2020-05-17 05:30:43');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('NFFFJL', 0, 0, 1, '2020-05-17 05:30:43');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('I4B39Q', 'NFFFJL', 'type1', '11', 0, '2020-05-17');
+UPDATE `admin` SET `last_login` = '2020-05-17 22:23:11', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=5;
+DELETE FROM `transfer`
+WHERE `sender_user_id` = 'NFFFJL'
+OR `receiver_user_id` = 'NFFFJL';
+DELETE FROM `investment`
+WHERE `user_id` = 'NFFFJL';
+DELETE FROM `transections`
+WHERE `user_id` = 'NFFFJL'
+AND `transection_category` = 'investment';
+DELETE FROM `earnings`
+WHERE `user_id` = 'NFFFJL';
+DELETE FROM `team_bonus_details`
+WHERE `user_id` = 'NFFFJL';
+DELETE FROM `team_bonus`
+WHERE `user_id` = 'NFFFJL';
+DELETE FROM `user_registration`
+WHERE `user_id` = 'NFFFJL';
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=4;
+DELETE FROM `transfer`
+WHERE `sender_user_id` = 'UHSUXU'
+OR `receiver_user_id` = 'UHSUXU';
+DELETE FROM `investment`
+WHERE `user_id` = 'UHSUXU';
+DELETE FROM `transections`
+WHERE `user_id` = 'UHSUXU'
+AND `transection_category` = 'investment';
+DELETE FROM `earnings`
+WHERE `user_id` = 'UHSUXU';
+DELETE FROM `team_bonus_details`
+WHERE `user_id` = 'UHSUXU';
+DELETE FROM `team_bonus`
+WHERE `user_id` = 'UHSUXU';
+DELETE FROM `user_registration`
+WHERE `user_id` = 'UHSUXU';
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=3;
+DELETE FROM `transfer`
+WHERE `sender_user_id` = '7NHRLR'
+OR `receiver_user_id` = '7NHRLR';
+DELETE FROM `investment`
+WHERE `user_id` = '7NHRLR';
+DELETE FROM `transections`
+WHERE `user_id` = '7NHRLR'
+AND `transection_category` = 'investment';
+DELETE FROM `earnings`
+WHERE `user_id` = '7NHRLR';
+DELETE FROM `team_bonus_details`
+WHERE `user_id` = '7NHRLR';
+DELETE FROM `team_bonus`
+WHERE `user_id` = '7NHRLR';
+DELETE FROM `user_registration`
+WHERE `user_id` = '7NHRLR';
+DELETE FROM `transfer`
+WHERE `sender_user_id` = 'RNZQI1'
+OR `receiver_user_id` = 'RNZQI1';
+DELETE FROM `investment`
+WHERE `user_id` = 'RNZQI1';
+DELETE FROM `transections`
+WHERE `user_id` = 'RNZQI1'
+AND `transection_category` = 'investment';
+DELETE FROM `earnings`
+WHERE `user_id` = 'RNZQI1';
+DELETE FROM `team_bonus_details`
+WHERE `user_id` = 'RNZQI1';
+DELETE FROM `team_bonus`
+WHERE `user_id` = 'RNZQI1';
+DELETE FROM `user_registration`
+WHERE `user_id` = 'RNZQI1';
+DELETE FROM `transfer`
+WHERE `sender_user_id` = 'MXM0KD'
+OR `receiver_user_id` = 'MXM0KD';
+DELETE FROM `investment`
+WHERE `user_id` = 'MXM0KD';
+DELETE FROM `transections`
+WHERE `user_id` = 'MXM0KD'
+AND `transection_category` = 'investment';
+DELETE FROM `earnings`
+WHERE `user_id` = 'MXM0KD';
+DELETE FROM `team_bonus_details`
+WHERE `user_id` = 'MXM0KD';
+DELETE FROM `team_bonus`
+WHERE `user_id` = 'MXM0KD';
+DELETE FROM `user_registration`
+WHERE `user_id` = 'MXM0KD';
+DELETE FROM `transfer`
+WHERE `sender_user_id` = 'I4B39Q'
+OR `receiver_user_id` = 'I4B39Q';
+DELETE FROM `investment`
+WHERE `user_id` = 'I4B39Q';
+DELETE FROM `transections`
+WHERE `user_id` = 'I4B39Q'
+AND `transection_category` = 'investment';
+DELETE FROM `earnings`
+WHERE `user_id` = 'I4B39Q';
+DELETE FROM `team_bonus_details`
+WHERE `user_id` = 'I4B39Q';
+DELETE FROM `team_bonus`
+WHERE `user_id` = 'I4B39Q';
+DELETE FROM `user_registration`
+WHERE `user_id` = 'I4B39Q';
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=1;
+DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=2;
+DELETE FROM `transfer`
+WHERE `sender_user_id` = 'KYBTG1'
+OR `receiver_user_id` = 'KYBTG1';
+DELETE FROM `investment`
+WHERE `user_id` = 'KYBTG1';
+DELETE FROM `transections`
+WHERE `user_id` = 'KYBTG1'
+AND `transection_category` = 'investment';
+DELETE FROM `earnings`
+WHERE `user_id` = 'KYBTG1';
+DELETE FROM `team_bonus_details`
+WHERE `user_id` = 'KYBTG1';
+DELETE FROM `team_bonus`
+WHERE `user_id` = 'KYBTG1';
+DELETE FROM `user_registration`
+WHERE `user_id` = 'KYBTG1';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`, `points`) VALUES ('', 'UE64ZP', '2XPOWR', 'left', '2XPOWR', 'left_2xpowers', 'left', '2xpowers', 'left_2xpowers@gmail.com', 'bc7d5bcfb05f05ca1da22f0f2b9f6ebb', '2234234243', '127.0.0.1', '1', '0');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`) VALUES ('2XPOWR', 'UE64ZP', '100', 0, '127.0.0.1', '2020-05-17 11:01:29', 'Initial account create transfer from parent to child', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2XPOWR', 'transfer', 6, '100', 'Initial transfer to UE64ZP on account creation from parent', '2020-05-17 11:01:29');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UE64ZP', 'reciver', 6, '100', 'Initial transfer to UE64ZP on account creation from parent', '2020-05-17 11:01:29');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`) VALUES ('UE64ZP', '2XPOWR', '1', '100', '2020-05-17', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UE64ZP', 'investment', 9, '100', '2020-05-17', 1, 'User UE64ZP Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('UE64ZP', 0, 0, 1, '2020-05-17 11:01:29');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('UE64ZP', 0, 0, 1, '2020-05-17 11:01:29');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2XPOWR', 'UE64ZP', 'type1', '1', 0, '2020-05-17');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`, `points`) VALUES ('', '6EJ2SH', '2XPOWR', 'right', '2XPOWR', 'right_2xpowers', 'right', '2xpowers', 'right_2xpowers@gmail.comm', 'd652c4063708949e89ba2b2bc9ad49e4', '23423424', '127.0.0.1', '1', '0');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`) VALUES ('2XPOWR', '6EJ2SH', '1600', 0, '127.0.0.1', '2020-05-17 11:02:31', 'Initial account create transfer from parent to child', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2XPOWR', 'transfer', 7, '1600', 'Initial transfer to 6EJ2SH on account creation from parent', '2020-05-17 11:02:31');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('6EJ2SH', 'reciver', 7, '1600', 'Initial transfer to 6EJ2SH on account creation from parent', '2020-05-17 11:02:31');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`) VALUES ('6EJ2SH', '2XPOWR', '5', '1600', '2020-05-17', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('6EJ2SH', 'investment', 10, '1600', '2020-05-17', 1, 'User 6EJ2SH Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('6EJ2SH', 0, 0, 1, '2020-05-17 11:02:31');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('6EJ2SH', 0, 0, 1, '2020-05-17 11:02:31');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2XPOWR', '6EJ2SH', 'type1', '5', 0, '2020-05-17');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`, `points`) VALUES ('', 'B7W6FX', 'UE64ZP', 'left', 'UE64ZP', 'c1_left_2xp', 'c1_left', '_2xp', 'c1_left_2xp@gmail.com', 'df24a01c4c2d4f4019e5f5eee8a25631', '2342342424', '127.0.0.1', '1', '0');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`) VALUES ('UE64ZP', 'B7W6FX', '6400', 0, '127.0.0.1', '2020-05-17 11:04:08', 'Initial account create transfer from parent to child', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UE64ZP', 'transfer', 8, '6400', 'Initial transfer to B7W6FX on account creation from parent', '2020-05-17 11:04:08');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('B7W6FX', 'reciver', 8, '6400', 'Initial transfer to B7W6FX on account creation from parent', '2020-05-17 11:04:08');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`) VALUES ('B7W6FX', 'UE64ZP', '7', '6400', '2020-05-17', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('B7W6FX', 'investment', 11, '6400', '2020-05-17', 1, 'User B7W6FX Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('B7W6FX', 0, 0, 1, '2020-05-17 11:04:08');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('B7W6FX', 0, 0, 1, '2020-05-17 11:04:08');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('UE64ZP', 'B7W6FX', 'type1', '7', 0, '2020-05-17');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`, `points`) VALUES ('', 'EHOSCN', 'UE64ZP', 'right', 'UE64ZP', 'c2_left_2xp', 'c2_left', '_2xp', 'c2_left_2xp@gmail.com', '07d908cb82b3e920b2058782b3c1eb76', '234242342', '127.0.0.1', '1', '0');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`) VALUES ('UE64ZP', 'EHOSCN', '3200', 0, '127.0.0.1', '2020-05-17 11:05:02', 'Initial account create transfer from parent to child', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UE64ZP', 'transfer', 9, '3200', 'Initial transfer to EHOSCN on account creation from parent', '2020-05-17 11:05:02');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('EHOSCN', 'reciver', 9, '3200', 'Initial transfer to EHOSCN on account creation from parent', '2020-05-17 11:05:02');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`) VALUES ('EHOSCN', 'UE64ZP', '6', '3200', '2020-05-17', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('EHOSCN', 'investment', 12, '3200', '2020-05-17', 1, 'User EHOSCN Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('EHOSCN', 0, 0, 1, '2020-05-17 11:05:02');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('EHOSCN', 0, 0, 1, '2020-05-17 11:05:02');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('UE64ZP', 'EHOSCN', 'type1', '6', 0, '2020-05-17');

@@ -43,7 +43,7 @@
                             <input type="text" value="<?php echo $user->sponsor_id!=''?$user->sponsor_id:$user_id->user_id ?>" class="form-control" <?php echo $user->uid?'readonly':'' ?> name="sponsor_id" placeholder="<?php echo display("sponsor_name") ?>">
                             <?php */ ?>
                             <select name="parent" class="form-control">
-                                <?php foreach($sponsers as $id => $name){ ?>
+                                <?php foreach($parents as $id => $name){ ?>
                                 <option value="<?php echo $id; ?>" ><?php echo $name; ?></option>
                                 <?php } ?>
                             </select>

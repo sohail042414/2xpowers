@@ -81,6 +81,7 @@ class User extends CI_Controller {
 			$row[] = $users->email;
 			$row[] = $users->phone;
 			$row[] = '<a href="'.base_url("backend/user/user/form/$users->uid").'"'.' class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="left" title="Update"><i class="fa fa-pencil" aria-hidden="true"></i></a>';
+			$row[] = '<a href="'.base_url("backend/user/user/remove/$users->uid").'"'.' class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="left" title="Update"><i class="fa fa-trash" aria-hidden="true"></i></a>';
 
 			$data[] = $row;
 		}
@@ -126,28 +127,76 @@ class User extends CI_Controller {
         } else {
             return true;
         }
+	} 
+	
+
+    public function parent_check($parent,$position)
+    { 
+        $user_exists = $this->db->select('username')
+            ->where('position',$position) 
+            ->where('parent',$parent) 
+            ->get('user_registration')
+            ->num_rows();
+
+        if ($user_exists > 0) {
+            $this->form_validation->set_message('username_check', 'This parent {$parent} already has children at this position.');
+            return false;
+        } else {
+            return true;
+        }
     } 
 
  
+	public function add_child(){
+
+		$parent = $this->input->get('parent');
+
+		if(!empty($parent)){
+			$this->session->set_userdata('parent',$parent);
+		}
+
+		$position = $this->input->get('position');
+
+		if(!empty($position)){
+			$this->session->set_userdata('position',$position);
+		}
+
+		redirect("backend/user/user/form");
+	}
+
 	public function form($uid = null)
 	{ 
+
 		$data['title']  = display('add_user');
 
 		$this->load->model(array(
 			'backend/package/package_model'  
 		));
 
-		$data['packages'] = $this->package_model->get_list();
-		$data['positions'] = $this->user_model->get_positions();
+		$parent = $this->session->userdata('parent');
+		$position = $this->session->userdata('position');
 
-		$data['sponsers'] = $this->user_model->get_sponser_list();
+		$data['packages'] = $this->package_model->get_list();
+		
+		//$data['positions'] = $this->user_model->get_positions();
+		//giv option to select only position choosen from tree, not all 
+		$data['positions'] = $this->user_model->get_positions($position);
+		//get sponsers based on parent selected. 
+		$data['sponsers'] = $this->user_model->get_sponser_list($parent);
+
+		//parent can only be one selected from tree
+		$parent = $this->user_model->get_by_user_id($parent);
+		$data['parents'] = [
+			$parent->user_id => $parent->f_name.' '.$parent->l_name."(".$parent->user_id.")"
+		];
 
 		/*-----------------------------------*/
 		$this->form_validation->set_rules('username', display('username'),'required|max_length[20]');
-		$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),'required|max_length[6]');
-		$this->form_validation->set_rules('parent', display('parent'),'required|max_length[6]');
+		$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),'required|max_length[6]');		
 		$this->form_validation->set_rules('f_name', display('firstname'),'required|max_length[50]');
 		$this->form_validation->set_rules('l_name', display('lastname'),'required|max_length[50]');
+
+		$this->form_validation->set_rules('parent', display('parent'),"required|max_length[6]|callback_parent_check[$position]");
 		#------------------------#
 		if (!empty($uid)) {   
        		$this->form_validation->set_rules('username', display("username"), "required|max_length[100]|callback_username_check[$uid]|trim"); 
@@ -262,6 +311,23 @@ class User extends CI_Controller {
 		$this->load->view("backend/layout/main_wrapper", $data);
 	}
 
+	public function network(){
+
+		$top_user = $this->user_model->get_top_user();
+
+		$data['user'] = $top_user;
+
+		$isAdmin = $this->session->userdata('isAdmin');
+		
+		//$data['network_tree'] = $this->user_model->get_network_tree($top_user->user_id);
+		$data['network_tree_html'] = $this->user_model->get_network_tree_html($top_user->user_id,$isAdmin);
+
+		$data['title'] = 'Network Tree';
+		$data['content'] = $this->load->view("backend/user/network", $data, true);
+		$this->load->view("backend/layout/main_wrapper", $data);
+
+	}
+
 
 	public function delete($user_id = null)
 	{  
@@ -272,6 +338,28 @@ class User extends CI_Controller {
 		}
 		redirect("backend/user/user/");
 	}
+
+
+	public function remove($uid = null)
+	{  
+
+		$user = $this->user_model->single($uid);
+
+		$children = $this->user_model->get_children($user->user_id);
+
+		if(count($children) > 0){
+			$this->session->set_flashdata('exception', 'Cannot delete this user, delete children first!');
+			redirect("backend/user/user/");
+		}
+
+		if ($this->user_model->remove_user($uid)) {
+			$this->session->set_flashdata('message', display('delete_successfully'));
+		} else {
+			$this->session->set_flashdata('exception', display('please_try_again'));
+		}
+		redirect("backend/user/user/");
+	}
+
 
     /*
     |----------------------------------------------

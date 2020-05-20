@@ -1,49 +1,10 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Package extends CI_Controller 
-{
-    public function __construct()
-    {
-        parent::__construct();
-  
-        if (!$this->session->userdata('isLogIn')) 
-        redirect('login');
-
-        if (!$this->session->userdata('user_id')) 
-        redirect('login');  
- 
-        $this->load->model(array(
-            'customer/auth_model', 
-            'customer/package_model', 
-            'customer/transections_model', 
-            'customer/transfer_model', 
-            'customer/Profile_model', 
-            'common_model', 
-        ));
+class Payment_model extends CI_Model{
+    
+    function __construct() {
     }
-
-
-    public function index()
-    {   
-        $data['title']   = display('package'); 
-        $data['package'] = $this->package_model->all_package();
-        $data['content'] = $this->load->view('customer/pages/package', $data, true);
-        $this->load->view('customer/layout/main_wrapper', $data);  
-    }
-
-    public function confirm_package($package_id=NULL)
-    {   
-        $data['title']   = display('package'); 
-        $data['my_info'] = $this->Profile_model->my_info();
-        $data['package'] = $this->package_model->package_info_by_id($package_id);
-        $data['content'] = $this->load->view('customer/pages/package_confirmation', $data, true);
-        $this->load->view('customer/layout/main_wrapper', $data);  
-    }
-
-
-
-    /*
+/*
     |--------------------------------------------------------------
     |   BUY PACKAGE 
     |--------------------------------------------------------------
@@ -927,5 +888,4 @@ class Package extends CI_Controller
         }
 
     }
-
 }

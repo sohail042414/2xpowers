@@ -38,11 +38,8 @@
                         
                         <div class="form-group col-lg-6">
                             <label><?php echo display("parent") ?> *</label>
-                            <?php /* ?>
-                            <input type="text" value="<?php echo $user->sponsor_id!=''?$user->sponsor_id:$user_id->user_id ?>" class="form-control" <?php echo $user->uid?'readonly':'' ?> name="sponsor_id" placeholder="<?php echo display("sponsor_name") ?>">
-                            <?php */ ?>
                             <select name="parent" class="form-control">
-                                <?php foreach($sponsers as $id => $name){ ?>
+                                <?php foreach($parents as $id => $name){ ?>
                                 <option value="<?php echo $id; ?>" ><?php echo $name; ?></option>
                                 <?php } ?>
                             </select>
@@ -52,7 +49,7 @@
                             <label><?php echo display("position") ?> *</label>
                             <select name="position" class="form-control">
                                 <?php foreach($positions as $id => $name){ ?>
-                                <option value="<?php echo $id; ?>" ><?php echo $name; ?></option>
+                                <option selected="selected" value="<?php echo $id; ?>" ><?php echo $name; ?></option>
                                 <?php } ?>
                             </select>
                         </div>

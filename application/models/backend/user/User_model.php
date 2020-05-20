@@ -9,17 +9,22 @@ class User_model extends CI_Model {
 		$package_id = $data['package_id'];
 		unset($data['package_id']);
 
-		$this->db->insert('user_registration', $data);
-
-		$id = $this->db->insert_id();
-
-		$user = $this->single($id);
-
 		$package=  $this->db->select('*')
 		->from('package')
 		->where('package_id', $package_id)
 		->get()
 		->row();
+
+		$data['points'] = $package->points;
+
+		$data['created'] = date("Y-m-d H:i:s");
+        $data['modified'] = date("Y-m-d H:i:s");    
+
+		$this->db->insert('user_registration', $data);
+
+		$id = $this->db->insert_id();
+
+		$user = $this->single($id);
 
 		//$sponser_user = $this->get_by_user_id($user->sponsor_id);
 
@@ -165,6 +170,59 @@ class User_model extends CI_Model {
 			->delete("user_registration");
 	}
 
+	public function remove_user($uid){
+		
+		$user = $this->single($uid);
+
+		//remove all transfers. 
+		$transfers = $this->db->select('*')
+		->from('transfer')
+		->where('sender_user_id', $user->user_id)
+		->or_where('receiver_user_id',$user->user_id)
+		->get()
+		->result();
+		//
+
+		foreach($transfers as $transfer){			
+			$this->db->query("DELETE from transections Where
+				transection_category IN('reciver','transfer')
+				AND releted_id=$transfer->transfer_id");
+		}
+
+		//remove all investments 
+		$this->db->where('sender_user_id', $user->user_id)
+			->or_where('receiver_user_id',$user->user_id)
+			->delete("transfer");
+
+		//remove all investments 
+		$this->db->where('user_id', $user->user_id)
+			->delete("investment");
+
+		//remove all investments transections
+		$this->db->where('user_id', $user->user_id)
+			->where('transection_category','investment')
+			->delete("transections");
+
+		//remove earnings 
+		$this->db->where('user_id', $user->user_id)
+		->delete("earnings");
+
+		//remove team bunus detais
+		$this->db->where('user_id', $user->user_id)
+		->delete("team_bonus_details");
+
+		//remove bonus
+		$this->db->where('user_id', $user->user_id)
+		->delete("team_bonus");
+
+		//remove user
+		$this->db->where('user_id', $user->user_id)
+		->delete("user_registration");
+
+		return true;
+
+	}
+
 	public function dropdown()
 	{
 		$data = $this->db->select("user_id, CONCAT_WS(' ', f_name, l_name) AS fullname")
@@ -281,25 +339,41 @@ class User_model extends CI_Model {
 			->row();
 	}
 
-	public function get_positions(){
+	public function get_positions($only=''){
+		if($only==''){
+			return [
+				'left' => 'Left',
+				'right' => 'Right'
+			];
+		}
+
+		if($only=='right'){
+			return [
+				'right' => 'Right'
+			];
+		}
+		
 		return [
-			'left' => 'Left',
-			'right' => 'Right'
+			'left' => 'Left'
 		];
 	}
 
-	public function get_sponser_list(){
-
-		$data = $this->db->select("*")
-			->from('user_registration')
-			->order_by('f_name', 'asc')
-			->get()
-			->result();
+	public function get_sponser_list($parent){
 
 		$list = array();
 
-		foreach($data as $item){
+		while($parent !='' OR $parent !=NULL){
+
+			$item = $this->db->select("*")
+			->from('user_registration')
+			->where('user_id',$parent)
+			->order_by('f_name', 'asc')
+			->get()
+			->row();
+			
 			$list[$item->user_id] = $item->f_name.' '.$item->l_name."(".$item->user_id.")";
+
+			$parent = $item->parent;
 		}
 
 		return $list;
@@ -342,7 +416,7 @@ class User_model extends CI_Model {
 		->result();
 	}
 
-	public function get_network_tree_html($user_id){
+	public function get_network_tree_html($user_id,$isAdmin=false){
 
 		$tree = array();
 		$user = $this->get_by_user_id($user_id);
@@ -350,14 +424,56 @@ class User_model extends CI_Model {
 		$tree['user'] = $user;		
 		$children = $this->get_children($user_id);
 
+		$package = $this->get_user_package($user_id);
+
 		$tree_html = '<ul id="organisation" style="display:none;">';
-		$tree_html.= '<li><em>'.$user->f_name.' '.$user->l_name.'</em>';
+		$tree_html.= '<li>';
+
+		$tree_html.= '<em>'.$user->f_name.' '.$user->l_name.' (Pts:'.$user->points.')</em>';
+		if($package !=FALSE){
+			$tree_html.= '<div class="row">';
+			$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
+			$tree_html.= '<h3>'.$package->package_name.'($'.$package->package_amount.')</h3>';
+			$tree_html.= '</div>';
+			$tree_html.= '</div>';
+		}
+
+		$tree_html.= '<div class="row">';
+		$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
+
+		$tree_html.= $this->get_add_buttons($children,$user,$isAdmin);
+
+		$tree_html.= '</div>';
+		$tree_html.= '</div>';
+
 		$tree_html.= '<ul>';
 
 		foreach($children as $child){			
 			$tree_html.= '<li>';
-			$tree_html.='<em>'.$child->f_name.' '.$child->l_name.'</em>';
-			$tree_html.=$this->get_child_tree_html($child);
+			//$tree_html.='<em>'.$child->f_name.' '.$child->l_name.'</em>';
+			$package = $this->get_user_package($child->user_id);
+
+			$children = $this->get_children($child->user_id);
+
+			$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.' (Pts:'.$child->points.')</em>';
+			if($package !=FALSE){
+				$tree_html.= '<div class="row">';
+				$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
+				$tree_html.= '<h3>'.$package->package_name.'($'.$package->package_amount.')</h3>';
+				$tree_html.= '</div>';
+				$tree_html.= '</div>';
+			}
+			
+			$tree_html.= '<div class="row">';
+			$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
+
+			$tree_html.= $this->get_add_buttons($children,$child,$isAdmin);
+
+			$tree_html.= '</div>';
+			$tree_html.= '</div>';
+
+
+			$tree_html.=$this->get_child_tree_html($child,$isAdmin);
 			//$tree['children'][] = $this->get_child_tree($child);
 			$tree_html.='</li>';
 		}
@@ -371,7 +487,7 @@ class User_model extends CI_Model {
 
 	}
 
-	public function get_child_tree_html($user){
+	public function get_child_tree_html($user,$isAdmin){
 
 		//$data = array();
 		//$data['user'] = $user;
@@ -388,8 +504,30 @@ class User_model extends CI_Model {
 			$tree_html.= '<ul>';
 			foreach($children as $child){
 				$tree_html.= '<li>';
-				$tree_html.='<em>'.$child->f_name.' '.$child->l_name.'</em>';
-				$tree_html.=$this->get_child_tree_html($child);
+				//$tree_html.='<em>'.$child->f_name.' '.$child->l_name.'</em>';
+					
+				$package = $this->get_user_package($child->user_id);
+
+				$children = $this->get_children($child->user_id);
+
+				$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.'(Pts:'.$child->points.')</em>';
+				if($package !=FALSE){
+					$tree_html.= '<div class="row">';
+					$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
+					$tree_html.= '<h3>'.$package->package_name.'($'.$package->package_amount.')</h3>';
+					$tree_html.= '</div>';
+					$tree_html.= '</div>';
+				}
+				$tree_html.= '<div class="row">';
+				$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
+				
+				$tree_html.= $this->get_add_buttons($children,$child,$isAdmin);
+				
+
+				$tree_html.= '</div>';
+				$tree_html.= '</div>';
+				
+				$tree_html.=$this->get_child_tree_html($child,$isAdmin);
 				//$data['children'][] = $this->get_child_tree_html($child);
 				$tree_html.='</li>';
 			}
@@ -397,7 +535,30 @@ class User_model extends CI_Model {
 		}
 
 		return $tree_html;
+		
+	}
 
+	private function get_add_buttons($children,$user,$isAdmin){
+
+		$tree_html='';
+
+		if(!$this->has_left($children)){ 
+			if($isAdmin){
+				$tree_html.= '<a href="'.base_url().'backend/user/user/add_child?parent='.$user->user_id.'&position=left" class="btn btn-xs btn-primary pull-left">Add Left </a>';
+			}else{
+				$tree_html.= '<a href="'.base_url().'customer/user/user/add_child?parent='.$user->user_id.'&position=left" class="btn btn-xs btn-primary pull-left">Add Left </a>';
+			}
+
+		} 
+		if(!$this->has_right($children)){ 
+			if($isAdmin){
+				$tree_html.= '<a href="'.base_url().'backend/user/user/add_child?parent='.$user->user_id.'&position=right" class="btn btn-xs btn-primary pull-right">Add Right </a>';
+			}else{
+				$tree_html.= '<a href="'.base_url().'customer/user/user/add_child?parent='.$user->user_id.'&position=right" class="btn btn-xs btn-primary pull-right">Add Right </a>';
+			}
+		}
+
+		return $tree_html;
 	}
 
 	public function get_network_tree($user_id){
@@ -435,6 +596,60 @@ class User_model extends CI_Model {
 
 		return $data;
 
+	}
+
+
+	public function get_user_package($user_id){
+
+		$investment = $this->db->select('*')
+		->from('investment')
+		->where('user_id', $user_id)
+		->get()
+		->row();
+
+		if(!is_object($investment)){
+			return false;
+		}
+
+		$package= $this->db->select('*')
+		->from('package')
+		->where('package_id', $investment->package_id)
+		->get()
+		->row();
+
+		if(!is_object($package)){
+			return false;
+		}
+
+		return $package;
+
+	}
+
+	public function has_left($children){
+		foreach($children as $child){
+			if($child->position == 'left'){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public function has_right($children){
+		foreach($children as $child){
+			if($child->position == 'right'){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public function get_top_user(){
+		return $this->db->select("*")
+		->from('user_registration')
+		->where('parent',NULL)
+		->or_where('parent','')
+		->get()
+		->row();
 	}
 
 }

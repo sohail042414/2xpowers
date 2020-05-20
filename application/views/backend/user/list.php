@@ -20,7 +20,8 @@
                                 <th><?php echo display('username') ?></th>
                                 <th><?php echo display('email') ?></th>
                                 <th><?php echo display('mobile') ?></th>
-                                <th><?php echo display('action') ?></th> 
+                                <th><?php echo display('action') ?></th>
+                                <th><?php echo display('action') ?></th>  
                             </tr>
                         </thead>
                         <tbody>
