@@ -34,7 +34,7 @@ img.star {
 
 .node {
     background: #5b69bc;
-    height: 110px !important;
+    height: 120px !important;
     width: 160px !important;
     border: 1px solid #e1e6ef;
     font-family: sans-serif;

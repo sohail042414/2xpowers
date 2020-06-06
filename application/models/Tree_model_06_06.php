@@ -3,8 +3,6 @@
 class Tree_model extends CI_Model{
 	
 	public $generation_level = 1;
-	public $current_package = null;
-	public $first_parent = null;
 
     function __construct() {
 
@@ -29,10 +27,6 @@ class Tree_model extends CI_Model{
 		->where('package_id', $package_id)
 		->get()
 		->row();
-
-		$this->current_package = $package;
-
-
 
 		$data['points'] = $package->points;
 		$data['business_points'] = 0;
@@ -157,7 +151,6 @@ class Tree_model extends CI_Model{
 		//$this->add_binary_points($user,$package);
 
 		$parent = $this->get_by_user_id($parent_id);
-		$this->first_parent = $parent;
 
         //continue only if there is grand parent, parent of parent is nto empty
         // if(empty($parent->parent)){
@@ -319,7 +312,7 @@ class Tree_model extends CI_Model{
 			}
 
 			if($this->has_children($right)){
-				$right_points = $right->business_points;
+				$right_points = $left->right_points;
 			}else{
 				$right_points = $right->points;
 			}
@@ -336,10 +329,6 @@ class Tree_model extends CI_Model{
 			->get()
 			->row();
 
-			// echo "left Points : ".$left_points. ",  RIght point : ".$right_points;
-			// exit;
-
-			/*
 			if($this->generation_level ==1){
 				
 				$power_leg = 'right';
@@ -416,22 +405,15 @@ class Tree_model extends CI_Model{
 				}
 				
 			}else{
-				*/
 
-				if($left_points == $right_points){
-					$bonus_points = $left_points;
-					$diff = $user->business_points - $bonus_points;
-					$power_leg = NULL;	
-				}else if($left_points < $right_points){
-
-					$bonus_points = $left_points;
-					$diff = $user->business_points - $bonus_points;
-					$power_leg = 'right';	
-
-				}else{
-					$bonus_points = $right_points;
-					$diff = $user->business_points - $bonus_points;
-					$power_leg = 'left';	
+				$power_leg = 'right';
+				$points = $left->business_points;
+				$diff = $right->business_points - $left->business_points;
+				
+				if($right->points < $points){
+					$points = $right->business_points;
+					$week_side = 'left';
+					$diff = $left->business_points - $right->business_points;
 				}
 
 				$team_bonus = $this->db->select('*')
@@ -441,7 +423,7 @@ class Tree_model extends CI_Model{
 				->row();
 		
 				//$binary_bonus = (int) $package->package_amount*($user_package->indirect_bonus/100);
-				$binary_bonus = (int) $bonus_points*($user_package->indirect_bonus/100);
+				$binary_bonus = (int) $points*($user_package->indirect_bonus/100);
 		
 				$update = array(
 					'business_points' =>abs($diff),
@@ -449,6 +431,7 @@ class Tree_model extends CI_Model{
 				);
 		
 				$this->db->where('user_id',$user->user_id)->update('user_registration',$update);
+				
 				
 
 				if($team_bonus!=NULL){
@@ -492,7 +475,7 @@ class Tree_model extends CI_Model{
 		
 				}
 
-			//}
+			}
 		}
 
 		$parent = $this->get_by_user_id($user->parent);
@@ -612,7 +595,6 @@ class Tree_model extends CI_Model{
 	}
 
 	public function has_children($user){
-
 		$children = $this->db->select('*')
 		->from('user_registration')
 		->where('parent',$user->user_id)		

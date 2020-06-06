@@ -18,9 +18,11 @@ class common_model extends CI_Model {
 		    'smtp_user' => $email->user,
 		    'smtp_pass' => $email->password,
 		    'mailtype'  => $email->mailtype,
-		    'starttls'  => true,
-		    'charset'   => $email->charset
+		    //'starttls'  => true,
+			'charset'   => $email->charset,
+			'validation' => TRUE,
 		);
+
 		$this->email->initialize($config);
 		$this->email->set_mailtype("html");
 		$this->email->set_newline("\r\n");

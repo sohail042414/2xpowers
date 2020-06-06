@@ -8,7 +8,7 @@
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <?php echo form_open_multipart("backend/dashboard/setting//update_email_gateway") ?>
+                    <?php echo form_open_multipart("backend/dashboard/setting/update_email_gateway") ?>
                     <?php echo form_hidden('es_id',$email->es_id) ?>
                     <div class="col-md-6">   
           
@@ -73,6 +73,7 @@
                             </div>
                         </div>
                     </div>
+                    <?php echo form_close(); ?>
                     <?php echo form_open_multipart("backend/dashboard/setting//test_email") ?>
                     <div class="col-md-6">
                         <h3 class="text-center">Email Test</h3>

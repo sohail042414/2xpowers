@@ -51,6 +51,7 @@ class Setting_model extends CI_Model {
 		//die();
 
 		//SMTP & mail configuration
+		/*
 		$config = array(
 		    'protocol'  => $email->protocol,
 		    'smtp_host' => $email->host,
@@ -62,12 +63,27 @@ class Setting_model extends CI_Model {
             'wordwrap'  => TRUE,
 		    'newline'   => "\r\n"
 		);
+		*/
+
+		$config = array(
+		    'protocol'  => $email->protocol,
+		    'smtp_host' => $email->host,
+		    'smtp_port' => $email->port,
+		    'smtp_user' => $email->user,
+			'smtp_pass' => $email->password,
+			'smtp_timeout' => '7',
+			'mailtype'  => $email->mailtype,			
+		    //'starttls'  => true,
+			'charset'   => $email->charset,
+			'validation' => TRUE,
+		);
 		
+
 		//Load email library
 		$this->load->library('email',$config);
 		$this->email->initialize($config);
 		//$this->email->set_mailtype("html");
-		//$this->email->set_newline("\r\n");
+		$this->email->set_newline("\r\n");
 
 		//Email content
 		$htmlContent = $post['message'];
@@ -76,16 +92,20 @@ class Setting_model extends CI_Model {
 		$this->email->from($email->user, $email->title);
 		$this->email->subject($post['subject']);
 		$this->email->message($htmlContent);
-		
-		//Send email
-		if($this->email->send()){
+		try {
+			//Send email
+			if($this->email->send()){
+				return 1;
 
-			return 1;
-
-		} else{
-			
-			return 0;
-
+			} else{
+				return false;				
+				//echo $this->email->print_debugger();
+				//exit;
+			}
+		}catch(Exception $e){
+			// echo '<pre>';
+			// print_r($e);
+			// exit; 
 		}
 		
 	}

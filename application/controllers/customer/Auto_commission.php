@@ -19,6 +19,8 @@ class Auto_commission extends CI_Controller
 
     public function payout(){
 
+        $log = '';
+
         $day = date('N');
 
         $investment = $this->db->select("*")
@@ -35,6 +37,8 @@ class Auto_commission extends CI_Controller
                
                 //current date.
                 $date_1 = date_create(date('Y-m-d'));
+                //$date_1 = date_create('2020-05-27');
+
                 $date_2 = date_create($value->invest_date);
                         
                 $diff = date_diff($date_2, $date_1);
@@ -66,7 +70,8 @@ class Auto_commission extends CI_Controller
                         'package_id'    => $value->package_id,
                         'order_id'      => $value->order_id,
                         'amount'        => $amount,
-                        'date'          => date('Y-m-d'),
+                        //'date'          => date('Y-m-d'),
+                        'date'          =>$date_1->format('Y-m-d'), 
                     );
 
                     //check if already not inserted for this user. 
@@ -76,12 +81,13 @@ class Auto_commission extends CI_Controller
                     ->where('order_id',$value->order_id)
                     ->where('user_id',$value->user_id)
                     ->where('earning_type','type2')
-                    ->where('date',date('Y-m-d'))
+                    //->where('date',date('Y-m-d'))
+                    ->where('date',$date_1->format('Y-m-d'))                    
                     ->get()->num_rows();
 
                     if(empty($check)){
 
-                        echo "<br> Adding ROI for user ".$paydata['user_id']." on Package ".$paydata['package_id']." for date".date('Y-m-d',time());;
+                        $log .="<br> Adding ROI for user ".$paydata['user_id']." on Package ".$paydata['package_id']." for date ".$date_1->format('Y-m-d');
 
                         $this->db->insert('earnings',$paydata);
 
@@ -115,7 +121,8 @@ class Auto_commission extends CI_Controller
                                 'receiver_id' => $user_info->user_id,
                                 'subject' => 'Payout',
                                 'message' => 'You received your payout. Your new balance is $'.$balance['balance'],
-                                'datetime' => date('Y-m-d h:i:s'),
+                                //'datetime' => date('Y-m-d h:i:s'),
+                                'datetime' => $date_1->format('Y-m-d h:i:s'),
                             );
 
                             $this->db->insert('message',$message_data);
@@ -180,11 +187,20 @@ class Auto_commission extends CI_Controller
                         }
 
                     }else{
-                        echo "<br> ROI already exists for user ".$paydata['user_id']." on Package ".$paydata['package_id']." for date".date('Y-m-d',time());
+                        $log.="<br> ROI already exists for user ".$paydata['user_id']." on Package ".$paydata['package_id']." for date ".$date_1->format('Y-m-d');
                     }
                 }
             }
         }
+
+        $cron_data = array(
+            'name' => 'payout',
+            'log' => $log
+        );
+
+        $this->db->insert('cron_jobs',$cron_data);
+
+        echo $log; exit;
     }
 
 

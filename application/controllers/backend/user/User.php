@@ -6,9 +6,7 @@ class User extends CI_Controller {
  	public function __construct()
  	{
  		parent::__construct();
- 		$this->load->model(array(
- 			'backend/user/user_model'  
- 		));
+ 		$this->load->model('backend/user/user_model');
  		
  		if (!$this->session->userdata('isAdmin')) 
         redirect('logout');
@@ -141,10 +139,25 @@ class User extends CI_Controller {
         if ($user_exists > 0) {
             $this->form_validation->set_message('username_check', 'This parent {$parent} already has children at this position.');
             return false;
-        } else {
-            return true;
-        }
-    } 
+		}
+		
+		return true;
+	} 
+	
+	public function sponsor_id_check($sponsor_id,$package_id){
+
+		$this->load->model('customer/transections_model');
+
+		$pak_info = $this->package_model->single($package_id); 
+        $data = $this->transections_model->get_cata_wais_transections($sponsor_id);
+
+        if($pak_info->package_amount > $data['balance']){
+			$this->form_validation->set_message('sponsor_id_check', 'This Sponsor does not have enough balance.');
+			return false;
+		}
+
+		return true;
+	}
 
  
 	public function add_child(){
@@ -169,13 +182,13 @@ class User extends CI_Controller {
 
 		$data['title']  = display('add_user');
 
-		$this->load->model(array(
-			'backend/package/package_model'  
-		));
+		$this->load->model('backend/package/package_model');
+		$this->load->model('tree_model');
 
 		$parent = $this->session->userdata('parent');
 		$position = $this->session->userdata('position');
-
+		$package_id = $this->input->post('package_id');
+		
 		$data['packages'] = $this->package_model->get_list();
 		
 		//$data['positions'] = $this->user_model->get_positions();
@@ -192,7 +205,8 @@ class User extends CI_Controller {
 
 		/*-----------------------------------*/
 		$this->form_validation->set_rules('username', display('username'),'required|max_length[20]');
-		$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),'required|max_length[6]');		
+		//$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),'required|max_length[6]');		
+		$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),"required|max_length[6]|callback_sponsor_id_check[$package_id]");		
 		$this->form_validation->set_rules('f_name', display('firstname'),'required|max_length[50]');
 		$this->form_validation->set_rules('l_name', display('lastname'),'required|max_length[50]');
 
@@ -267,7 +281,8 @@ class User extends CI_Controller {
 
 			if (empty($uid)) 
 			{
-				if ($this->user_model->create($userdata)) {
+				//if ($this->user_model->create($userdata)) {
+				if ($this->tree_model->create_user($userdata)) {
 					$this->session->set_flashdata('message', display('save_successfully'));
 				} else {
 					$this->session->set_flashdata('exception', display('please_try_again'));

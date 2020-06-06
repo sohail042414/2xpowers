@@ -94,7 +94,6 @@ class Package extends CI_Controller
             // check invesment by sponser
             $investment = $this->db->select('*')->from('investment')->where('user_id',$sponsor_id)->get()->num_rows();
 
-
             if($this->session->userdata('sponsor_id')!=NULL){
 
                 if($investment > 0 ){

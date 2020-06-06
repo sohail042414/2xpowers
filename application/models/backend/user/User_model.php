@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_model extends CI_Model {
  
+	
 	public function create($data = array())
 	{
 
@@ -429,11 +430,12 @@ class User_model extends CI_Model {
 		$tree_html = '<ul id="organisation" style="display:none;">';
 		$tree_html.= '<li>';
 
-		$tree_html.= '<em>'.$user->f_name.' '.$user->l_name.' (Pts:'.$user->points.')</em>';
+		$tree_html.= '<em>'.$user->f_name.' '.$user->l_name.'(Pts:'.$user->business_points.')</em>';		
 		if($package !=FALSE){
 			$tree_html.= '<div class="row">';
 			$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
 			$tree_html.= '<h3>'.$package->package_name.'($'.$package->package_amount.')</h3>';
+			$tree_html.='<h3>Power : '.$user->power_leg.'</h3>';
 			$tree_html.= '</div>';
 			$tree_html.= '</div>';
 		}
@@ -455,11 +457,12 @@ class User_model extends CI_Model {
 
 			$children = $this->get_children($child->user_id);
 
-			$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.' (Pts:'.$child->points.')</em>';
+			$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.' (Pts:'.$child->business_points.')</em>';
 			if($package !=FALSE){
 				$tree_html.= '<div class="row">';
 				$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
 				$tree_html.= '<h3>'.$package->package_name.'($'.$package->package_amount.')</h3>';
+				$tree_html.='<h3>Power : '.$child->power_leg.'</h3>';
 				$tree_html.= '</div>';
 				$tree_html.= '</div>';
 			}
@@ -510,11 +513,12 @@ class User_model extends CI_Model {
 
 				$children = $this->get_children($child->user_id);
 
-				$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.'(Pts:'.$child->points.')</em>';
+				$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.'(Pts:'.$child->business_points.')</em>';
 				if($package !=FALSE){
 					$tree_html.= '<div class="row">';
 					$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
 					$tree_html.= '<h3>'.$package->package_name.'($'.$package->package_amount.')</h3>';
+					$tree_html.='<h3>Power : '.$child->power_leg.'</h3>';
 					$tree_html.= '</div>';
 					$tree_html.= '</div>';
 				}
