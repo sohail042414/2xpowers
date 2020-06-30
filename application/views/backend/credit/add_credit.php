@@ -19,6 +19,17 @@
                         </div>
                     </div>
 
+                    
+                    <div class="form-group row">
+                        <label for="amount" class="col-xs-3 col-form-label">Type *</label>
+                        <div class="col-xs-9">
+                            <select name="deposit_type" class="form-control">
+                                <option value="normal_credit">Normal</option>
+                                <option value="promotion_credit">Promotion</option>
+                            </select>                            
+                        </div>
+                    </div>
+
                     <div class="form-group row">
                         <label for="amount" class="col-xs-3 col-form-label"><?php echo display('amount') ?> *</label>
                         <div class="col-xs-9">

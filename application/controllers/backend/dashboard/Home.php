@@ -34,7 +34,6 @@ class Home extends CI_Controller
         $data['roi']        = $this->db->query("SELECT MONTHNAME(`date`) as month, SUM(`amount`) as roi FROM `earnings` WHERE YEAR(`date`) = '2018' GROUP BY YEAR(CURDATE()), MONTH(`date`)")->result();
 
 
-
         $data['transections']        = $this->db->query("SELECT `transection_category` as transection_category, SUM(`amount`) as transections FROM `transections` WHERE  status=1 AND (transection_category='deposit' OR transection_category='withdraw') AND YEAR(`transection_date_timestamp`) = '2018' GROUP BY `transection_category`")->result();
 
         $data['total_binary_bonus'] = 0;

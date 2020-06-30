@@ -75,5 +75,13 @@ class Package_model extends CI_Model {
 
 	}
 
+	public function get_single_list($package_id){
+		$list = array();
+		$item = $this->single($package_id);
+		$list[$item->package_id] = $item->package_name. "($".$item->package_amount.")";
+		return $list;
+
+	}
+
 
 }

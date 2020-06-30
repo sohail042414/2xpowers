@@ -11,7 +11,8 @@
                     <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                         <?php echo form_open('customer/transfer/store',array('name'=>'transfer_form'));?>
                         <div class="border_preview">
-                            <div class="form-group row">
+                            
+                        <div class="form-group row">
                                 <label for="receiver_id" class="col-sm-4 col-form-label"><?php echo display('reciver_account')?></label>
                                 <div class="col-sm-7">
                                     <input class="form-control" onblur="ReciverChack(this.value)" name="receiver_id" type="text" required id="receiver_id" placeholder="<?php echo display('user_id')?>">
@@ -22,6 +23,16 @@
                                 </div>
                             </div>
 
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Balance Type *</label>
+                                <div class="col-sm-8">
+                                    <select name="balance_type" class="form-control">
+                                        <?php foreach($vallets  as $id => $name){ ?>
+                                        <option value="<?php echo $id; ?>" ><?php echo $name; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <label for="amount" class="col-sm-4 col-form-label"><?php echo display('amount')?></label>
                                 <div class="col-sm-8">

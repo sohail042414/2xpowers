@@ -5,11 +5,12 @@ class User extends CI_Controller {
  	
  	public function __construct()
  	{
- 		parent::__construct();
- 		$this->load->model(array(
- 			'backend/user/user_model'  
- 		));
- 		
+		 parent::__construct();
+		 
+		 $this->load->model('backend/user/user_model');
+		 $this->load->model('customer/deshboard_model');
+		 $this->load->model('common_model'); 	
+		 	
 		 if (!$this->session->userdata('isLogIn')) 
 		 redirect('login');
  
@@ -144,7 +145,56 @@ class User extends CI_Controller {
         }
     } 
 
-	
+	public function company_balance_check($company_balance_used,$package_id){
+
+		$post_data = $this->input->post();
+
+		$package = $this->db->from('package')->where('package_id',$package_id)->get()->row();
+
+		$total_used = (int)$post_data['company_balance_used']+ (int)$post_data['promotion_balance_used']+(int)$post_data['commission_used']+(int)$post_data['roi_used'];
+		
+		if($total_used < $package->package_amount){
+			$this->form_validation->set_message('company_balance_check', 'You have not used full package amount from balance ($'.$package->package_amount.')');
+			return FALSE;
+		}
+
+		$percent50 = 0.5*$package->package_amount; 
+
+		if($percent50 > $post_data['company_balance_available']){
+			$this->form_validation->set_message('company_balance_check', 'Sponsor does not have enough company balance, required min $'.$percent50);
+			return FALSE;
+		}
+
+		if($post_data['company_balance_used'] < $percent50){
+			$this->form_validation->set_message('company_balance_check', 'Must use min 50% ($'.$percent50.') of company balance');
+			return FALSE;
+		}
+
+		$percent20 = 0.2*$package->package_amount; 
+
+		if($post_data['promotion_balance_used'] > $percent20){
+			$this->form_validation->set_message('company_balance_check', 'Must use max 20% ($'.$percent20.') of promotion balance');
+			return FALSE;
+		}
+
+		if($post_data['promotion_balance_used'] > $post_data['promotion_balance_available']){
+			$this->form_validation->set_message('company_balance_check', 'Sponsor does not have enough promotion balance ($'.$post_data['promotion_balance_available'].')');
+			return FALSE;
+		}
+
+		if($post_data['commission_used'] > $post_data['commission_available']){
+			$this->form_validation->set_message('company_balance_check', 'Sponsor does not have enough commission balance ($'.$post_data['commission_used'].')');
+			return FALSE;
+		}
+
+		if($post_data['roi_used'] > $post_data['roi_available']){
+			$this->form_validation->set_message('company_balance_check', 'Sponsor does not have enough ROI balance ($'.$post_data['roi_used'].')');
+			return FALSE;
+		}
+
+		return TRUE;
+	}
+
 	public function add_child(){
 
 		$parent = $this->input->get('parent');
@@ -182,6 +232,9 @@ class User extends CI_Controller {
 		//get sponsers based on parent selected. 
 		$data['sponsers'] = $this->user_model->get_sponser_list($parent);
 
+		$data['countries'] = $this->common_model->get_countries();
+
+		$data['vallet'] = $this->deshboard_model->get_cata_wais_transections($parent);
 		//parent can only be one selected from tree
 		$parent = $this->user_model->get_by_user_id($parent);
 		$data['parents'] = [
@@ -189,6 +242,9 @@ class User extends CI_Controller {
 		];
 
 		$data['title']  = display('add_user');
+
+		$package_id = $this->input->post('package_id');
+
 		/*-----------------------------------*/
 		$this->form_validation->set_rules('username', display('username'),'required|max_length[20]');
 		$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),'required|max_length[6]');
@@ -215,6 +271,9 @@ class User extends CI_Controller {
 		$this->form_validation->set_rules('mobile', display('mobile'),'max_length[30]');
 		//$this->form_validation->set_rules('status', display('status'),'required|max_length[1]');
 		/*-----------------------------------*/ 
+		
+		$this->form_validation->set_rules('company_balance_used', "Company Balance", "required|numeric|callback_company_balance_check[$package_id]|trim"); 
+
 		if (empty($uid))
 		{ 
 			$data['user'] = (object)$userdata = array(
@@ -229,6 +288,7 @@ class User extends CI_Controller {
 				'l_name' 	  => $this->input->post('l_name'),
 				'email' 	  => $this->input->post('email'),
 				'password' 	  => md5($this->input->post('password')),
+				'country'	  => $this->input->post('country'),
 				'phone' 	  => $this->input->post('mobile'),
 				'reg_ip'      => $this->input->ip_address(),
 				'status'      => 1,
@@ -248,6 +308,7 @@ class User extends CI_Controller {
 				'l_name' 	  => $this->input->post('l_name'),
 				'email' 	  => $this->input->post('email'),
 				'password' 	  => md5($this->input->post('password')),
+				'country'	  => $this->input->post('country'),
 				'phone' 	  => $this->input->post('mobile'),
 				'reg_ip'      => $this->input->ip_address(),
 				'status'      => $this->input->post('status'),
@@ -266,6 +327,7 @@ class User extends CI_Controller {
 
 			if (empty($uid)) 
 			{
+
 				if ($this->user_model->create($userdata)) {
 					$this->session->set_flashdata('message', display('save_successfully'));
 				} else {
@@ -312,6 +374,15 @@ class User extends CI_Controller {
 			$data['content'] = $this->load->view("customer/user/form", $data, true);
 			$this->load->view("customer/layout/main_wrapper", $data);
 		}
+	}
+	//shifted to other controller. 
+
+	public function sponsorbalance(){
+
+		$user_id = $this->input->post('user_id');
+		$vallet = $this->deshboard_model->get_cata_wais_transections($user_id);
+		print_r(json_encode($vallet));
+		exit;
 	}
 
 	public function network(){

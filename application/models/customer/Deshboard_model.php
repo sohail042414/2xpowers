@@ -2,22 +2,42 @@
 
 class Deshboard_model extends CI_Model {
 
-	public function get_cata_wais_transections()
+	public function get_cata_wais_transections($user_id =NULL)
 	{
+		if($user_id == NULL){
+			$user_id = $this->session->userdata('user_id');
+		}
 		
 		// My Payout
 		$my_payout = $this->db->select("sum(amount) as earns2")
 			->from('earnings')
-			->where('user_id',$this->session->userdata('user_id'))
+			->where('user_id',$user_id)
 			->where('earning_type','type2')
 			->get()
 			->row();
 		$pay = $my_payout->earns2;
 
+		// Deductions fro ROI's (negative transections)
+		$negative_payout = $this->db->select("sum(amount) as negative_earning")
+		->from('earnings')
+		->where('user_id',$user_id)
+		->where('earning_type','type2')
+		->where('amount<',0)
+		->get()
+		->row();
+
+		// echo $this->db->last_query();
+		// exit;
+	
+
+		$negative_roi_sum = abs($negative_payout->negative_earning);
+		
+		$pay = $my_payout->earns2;
+
 		//Package Commission
 		$commission = $this->db->select("sum(amount) as earns1")
 			->from('earnings')
-			->where('user_id',$this->session->userdata('user_id'))
+			->where('user_id',$user_id)
 			->where('earning_type','type1')
 			->get()
 			->row();
@@ -26,7 +46,7 @@ class Deshboard_model extends CI_Model {
 		//user lavel bonus
 		$bonus = $this->db->select("sum(bonus) as bonuss")
 			->from('user_level')
-			->where('user_id',$this->session->userdata('user_id'))
+			->where('user_id',$user_id)
 			->get()
 			->row();
 		$team_bonus = $bonus->bonuss;
@@ -38,7 +58,7 @@ class Deshboard_model extends CI_Model {
 		//team bonus
 		$teambonus = $this->db->select("*")
 			->from('team_bonus')
-			->where('user_id',$this->session->userdata('user_id'))
+			->where('user_id',$user_id)
 			->get()
 			->row();
 
@@ -49,7 +69,7 @@ class Deshboard_model extends CI_Model {
 
 		$data = $this->db->select('*')
 		->from('transections')
-		->where('user_id',$this->session->userdata('user_id'))
+		->where('user_id',$user_id)
 		->where('status',1)
 		->get()
 		->result();
@@ -63,6 +83,8 @@ class Deshboard_model extends CI_Model {
 		$tras = 0;
 		$reciver = 0;
 		$individule = array();
+		$company_balance =0;
+		$promotion_balance =0;
 
 		foreach ($data as $value) {
 
@@ -74,6 +96,12 @@ class Deshboard_model extends CI_Model {
 
 				$dep = $dep + $value->amount;
 				$individule['deposit'] = $dep;
+
+				if(is_object($deposit) && $deposit->deposit_type == 'normal_credit'){
+					$company_balance+=$value->amount; 
+				}else if(is_object($deposit) && $deposit->deposit_type == 'promotion_credit'){
+					$promotion_balance+=$value->amount; 
+				}
 			}
 
 			if(@$value->transection_category=='withdraw'){
@@ -109,17 +137,27 @@ class Deshboard_model extends CI_Model {
 		}
 
 
-			$individule['commission'] = @$pack_commission;
-			$individule['my_earns'] = @$pay;
+			$individule['commission'] = empty(@$pack_commission) ? 0: $pack_commission ;
+			$individule['my_earns'] = empty(@$pay) ? 0 : $pay;
 			$individule['team_bonus'] = @$team_bonus;
 			$individule['team_commission'] = @$team_commission;
 			$individule['sponser_commission'] = @$sponser_commission;
+			$individule['promotion_balance'] = $promotion_balance;
+			$individule['company_balance'] = $company_balance;
 
 			//TOTAL FEES
 			$total_fees = (@$individule['d_fees']+@$individule['w_fees']+@$individule['t_fees']);
 			#-----------------------
 
 			$individule['balance'] = (@$individule['deposit']+@$total_earn+@$individule['reciver'])-(@$individule['withdraw']+@$individule['investment']+@$individule['transfar']+@$total_fees);
+
+			$individule['balance'] = $individule['balance']+$negative_roi_sum;
+			$individule['balance'] = $individule['balance']+@$individule['w_fees'];
+			$individule['negative_roi_sum'] = $negative_roi_sum;
+
+			// echo '<pre>';
+			// print_r($individule);
+			// exit; 
 
 			return $individule;
 		

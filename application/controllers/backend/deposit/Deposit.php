@@ -104,7 +104,7 @@ class Deposit extends CI_Controller {
         $page = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
         $data['deposit'] = $this->db->select('*')->from('deposit')
         ->where('status',0)
-        ->where('deposit_method','phone')
+        //->where('deposit_method','phone')
         ->limit($config["per_page"], $page)
         ->get()
         ->result();

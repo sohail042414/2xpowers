@@ -88,7 +88,7 @@ class Deposit extends CI_Controller
                 'fees'              => $this->input->post('fees', TRUE),
                 'comments'          => $comment,
                 'deposit_date'      => $deposit_date,
-                'deposit_ip'        => $this->input->ip_address(),
+                'deposit_ip'        => $this->input->ip_address()
             );
 
             //Store Deposit Session Data
@@ -109,20 +109,31 @@ class Deposit extends CI_Controller
     {
        
         $data['title']  = display('deposit');
-       
+        
+        $data['admin_wallet'] = "13TnnxuUMQKeMj1JnQHvZuKYWo15W1pNfi";
+
         if ($this->session->userdata('deposit')) {
-            $data['deposit'] = $this->session->userdata('deposit');
+            $data['deposit'] = $this->session->userdata('deposit');                
 
             //Payment Type specify for callback (deposit/buy/sell etc )
-            $this->session->set_userdata('payment_type', 'deposit');
-
+            $this->session->set_userdata('payment_type', 'deposit');            
             $method  = $data['deposit']->deposit_method;
+
+            if($method == 'bitcoin'){
+                $deposit = $data['deposit'];
+                $this->db->insert('deposit',$deposit);
+                $this->session->unset_userdata('payment_type');
+                $this->session->unset_userdata('deposit');
+            }
+
             $data['deposit_data']   = $this->payment->payment_process($data['deposit'], $method);
+            /*
             if (!$data['deposit_data']) {
                 $this->session->set_flashdata('exception', display('this_gateway_deactivated'));
                 redirect('customer/deposit');
 
             }
+            */
 
         }else{
             $this->session->set_flashdata('exception', "Something went wrong!!!");

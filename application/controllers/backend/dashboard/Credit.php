@@ -89,6 +89,7 @@ class Credit extends CI_Controller {
                 'user_id'           => $this->input->post('user_id'),
                 'deposit_amount'    => $this->input->post('amount'),
                 'deposit_method'    => 'admin',
+                'deposit_type'    => $this->input->post('deposit_type'),
                 'fees'              => 0.0,
                 'comments'          => $this->input->post('note'),
                 'deposit_date'      => date('Y-m-d h:i:s'),

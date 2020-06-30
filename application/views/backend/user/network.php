@@ -34,7 +34,7 @@ img.star {
 
 .node {
     background: #5b69bc;
-    height: 120px !important;
+    height: 160px !important;
     width: 160px !important;
     border: 1px solid #e1e6ef;
     font-family: sans-serif;
@@ -47,7 +47,7 @@ img.star {
         <div class="panel panel-bd lobidrag">
             <div class="panel-heading">
                 <div class="panel-title">
-                    <h2><?php echo (!empty($title)?$title:null) ?></h2>
+                    <h2><?php echo (!empty($title)?$title:null) ?> | Total points: <?php echo $total_points; ?></h2>
                 </div>
             </div>
             <div class="panel-body">

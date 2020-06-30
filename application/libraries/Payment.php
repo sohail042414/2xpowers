@@ -9,6 +9,10 @@ class Payment
         $CI =& get_instance();
         $gateway = $CI->db->select('*')->from('payment_gateway')->where('identity', $method)->where('status',1)->get()->row();        
 
+        // echo '<pre>';
+        // print_r($gateway);
+        // exit; 
+
         if ($method=='bitcoin') {            
 
             /********************************
@@ -17,6 +21,8 @@ class Payment
             if ($gateway) {
 
                 $coin = 'speedcoin';
+                //$coin = 'bitcoin';
+
                 // if($sdata->currency_symbol=='BCH'){
                 //     $coin = 'bitcoincash';
                 // }elseif($sdata->currency_symbol=='LTC'){
@@ -130,6 +136,7 @@ class Payment
                     $options = array(
                         "public_key"    => $public_key,
                         "private_key"   => $private_key,
+                        "webdev_key"    => '', 
                         "webdev_key"    => 'DEV1124G19CFB313A993D68G453342148', 
                         "orderID"       => $orderID,
                         "userID"        => $userID,
@@ -165,7 +172,7 @@ class Payment
                     $data['debug']          = true;
 
                     // Text above payment box
-                    $data['custom_text']  = "";
+                    //$data['custom_text']  = "This is testing comment from sohail.";
 
 
                 return $data;

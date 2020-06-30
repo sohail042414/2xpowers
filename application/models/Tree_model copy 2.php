@@ -311,22 +311,18 @@ class Tree_model extends CI_Model{
 		if(is_object($left) && is_object($right) && $this->generation_level <= 10){
 
 			$total_points_left = $this->get_total_points($left);
-			/*
+
 			if($this->has_children($left)){
 				$left_points = $left->business_points;
 			}else{
 				$left_points = $left->points;
 			}
-			
+
 			if($this->has_children($right)){
 				$right_points = $right->business_points;
 			}else{
 				$right_points = $right->points;
 			}
-			*/
-
-			$left_points = $this->get_total_points($left);
-			$right_points = $this->get_total_points($right);
 
 			$user_investment = $this->db->select('*')
 			->from('investment')
@@ -632,8 +628,8 @@ class Tree_model extends CI_Model{
 	}
 
 	public function get_total_points($user){
-		$this->total_points =0;
-		$this->get_sub_total($user);
+		$this->total_points = 0;
+		$this->total_points += $this->get_sub_total($user);
 		return $this->total_points;
 	}
 
@@ -656,8 +652,6 @@ class Tree_model extends CI_Model{
 			}
 
 		}
-		
-		return;
 		 
 	}
 }

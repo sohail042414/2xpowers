@@ -19,6 +19,17 @@
                             </div>
 
                             <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Balance Type *</label>
+                                <div class="col-sm-8">
+                                    <select name="balance_type" class="form-control">
+                                        <?php foreach($vallets  as $id => $name){ ?>
+                                        <option value="<?php echo $id; ?>" ><?php echo $name; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label for="p_name" class="col-sm-4 col-form-label"><?php echo display('payment_method');?></label>
                                 <div class="col-sm-8">
                                     <select class="form-control basic-single" name="method" onchange="WalletId(this.value)" >

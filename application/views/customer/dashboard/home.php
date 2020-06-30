@@ -1,3 +1,11 @@
+<style>
+    .social_share ul li {
+    width: 25% !important;
+    float: left;
+    padding-right: 5px;
+}
+</style>
+
                     <div class="row">
                         <div class="form-group">
                             <label class="col-sm-2 col-form-label"><?php echo display('affiliate_url');?> </label>
@@ -24,7 +32,9 @@
                         <ul>
                             <li class="whatsapp"><a href="<?php echo base_url()?>customer/commission/my_payout"> <span><?php //echo display('my_payout')?>Daily ROI $<?php echo (@$my_earns?number_format($my_earns, 2):'0.0');?></span></a></li>
                             <li class="facebook"><a href="<?php echo base_url()?>customer/commission/my_commission"> <span><?php echo display('commission')?> $<?php echo (@$commission?number_format($commission, 2):'0.0');?></span></a></li>
-                            <li class="twitter"><a href="<?php echo base_url()?>customer/commission/team_bonus"> <span><?php echo display('bonus')?>  $<?php echo ($team_bonus?number_format($team_bonus, 2):'0.0');?></span></a></li>
+                            <li class="twitter" style="display:none;"><a href="<?php echo base_url()?>customer/commission/team_bonus"> <span><?php echo display('bonus')?>  $<?php echo ($team_bonus?number_format($team_bonus, 2):'0.0');?></span></a></li>
+                            <li class="twitter"><a href="#"> <span><?php //echo display('bonus')?>Company Balance  $<?php echo ($company_balance?number_format($company_balance, 2):'0.0'); ?></span></a></li>
+                            <li class="whatsapp"><a href="#"> <span><?php //echo display('bonus')?>Promotion Balance  $<?php echo ($promotion_balance?number_format($promotion_balance, 2):'0.0'); ?></span></a></li>
                         </ul>
                     </div>
 
@@ -43,13 +53,13 @@
                         <div class="col-sm-6 col-md-3">
                             <div class="count_panel">
                                 <div class="stats-title ">
-                                    <h4><?php echo display('team_turnover')?></h4>
+                                    <h4><?php //echo display('team_turnover')?>Binary Commission</h4>
                                 </div>
                                 <h1 class="currency_text text-success">$<?php echo (@$team_commission!=0?number_format($team_commission, 2):'0.0');?></h1>
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-sm-6 col-md-3" style="display: none;">
                             <div class="count_panel">
                                 <div class="stats-title ">
                                     <h4><?php echo display('personal_turnover')?></h4>
@@ -62,7 +72,7 @@
                         <div class="col-sm-6 col-md-3">
                             <div class="count_panel">
                                 <div class="stats-title ">
-                                    <h4><?php echo display('balance');?></h4>
+                                    <h4><?php echo "Total ".display('balance');?></h4>
                                 </div>
                                 <h1 class="currency_text text-info"> $<?php echo number_format($balance, 2);?></h1>
                             </div>

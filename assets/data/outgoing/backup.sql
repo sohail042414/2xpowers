@@ -1315,3 +1315,69 @@ WHERE `user_id` = '2XPOWR';
 INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `last_update`) VALUES ('2XPOWR', 1234, 1234, '2020-06-06 11:28:34');
 UPDATE `team_bonus` SET `sponser_commission` = 1234, `team_commission` = 1234, `last_update` = '2020-06-06 11:28:34'
 WHERE `user_id` = '2XPOWR';
+UPDATE `admin` SET `last_login` = '2020-06-07 21:18:04', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_login` = '2020-06-09 15:26:59', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_logout` = '2020-06-09 21:18:56'
+WHERE `id` IS NULL;
+UPDATE `admin` SET `last_login` = '2020-06-30 12:36:42', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `user_registration` SET `f_name` = 'left', `l_name` = '2xp', `email` = 'left_2xp@gmail.com', `phone` = '234234', `status` = 1, `roi_status` = 1
+WHERE `user_id` IS NULL;
+UPDATE `user_registration` SET `f_name` = 'left', `l_name` = '2xp', `email` = 'left_2xp@gmail.com', `phone` = '234234', `status` = 0, `roi_status` = 1
+WHERE `user_id` IS NULL;
+UPDATE `user_registration` SET `f_name` = 'left', `l_name` = '2xp', `email` = 'left_2xp@gmail.com', `phone` = '234234', `status` = 0, `roi_status` = 1
+WHERE `user_id` IS NULL;
+UPDATE `user_registration` SET `user_id` = 'F3FREC', `f_name` = 'left', `l_name` = '2xp232', `email` = 'left_2xp@gmail.com', `phone` = '234234', `status` = 1, `roi_status` = 1
+WHERE `user_id` = 'F3FREC';
+UPDATE `user_registration` SET `user_id` = 'F3FREC', `f_name` = 'left', `l_name` = '2xp232', `email` = 'left_2xp@gmail.com', `phone` = '234234', `status` = 0, `roi_status` = 1
+WHERE `user_id` = 'F3FREC';
+UPDATE `user_registration` SET `user_id` = 'F3FREC', `f_name` = 'left', `l_name` = '2xp232', `email` = 'left_2xp@gmail.com', `phone` = '234234', `status` = 0, `roi_status` = 0
+WHERE `user_id` = 'F3FREC';
+UPDATE `user_registration` SET `user_id` = 'F3FREC', `f_name` = 'left', `l_name` = '2xp232', `email` = 'left_2xp@gmail.com', `phone` = '234234', `status` = 1, `roi_status` = 0
+WHERE `user_id` = 'F3FREC';
+UPDATE `user_registration` SET `user_id` = 'F3FREC', `f_name` = 'left', `l_name` = '2xp232', `email` = 'left_2xp@gmail.com', `phone` = '234234', `status` = 1, `roi_status` = 1
+WHERE `user_id` = 'F3FREC';
+UPDATE `user_registration` SET `user_id` = 'F3FREC', `f_name` = 'left2', `l_name` = '2xp232', `email` = 'left_2xp@gmail.com', `phone` = '234234', `status` = 1, `roi_status` = 1
+WHERE `user_id` = 'F3FREC';
+UPDATE `user_registration` SET `user_id` = 'F3FREC', `f_name` = 'left2', `l_name` = '2xp232', `email` = 'left_2xp@gmail.com', `phone` = '234234', `status` = 0, `roi_status` = 1
+WHERE `user_id` = 'F3FREC';
+UPDATE `user_registration` SET `user_id` = '303NWX', 0 = '597cac4a12b8e34bbe9f446083cc82fc'
+WHERE `user_id` = '303NWX';
+UPDATE `user_registration` SET `user_id` = '303NWX', `password` = '597cac4a12b8e34bbe9f446083cc82fc'
+WHERE `user_id` = '303NWX';
+UPDATE `user_registration` SET `user_id` = 'F3FREC', `password` = '09695af009443bee4cf498a4723824e8'
+WHERE `user_id` = 'F3FREC';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`, `roi_status`, `points`, `created`, `modified`) VALUES ('', 'GOWC9J', '2XPOWR', 'left', '303NWX', 'testing', '23', 'asdfasdf', 'testing@gmail.com', 'ae2b1fca515949e5d54fb22b8ed95575', '2343', '127.0.0.1', '0', '0', '80', '2020-06-30 15:44:06', '2020-06-30 15:44:06');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`) VALUES ('2XPOWR', 'GOWC9J', '100', 0, '127.0.0.1', '2020-06-30 03:44:06', 'Initial account create transfer from parent to child', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2XPOWR', 'transfer', 47, '100', 'Initial transfer to GOWC9J on account creation from parent', '2020-06-30 03:44:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('GOWC9J', 'reciver', 47, '100', 'Initial transfer to GOWC9J on account creation from parent', '2020-06-30 03:44:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`) VALUES ('GOWC9J', '2XPOWR', '1', '100', '2020-06-30', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('GOWC9J', 'investment', 51, '100', '2020-06-30', 1, 'User GOWC9J Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('GOWC9J', 0, 0, 1, '2020-06-30 03:44:06');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('GOWC9J', 0, 0, 1, '2020-06-30 03:44:06');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2XPOWR', 'GOWC9J', 'type1', '1', 10, '2020-06-30');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`, `roi_status`, `points`, `created`, `modified`) VALUES ('', 'RCWJ5M', '2XPOWR', 'left', 'F3FREC', 'testing12', 'testing', '233test', 'testing12@gmail.com', 'd66d0c18d08103b4012243e2f3780338', '123123123', '127.0.0.1', '0', '0', '80', '2020-06-30 15:45:52', '2020-06-30 15:45:52');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`) VALUES ('2XPOWR', 'RCWJ5M', '100', 0, '127.0.0.1', '2020-06-30 03:45:52', 'Initial account create transfer from parent to child', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2XPOWR', 'transfer', 48, '100', 'Initial transfer to RCWJ5M on account creation from parent', '2020-06-30 03:45:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('RCWJ5M', 'reciver', 48, '100', 'Initial transfer to RCWJ5M on account creation from parent', '2020-06-30 03:45:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`) VALUES ('RCWJ5M', '2XPOWR', '1', '100', '2020-06-30', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('RCWJ5M', 'investment', 52, '100', '2020-06-30', 1, 'User RCWJ5M Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('RCWJ5M', 0, 0, 1, '2020-06-30 03:45:52');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('RCWJ5M', 0, 0, 1, '2020-06-30 03:45:52');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2XPOWR', 'RCWJ5M', 'type1', '1', 10, '2020-06-30');
+UPDATE `user_registration` SET `user_id` = 'RCWJ5M', `f_name` = 'testing', `l_name` = '233test', `email` = 'testing12@gmail.com', `phone` = '123123123', `status` = 1, `roi_status` = 0
+WHERE `user_id` = 'RCWJ5M';
+UPDATE `user_registration` SET `user_id` = 'RCWJ5M', `f_name` = 'testing', `l_name` = '233test', `email` = 'testing12@gmail.com', `phone` = '123123123', `status` = 1, `roi_status` = 1
+WHERE `user_id` = 'RCWJ5M';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('303NWX', '303NWX', 'type2', '5', '50', '0', '2020-06-30');
+INSERT INTO `message` (`sender_id`, `receiver_id`, `subject`, `message`, `datetime`) VALUES (1, '303NWX', 'Payout', 'You received your payout. Your new balance is $0', '2020-06-30 12:00:00');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('F3FREC', 'F3FREC', 'type2', '8', '49', '0', '2020-06-30');
+INSERT INTO `message` (`sender_id`, `receiver_id`, `subject`, `message`, `datetime`) VALUES (1, 'F3FREC', 'Payout', 'You received your payout. Your new balance is $0', '2020-06-30 12:00:00');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('2XPOWR', '2XPOWR', 'type2', '9', '18', '0', '2020-06-30');
+INSERT INTO `message` (`sender_id`, `receiver_id`, `subject`, `message`, `datetime`) VALUES (1, '2XPOWR', 'Payout', 'You received your payout. Your new balance is $87150', '2020-06-30 12:00:00');
+INSERT INTO `cron_jobs` (`name`, `log`) VALUES ('payout', '<br> ROI disabled for user  testing, Not processing this user.<br> Adding ROI for user 303NWX on Package 5 for date 2020-06-30<br> Adding ROI for user F3FREC on Package 8 for date 2020-06-30<br> Adding ROI for user 2XPOWR on Package 9 for date 2020-06-30');
+INSERT INTO `cron_jobs` (`name`, `log`) VALUES ('payout', '<br> ROI disabled for user  testing, Not processing this user.<br> ROI already exists for user 303NWX on Package 5 for date 2020-06-30<br> ROI already exists for user F3FREC on Package 8 for date 2020-06-30<br> ROI already exists for user 2XPOWR on Package 9 for date 2020-06-30');
+INSERT INTO `cron_jobs` (`name`, `log`) VALUES ('payout', '<br> ROI disabled for user  testing, Not processing this user.<br> ROI already exists for user 303NWX on Package 5 for date 2020-06-30<br> ROI already exists for user F3FREC on Package 8 for date 2020-06-30<br> ROI already exists for user 2XPOWR on Package 9 for date 2020-06-30');
+INSERT INTO `cron_jobs` (`name`, `log`) VALUES ('payout', '<br> ROI disabled for user  testing, Not processing this user.<br> ROI already exists for user 303NWX on Package 5 for date 2020-06-30<br> ROI already exists for user F3FREC on Package 8 for date 2020-06-30<br> ROI already exists for user 2XPOWR on Package 9 for date 2020-06-30');

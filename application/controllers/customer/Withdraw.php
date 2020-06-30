@@ -27,6 +27,15 @@ class Withdraw extends CI_Controller
     public function index()
     {   
 
+        $this->load->model('customer/deshboard_model');
+        $vallets = $this->deshboard_model->get_cata_wais_transections();
+        $data['vallets'] = array(
+            'roi_balance' => "Daily ROI ($". $vallets['my_earns'].")",
+            'commission' => "Commission ($".$vallets['commission'].")",
+            //'company_balance' => "Company Balance ($".$vallets['company_balance'].")",
+            //'promotion_balance' => "Promotion Balance ($".$vallets['promotion_balance'].")",            
+        );
+
         $data['title']   = display('withdraw');
         $data['payment_gateway'] = $this->common_model->payment_gateway();
         $data['content'] = $this->load->view('customer/pages/withdraw', $data, true);
@@ -94,23 +103,75 @@ public function withdraw_details($id=NULL)
 
 }
 
+    public function balance_type($balance_type){
+
+
+        $post_data = $this->input->post();
+        
+        if($post_data['amount'] < 100 || $post_data['amount'] > 1000){
+            $this->form_validation->set_message('balance_type', 'Amount should be between $100 and $1000.');
+            return FALSE;
+        }
+
+        $this->load->model('customer/deshboard_model');
+        $vallets = $this->deshboard_model->get_cata_wais_transections();
+
+        //$roi_50_percent = (int)(0.5*$vallets['my_earns']);
+        //$commission_50_percent = (int)(0.5*$vallets['commission']);
+
+        if($balance_type =='roi_balance' && $post_data['amount'] > $vallets['my_earns']){
+            $this->form_validation->set_message('balance_type', 'Balance not sufficient in ROI');
+            return FALSE;
+        }
+
+        if($balance_type =='commission' && $post_data['amount'] > $vallets['commission']){
+            $this->form_validation->set_message('balance_type', 'Balance not sufficient in commission');
+            return FALSE;
+        }
+
+        return TRUE;
+    }
+
+
 
     public function store()
     {
+        
+        $balance_type = $this->input->post('balance_type');  
+
+        $this->load->model('customer/deshboard_model');
+        
+        $data['payment_gateway'] = $this->common_model->payment_gateway();
+       
+        $vallets = $this->deshboard_model->get_cata_wais_transections();        
+        $data['vallets'] = array(
+            'roi_balance' => "Daily ROI ($". $vallets['my_earns'].")",
+            'commission' => "Commission ($".$vallets['commission'].")",
+            //'company_balance' => "Company Balance ($".$vallets['company_balance'].")",
+            //'promotion_balance' => "Promotion Balance ($".$vallets['promotion_balance'].")",            
+        );
+
         $this->form_validation->set_rules('amount', display('amount'), 'required'); 
         $this->form_validation->set_rules('varify_media', 'OTP Send To', 'required'); 
         $this->form_validation->set_rules('walletid', 'Wallet id', 'required'); 
-       
+		$this->form_validation->set_rules('balance_type', "Balance Type", "required|callback_balance_type[]"); 
+         
         $appSetting = $this->common_model->get_setting();
 
         if($this->form_validation->run()){
 
             $varify_media = $this->input->post('varify_media');
             $varify_code = $this->randomID();
+            /*
             #----------------------------
             // check balance 
-            $blance = $this->check_balance($this->input->post('amount'));
+            //$blance = $this->check_balance($this->input->post('amount'));            
             #----------------------------
+            */
+            //for now do nto apply fees.
+            
+            $blance=TRUE;
+            
             if($blance!=true){
 
                 $this->session->set_flashdata('exception', display('balance_is_unavailable'));
@@ -165,19 +226,20 @@ public function withdraw_details($id=NULL)
                         'walletid' => $this->input->post('walletid'),
                         'request_ip' => $this->input->ip_address(),
                         'request_date' => date('Y-m-d h:i:s'),
-                        'method' => $this->input->post('method')
+                        'method' => $this->input->post('method'),
+                        'balance_type' => $balance_type,
                     );
 
 
-                        $varify_data = array(
+                    $varify_data = array(
 
-                            'ip_address' => $this->input->ip_address(),
-                            'user_id' => $this->session->userdata('user_id'),
-                            'session_id' => $this->session->userdata('isLogIn'),
-                            'verify_code' => $varify_code,
-                            'data' => json_encode($withdraw)
+                        'ip_address' => $this->input->ip_address(),
+                        'user_id' => $this->session->userdata('user_id'),
+                        'session_id' => $this->session->userdata('isLogIn'),
+                        'verify_code' => $varify_code,
+                        'data' => json_encode($withdraw)
 
-                        );
+                    );
 
                     $result = $this->transfer_model->save_transfer_verify($varify_data);
                  
@@ -337,6 +399,39 @@ public function withdraw_details($id=NULL)
                 'amount'                    => $t_data['amount'],
                 'transection_date_timestamp'=> date('Y-m-d h:i:s')
             );
+
+
+            if($t_data['balance_type'] == 'roi_balance'){
+                
+                //deduct from sender
+                $paydata1 = array(
+                    'user_id'       => $this->session->userdata('user_id'),
+                    'Purchaser_id'  => $this->session->userdata('user_id'),
+                    'earning_type'  => 'type2',
+                    'package_id'    => 0,
+                    'order_id'      => 0,
+                    'amount'        => (0-$t_data['amount']),
+                    'date'          => date('Y-m-d'),
+                );
+
+                $this->db->insert('earnings',$paydata1);
+
+            }else if($t_data['balance_type'] == 'commission'){
+
+                //deduct from sender
+                $paydata1 = array(
+                    'user_id'       => $this->session->userdata('user_id'),
+                    'Purchaser_id'  => $this->session->userdata('user_id'),
+                    'earning_type'  => 'type1',
+                    'package_id'    => 0,
+                    'order_id'      => 0,
+                    'amount'        => (0-$t_data['amount']),
+                    'date'          => date('Y-m-d'),
+                );
+
+                $this->db->insert('earnings',$paydata1);
+
+            }
 
             $this->transections_model->save_transections($transections_data);
             $this->db->set('status',0)

@@ -118,7 +118,8 @@ class Cryptobox {
 	
 	// Internal Variables
 	
-	private $boxID			= 0; 		// cryptobox id, the same as on gourl.io member page. For each your cryptocoin payment boxes you will have unique public / private keys 
+	//private $boxID			= 0;
+	private $boxID			= 50200;  		// cryptobox id, the same as on gourl.io member page. For each your cryptocoin payment boxes you will have unique public / private keys 
 	private $coinLabel		= ""; 		// current cryptocoin label (BTC, DOGE, etc.) 
 	private $coinName		= ""; 		// current cryptocoin name (Bitcoin, Dogecoin, etc.) 
 	private $paid			= false;	// paid or not

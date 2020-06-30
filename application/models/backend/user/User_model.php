@@ -2,7 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_model extends CI_Model {
- 
+	
+	public function __construct()
+	{
+		$this->load->model('tree_model');
+	}
 	
 	public function create($data = array())
 	{
@@ -27,7 +31,7 @@ class User_model extends CI_Model {
 
 		$user = $this->single($id);
 
-		//$sponser_user = $this->get_by_user_id($user->sponsor_id);
+		$sponser_user = $this->get_by_user_id($user->sponsor_id);
 
 		$sponsor_investment = $this->db->select('*')
 		->from('investment')
@@ -132,6 +136,201 @@ class User_model extends CI_Model {
 
 		$this->db->insert('earnings',$commission);
 
+		$post_data = $this->input->post();
+
+		//deduct from appropriate balances. 
+		if($post_data['company_balance_used'] > 0){
+
+			//deduct from sender
+			$deposit_data = array(
+				'user_id'           => $sponser_user->user_id,
+				'deposit_amount'    => (0-$post_data['company_balance_used']),
+				'deposit_method'    => 'admin',
+				'deposit_type'    => 'normal_credit',
+				'fees'              => 0.0,
+				'comments'          => 'Transfer of Company Balance on account creation of '.$user->user_id,
+				'deposit_date'      => date('Y-m-d h:i:s'),
+				'deposit_ip'        => $this->input->ip_address(),
+				'status'            => 1
+			);
+
+			$insert_deposit = $this->db->insert('deposit',$deposit_data);
+			$insert_id = $this->db->insert_id();
+
+			if($insert_id){
+
+				$transections_data = array(
+				'user_id'                   => $sponser_user->user_id,
+				'transection_category'      => 'deposit',
+				'releted_id'                => $insert_id,
+				'amount'                    => (0-$post_data['company_balance_used']),
+				'comments'                  => 'Transfer of Company Balance on account creation of '.$user->user_id,
+				'transection_date_timestamp'=> date('Y-m-d h:i:s')
+				);
+				$this->db->insert('transections',$transections_data);
+
+			}
+
+			//add to receiver
+			/*
+            $deposit_data_recv = array(
+                'user_id'           => $user->user_id,
+                'deposit_amount'    => $post_data['company_balance_used'],
+                'deposit_method'    => 'admin',
+                'deposit_type'    => 'normal_credit',
+                'fees'              => 0.0,
+                'comments'          => 'Transfer of Company Balance on account creation of '.$user->user_id,
+                'deposit_date'      => date('Y-m-d h:i:s'),
+                'deposit_ip'        => $this->input->ip_address(),
+                'status'            => 1
+            );
+
+            $this->db->insert('deposit',$deposit_data_recv);
+            $insert_id = $this->db->insert_id();
+
+            if($insert_id){
+
+                $transections_data_recv = array(
+                'user_id'                   => $user->user_id,
+                'transection_category'      => 'deposit',
+                'releted_id'                => $insert_id,
+                'amount'                    => $post_data['company_balance_used'],
+                'comments'                  => 'Transfer of Company Balance on account creation of '.$user->user_id,
+                'transection_date_timestamp'=> date('Y-m-d h:i:s')
+                );
+                $this->db->insert('transections',$transections_data_recv);
+
+			}
+			*/
+		}
+		
+		if($post_data['promotion_balance_used'] > 0){
+
+            //deduct from sender
+            $deposit_data = array(
+                'user_id'           => $sponser_user->user_id,
+                'deposit_amount'    => (0-$post_data['promotion_balance_used']),
+                'deposit_method'    => 'admin',
+                'deposit_type'    => 'promotion_credit',
+                'fees'              => 0.0,
+                'comments'          => 'Transfer of Company Balance on account creation of '.$user->user_id,
+                'deposit_date'      => date('Y-m-d h:i:s'),
+                'deposit_ip'        => $this->input->ip_address(),
+                'status'            => 1
+            );
+
+            $insert_deposit = $this->db->insert('deposit',$deposit_data);
+            $insert_id = $this->db->insert_id();
+
+            if($insert_id){
+
+                $transections_data = array(
+                'user_id'                   => $this->session->userdata('user_id'),
+                'transection_category'      => 'deposit',
+                'releted_id'                => $insert_id,
+                'amount'                    => (0-$post_data['promotion_balance_used']),
+                'comments'                  => 'Transfer of Company Balance on account creation of '.$user->user_id,
+                'transection_date_timestamp'=> date('Y-m-d h:i:s')
+                );
+                $this->db->insert('transections',$transections_data);
+
+            }
+
+			//add to receiver
+			/*
+            $deposit_data_recv = array(
+                'user_id'           => $user->user_id,
+                'deposit_amount'    => $post_data['promotion_balance_used'],
+                'deposit_method'    => 'admin',
+                'deposit_type'    => 'promotion_credit',
+                'fees'              => 0.0,
+                'comments'          => 'Transfer of Company Balance on account creation of '.$user->user_id,
+                'deposit_date'      => date('Y-m-d h:i:s'),
+                'deposit_ip'        => $this->input->ip_address(),
+                'status'            => 1
+            );
+
+            $insert_deposit = $this->db->insert('deposit',$deposit_data_recv);
+            $insert_id = $this->db->insert_id();
+
+            if($insert_id){
+
+                $transections_data_recv = array(
+                'user_id'                   => $user->user_id,
+                'transection_category'      => 'deposit',
+                'releted_id'                => $insert_id,
+                'amount'                    => $post_data['promotion_balance_used'],
+                'comments'                  => 'Transfer of Company Balance on account creation of '.$user->user_id,
+                'transection_date_timestamp'=> date('Y-m-d h:i:s')
+                );
+                $this->db->insert('transections',$transections_data_recv);
+
+            }
+			*/
+
+		}
+
+
+		if($post_data['commission_used'] > 0){
+            //deduct from sender
+            $paydata1 = array(
+                'user_id'       => $sponser_user->user_id,
+                'Purchaser_id'  => $user->user_id,
+                'earning_type'  => 'type2',
+                'package_id'    => 0,
+                'order_id'      => 0,
+                'amount'        => (0-$post_data['commission_used']),
+                'date'          => date('Y-m-d'),
+            );
+
+            $this->db->insert('earnings',$paydata1);
+			//add to receiver
+			/*
+            $paydata = array(
+                'user_id'       => $user->user_id,
+                'Purchaser_id'  => $user->user_id,
+                'earning_type'  => 'type2',
+                'package_id'    => 0,
+                'order_id'      => 0,
+                'amount'        => $post_data['commission_used'],
+                'date'          => date('Y-m-d'),
+            );
+			$this->db->insert('earnings',$paydata);
+			*/
+
+		}
+		
+		if($post_data['roi_used'] > 0){
+            //deduct from sender
+            $paydata1 = array(
+                'user_id'       => $sponser_user->user_id,
+                'Purchaser_id'  =>  $user->user_id,
+                'earning_type'  => 'type1',
+                'package_id'    => 0,
+                'order_id'      => 0,
+                'amount'        => (0-$post_data['roi_used']),
+                'date'          => date('Y-m-d'),
+            );
+
+            $this->db->insert('earnings',$paydata1);
+			 
+			//add to receiver
+			 /*
+            $paydata = array(
+                'user_id'       => $user->user_id,
+                'Purchaser_id'  => $user->user_id,
+                'earning_type'  => 'type1',
+                'package_id'    => 0,
+                'order_id'      => 0,
+                'amount'        => $post_data['roi_used'],
+                'date'          => date('Y-m-d'),
+            );
+			$this->db->insert('earnings',$paydata);
+			*/
+
+        }
+		
+
 		return true;
 
 	}
@@ -160,7 +359,7 @@ class User_model extends CI_Model {
 
 	public function update($data = array())
 	{
-		unset($data['package_id']);
+		//unset($data['package_id']);
 		return $this->db->where('user_id', $data["user_id"])
 			->update("user_registration", $data);
 	}
@@ -430,12 +629,15 @@ class User_model extends CI_Model {
 		$tree_html = '<ul id="organisation" style="display:none;">';
 		$tree_html.= '<li>';
 
-		$tree_html.= '<em>'.$user->f_name.' '.$user->l_name.'(Pts:'.$user->business_points.')</em>';		
+		//$tree_html.= '<em>'.$user->f_name.' '.$user->l_name.'(Pts:'.$user->business_points.')</em>';	
+		$tree_html.= '<em>'.$user->f_name.' '.$user->l_name.'</em>';		
 		if($package !=FALSE){
 			$tree_html.= '<div class="row">';
 			$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
 			$tree_html.= '<h3>'.$package->package_name.'($'.$package->package_amount.')</h3>';
-			$tree_html.='<h3>Power : '.$user->power_leg.'</h3>';
+			//$tree_html.='<h3>Power : '.$user->power_leg.'</h3>';
+			//$tree_html.='<h3>Total : '.$this->tree_model->get_total_points($user).'</h3>';
+			//$tree_html.=$this->show_points($user,$children);
 			$tree_html.= '</div>';
 			$tree_html.= '</div>';
 		}
@@ -457,12 +659,15 @@ class User_model extends CI_Model {
 
 			$children = $this->get_children($child->user_id);
 
-			$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.' (Pts:'.$child->business_points.')</em>';
+			//$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.' (Pts:'.$child->business_points.')</em>';
+			$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.'</em>';
 			if($package !=FALSE){
 				$tree_html.= '<div class="row">';
 				$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
 				$tree_html.= '<h3>'.$package->package_name.'($'.$package->package_amount.')</h3>';
-				$tree_html.='<h3>Power : '.$child->power_leg.'</h3>';
+				//$tree_html.='<h3>Power : '.$child->power_leg.'</h3>';
+				//$tree_html.='<h3>Total : '.$this->tree_model->get_total_points($child).'</h3>';
+				//$tree_html.=$this->show_points($user,$children);
 				$tree_html.= '</div>';
 				$tree_html.= '</div>';
 			}
@@ -513,12 +718,15 @@ class User_model extends CI_Model {
 
 				$children = $this->get_children($child->user_id);
 
-				$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.'(Pts:'.$child->business_points.')</em>';
+				//$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.'(Pts:'.$child->business_points.')</em>';
+				$tree_html.= '<em>'.$child->f_name.' '.$child->l_name.'</em>';
 				if($package !=FALSE){
 					$tree_html.= '<div class="row">';
 					$tree_html.= '<div class="col-lg-12 col-sm-12 col-md-12">';
 					$tree_html.= '<h3>'.$package->package_name.'($'.$package->package_amount.')</h3>';
-					$tree_html.='<h3>Power : '.$child->power_leg.'</h3>';
+					//$tree_html.='<h3>Power : '.$child->power_leg.'</h3>';
+					//$tree_html.='<h3>Total : '.$this->tree_model->get_total_points($child).'</h3>';
+					//$tree_html.=$this->show_points($user,$children);
 					$tree_html.= '</div>';
 					$tree_html.= '</div>';
 				}
@@ -540,6 +748,14 @@ class User_model extends CI_Model {
 
 		return $tree_html;
 		
+	}
+
+	public function show_points($user,$children){
+		$html ='<h3>Total : '.$this->tree_model->get_total_points($user).'</h3>';
+		foreach($children as $child){
+			$html.='<h3>'.strtoupper(substr($child->position,0,1)).' : '.$this->tree_model->get_total_points($child).'</h3>';
+		}
+		return $html;
 	}
 
 	private function get_add_buttons($children,$user,$isAdmin){

@@ -1,9 +1,14 @@
 <?php
 
 	define("DB_HOST",     'localhost');				
-	define("DB_USER",     'phpmyadmin');		
-	define("DB_PASSWORD", 'phpmy_pass');		
-	define("DB_NAME",     'local_2xpowers');
+	define("DB_USER",     'codetghy_2xuser');		
+	define("DB_PASSWORD", 'dnwCOe-da#=,');		
+	define("DB_NAME",     'codetghy_2xpower');
+
+	// 'hostname' => 'localhost',
+    // 'username' => 'codetghy_2xuser',
+    // 'password' => 'dnwCOe-da#=,',
+    // 'database' => 'codetghy_2xpower',
 
 	$con=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
 	// Check connection

@@ -78,7 +78,8 @@ class User extends CI_Controller {
 			$row[] = '<a href="'.base_url("backend/user/user/user_details/$users->uid").'">'.$users->username.'</a>';
 			$row[] = $users->email;
 			$row[] = $users->phone;
-			$row[] = '<a href="'.base_url("backend/user/user/form/$users->uid").'"'.' class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="left" title="Update"><i class="fa fa-pencil" aria-hidden="true"></i></a>';
+			$row[] = '<a href="'.base_url("backend/user/user/update/$users->uid").'"'.' class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="left" title="Update"><i class="fa fa-pencil" aria-hidden="true"></i></a>';
+			$row[] = '<a href="'.base_url("backend/user/user/change_password/$users->uid").'"'.' class="btn btn-info btn-sm" data-toggle="tooltip" data-placement="left" title="Change Password"><i class="fa fa-lock" aria-hidden="true"></i></a>';
 			$row[] = '<a href="'.base_url("backend/user/user/remove/$users->uid").'"'.' class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="left" title="Update"><i class="fa fa-trash" aria-hidden="true"></i></a>';
 
 			$data[] = $row;
@@ -174,10 +175,10 @@ class User extends CI_Controller {
 			$this->session->set_userdata('position',$position);
 		}
 
-		redirect("backend/user/user/form");
+		redirect("backend/user/user/create");
 	}
 
-	public function form($uid = null)
+	public function create()
 	{ 
 
 		$data['title']  = display('add_user');
@@ -187,8 +188,9 @@ class User extends CI_Controller {
 
 		$parent = $this->session->userdata('parent');
 		$position = $this->session->userdata('position');
-		$package_id = $this->input->post('package_id');
 		
+		$package_id = $this->input->post('package_id');
+
 		$data['packages'] = $this->package_model->get_list();
 		
 		//$data['positions'] = $this->user_model->get_positions();
@@ -199,40 +201,51 @@ class User extends CI_Controller {
 
 		//parent can only be one selected from tree
 		$parent = $this->user_model->get_by_user_id($parent);
-		$data['parents'] = [
-			$parent->user_id => $parent->f_name.' '.$parent->l_name."(".$parent->user_id.")"
-		];
-
-		/*-----------------------------------*/
-		$this->form_validation->set_rules('username', display('username'),'required|max_length[20]');
-		//$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),'required|max_length[6]');		
-		$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),"required|max_length[6]|callback_sponsor_id_check[$package_id]");		
-		$this->form_validation->set_rules('f_name', display('firstname'),'required|max_length[50]');
-		$this->form_validation->set_rules('l_name', display('lastname'),'required|max_length[50]');
-
-		$this->form_validation->set_rules('parent', display('parent'),"required|max_length[6]|callback_parent_check[$position]");
-		#------------------------#
-		if (!empty($uid)) {   
-       		$this->form_validation->set_rules('username', display("username"), "required|max_length[100]|callback_username_check[$uid]|trim"); 
-		} else {
-			$this->form_validation->set_rules('username', display('username'),'required|is_unique[user_registration.username]|max_length[20]');
-		} 
-		#------------------------#
-		if (!empty($uid)) {   
-       		$this->form_validation->set_rules('email', 'Email Address', "required|valid_email|max_length[100]|callback_email_check[$uid]|trim"); 
-		} else {
-			$this->form_validation->set_rules('email', display('email'),'required|valid_email|is_unique[user_registration.email]|max_length[100]');
+		if(is_object($parent)){
+			$data['parents'] = [
+				$parent->user_id => $parent->f_name.' '.$parent->l_name."(".$parent->user_id.")"
+			];
+		}else{
+			$data['parents'] = array();
 		}
 
 
-		#------------------------#
+		$data['user'] = (object) array(
+			'uid' 		  => '',
+			'user_id' 	  => $this->randomID(),
+			'sponsor_id'  => '',
+			'package_id'  => '',
+			'position'  => $position,
+			'parent'  => $parent,
+			'username'    => '',
+			'f_name' 	  => '',
+			'l_name' 	  => '',
+			'email' 	  => '',
+			'password' 	  => '',
+			'phone' 	  => '',
+			'reg_ip'      => '',
+			'status'      => 1,
+			'roi_status'      => 1,
+		);
+
+		/*-----------------------------------*/
+		$this->form_validation->set_rules('username', display('username'),'required|max_length[20]');	
+		$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),"required|max_length[6]|callback_sponsor_id_check[$package_id]");		
+		$this->form_validation->set_rules('f_name', display('firstname'),'required|max_length[50]');
+		$this->form_validation->set_rules('l_name', display('lastname'),'required|max_length[50]');
+		$this->form_validation->set_rules('parent', display('parent'),"required|max_length[6]|callback_parent_check[$position]");
+		$this->form_validation->set_rules('username', display('username'),'required|is_unique[user_registration.username]|max_length[20]');
+		$this->form_validation->set_rules('email', display('email'),'required|valid_email|is_unique[user_registration.email]|max_length[100]');
 		$this->form_validation->set_rules('password', display('password'),'required|min_length[6]|max_length[32]|md5');
 		$this->form_validation->set_rules('conf_password', display('conf_password'),'required|min_length[6]|max_length[32]|md5|matches[password]');
 		$this->form_validation->set_rules('mobile', display('mobile'),'max_length[30]');
 		$this->form_validation->set_rules('status', display('status'),'required|max_length[1]');
 		/*-----------------------------------*/ 
-		if (empty($uid))
-		{ 
+
+		$submit = $this->input->post('submit');
+
+		if(!empty($submit)){
+			
 			$data['user'] = (object)$userdata = array(
 				'uid' 		  => $this->input->post('uid'),
 				'user_id' 	  => $this->randomID(),
@@ -248,68 +261,151 @@ class User extends CI_Controller {
 				'phone' 	  => $this->input->post('mobile'),
 				'reg_ip'      => $this->input->ip_address(),
 				'status'      => $this->input->post('status'),
+				'roi_status'      => $this->input->post('roi_status'),
 			);
-		}
-		else
-		{
-			$data['user'] = (object)$userdata = array(
-				'uid' 		  => $this->input->post('uid'),
-				'user_id' 	  => $this->input->post('user_id'),
-				'sponsor_id'  => $this->input->post('sponsor_id'),
-				'package_id'  => $this->input->post('package_id'),
-				'position'  => $this->input->post('position'),
-				'parent'  => $this->input->post('parent'),
-				'username'    => $this->input->post('username'),
-				'f_name' 	  => $this->input->post('f_name'),
-				'l_name' 	  => $this->input->post('l_name'),
-				'email' 	  => $this->input->post('email'),
-				'password' 	  => md5($this->input->post('password')),
-				'phone' 	  => $this->input->post('mobile'),
-				'reg_ip'      => $this->input->ip_address(),
-				'status'      => $this->input->post('status'),
-			);
-		}
-		/*-----------------------------------*/
-		if ($this->form_validation->run()) 
-		{
 
-			$uid_query = $this->db->select('user_id')->where('user_id', $this->input->post('sponsor_id'))->get('user_registration')->row();
-			if (!$uid_query) {
-				$this->session->set_flashdata('exception', "Valid Sponsor Id Required");
-				redirect("backend/user/user/form");
-			}
-
-			if (empty($uid)) 
-			{
-				//if ($this->user_model->create($userdata)) {
-				if ($this->tree_model->create_user($userdata)) {
+			/*-----------------------------------*/
+			if ($this->form_validation->run()) 
+			{						
+				//if ($this->tree_model->create_user($userdata)) {
+				if ($this->user_model->create($userdata)) {
 					$this->session->set_flashdata('message', display('save_successfully'));
 				} else {
 					$this->session->set_flashdata('exception', display('please_try_again'));
 				}
-				redirect("backend/user/user/form");
+				redirect("backend/user/user/");
 
 			} 
-			else 
+
+		}
+
+		$data['content'] = $this->load->view("backend/user/create", $data, true);
+		$this->load->view("backend/layout/main_wrapper", $data);
+
+	}
+
+
+	public function update($uid)
+	{ 
+
+		$data['title'] = display('edit_user');
+
+		$this->load->model('backend/package/package_model');
+		$this->load->model('tree_model');
+		
+		$data['user'] = $user = $this->user_model->single($uid);
+
+		$user_investment = $this->db->select('*')
+		->from('investment')
+		->where('user_id', $user->user_id)
+		->get()
+		->row();
+
+		$parent = $user->parent;
+
+		$position = $user->position;
+		$package_id = $user_investment->package_id;
+
+		$data['packages'] = $this->package_model->get_single_list($package_id);
+
+		//giv option to select only position choosen from tree, not all 
+		$data['positions'] = $this->user_model->get_positions($position);
+		//get sponsers based on parent selected. 
+		
+		$sponsor = $this->user_model->get_by_user_id($user->sponsor_id);
+
+		$data['sponsers'] = array(
+			$sponsor->user_id => $sponsor->f_name.' '.$sponsor->l_name."(".$sponsor->user_id.")"
+		);
+
+		//parent can only be one selected from tree
+		$parent = $this->user_model->get_by_user_id($parent);
+		if(is_object($parent)){
+			$data['parents'] = [
+				$parent->user_id => $parent->f_name.' '.$parent->l_name."(".$parent->user_id.")"
+			];
+		}else{
+			$data['parents'] = array();
+		}
+
+		/*-----------------------------------*/
+
+		$this->form_validation->set_rules('f_name', display('firstname'),'required|max_length[50]');
+		$this->form_validation->set_rules('l_name', display('lastname'),'required|max_length[50]');
+		$this->form_validation->set_rules('email', 'Email Address', "required|valid_email|max_length[100]|callback_email_check[$uid]|trim"); 
+		$this->form_validation->set_rules('mobile', display('mobile'),'max_length[30]');
+		$this->form_validation->set_rules('status', display('status'),'required|max_length[1]');
+		$this->form_validation->set_rules('roi_status', "ROI Status",'required|max_length[1]');
+
+		/*-----------------------------------*/
+		$submit = $this->input->post('submit');
+
+		if(!empty($submit)){
+			
+			if ($this->form_validation->run()) 
 			{
+				//update fields that are allowed to update not all. 
+				$userdata = array(
+					'user_id' => $user->user_id,
+					'f_name' 	  => $this->input->post('f_name'),
+					'l_name' 	  => $this->input->post('l_name'),
+					'email' 	  => $this->input->post('email'),
+					'phone' 	  => $this->input->post('mobile'),
+					'status'      => (int)$this->input->post('status'),
+					'roi_status'      => (int)$this->input->post('roi_status'),
+				);
+				
 				if ($this->user_model->update($userdata)) {
 					$this->session->set_flashdata('message', display('update_successfully'));
 				} else {
 					$this->session->set_flashdata('exception', display('please_try_again'));
 				}
-				redirect("backend/user/user/form/$uid");
+
+				redirect("backend/user/user/update/$uid");
 			}
-		} 
-		else 
-		{ 
-			if(!empty($uid)) {
-				$data['title'] = display('edit_user');
-				$data['user']   = $this->user_model->single($uid);
-			}
-			
-			$data['content'] = $this->load->view("backend/user/form", $data, true);
-			$this->load->view("backend/layout/main_wrapper", $data);
 		}
+		
+
+		$data['content'] = $this->load->view("backend/user/update", $data, true);
+		$this->load->view("backend/layout/main_wrapper", $data);
+	}
+
+	public function change_password($uid)
+	{ 
+
+		$data['user'] = $user =  $this->user_model->single($uid);
+	
+		$data['title']  = "Change Password";
+
+		#------------------------#
+		$this->form_validation->set_rules('password', display('password'),'required|min_length[6]|max_length[32]|md5');
+		$this->form_validation->set_rules('conf_password', display('conf_password'),'required|min_length[6]|max_length[32]|md5|matches[password]');
+
+	
+		$submit = $this->input->post('submit');
+
+		if(!empty($submit)){
+			
+			if ($this->form_validation->run()) 
+			{
+				//update fields that are allowed to update not all. 
+				$userdata = array(
+					'user_id' => $user->user_id,
+					'password' => md5($this->input->post('password')),
+				);
+				
+				if ($this->user_model->update($userdata)) {
+					$this->session->set_flashdata('message', display('update_successfully'));
+				} else {
+					$this->session->set_flashdata('exception', display('please_try_again'));
+				}
+				
+			}
+		}
+			
+		$data['content'] = $this->load->view("backend/user/change_password", $data, true);
+		$this->load->view("backend/layout/main_wrapper", $data);
+	
 	}
 
 	public function user_details($uid = null)
@@ -328,14 +424,18 @@ class User extends CI_Controller {
 
 	public function network(){
 
-		$top_user = $this->user_model->get_top_user();
 
+		$this->load->model('tree_model');
+
+		$top_user = $this->user_model->get_top_user();
 		$data['user'] = $top_user;
 
 		$isAdmin = $this->session->userdata('isAdmin');
 		
 		//$data['network_tree'] = $this->user_model->get_network_tree($top_user->user_id);
 		$data['network_tree_html'] = $this->user_model->get_network_tree_html($top_user->user_id,$isAdmin);
+
+		$data['total_points'] = $this->tree_model->get_total_points($top_user);
 
 		$data['title'] = 'Network Tree';
 		$data['content'] = $this->load->view("backend/user/network", $data, true);

@@ -78,4 +78,20 @@ class Ajaxload extends CI_Controller
 
     }
 
+    /*
+|---------------------------------
+|   check reciver user Id
+|---------------------------------
+*/
+public function sponsorbalance()
+{   
+    
+    $this->load->model('customer/deshboard_model');
+    $user_id = $this->input->post('user_id');
+    $vallet = $this->deshboard_model->get_cata_wais_transections($user_id);
+    print_r(json_encode($vallet));
+    exit;
+
+}
+
 }

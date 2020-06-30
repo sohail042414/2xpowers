@@ -30,9 +30,18 @@ class Transfer extends CI_Controller
     */
     public function index()
     {   
-         $data['title']   = display('transfer'); 
-         $data['content'] = $this->load->view('customer/transfer/transfar', $data, true);
-         $this->load->view('customer/layout/main_wrapper', $data);  
+
+        $this->load->model('customer/deshboard_model');
+        $vallets = $this->deshboard_model->get_cata_wais_transections();
+        $data['vallets'] = array(
+            'roi_balance' => "Daily ROI ($". $vallets['my_earns'].")",
+            'commission' => "Commission ($".$vallets['commission'].")",
+            'company_balance' => "Company Balance ($".$vallets['company_balance'].")",
+            'promotion_balance' => "Promotion Balance ($".$vallets['promotion_balance'].")",            
+        );
+        $data['title']   = display('transfer'); 
+        $data['content'] = $this->load->view('customer/transfer/transfar', $data, true);
+        $this->load->view('customer/layout/main_wrapper', $data);  
     }
 
     /*
@@ -134,9 +143,13 @@ class Transfer extends CI_Controller
     public function store()
     {
 
+
         $this->form_validation->set_rules('receiver_id', display('receiver_id'), 'required'); 
         $this->form_validation->set_rules('amount', display('amount'), 'required'); 
         $this->form_validation->set_rules('varify_media', 'OTP Send To', 'required'); 
+
+        $balance_type = $this->input->post('balance_type');
+        //$this->form_validation->set_rules('username', display("username"), "required|max_length[100]|callback_username_check[$uid]|trim"); 
 
         if($this->form_validation->run()){
 
@@ -148,7 +161,8 @@ class Transfer extends CI_Controller
             
             #----------------------------
             // check balance 
-            $blance = $this->check_balance($amount);
+            //$blance = $this->check_balance($amount);
+            $blance = $this->check_balance_all();
             $appSetting = $this->common_model->get_setting();
             #----------------------------
             if($blance!=true){
@@ -159,7 +173,6 @@ class Transfer extends CI_Controller
             } else {
 
 
-                
                     if($varify_media==2){
 
                         #----------------------------
@@ -210,14 +223,14 @@ class Transfer extends CI_Controller
                     'date' => date('Y-m-d h:i:s'),
                     'comments' => $this->input->post('comments'),
                     'status' => 1,
-
+                    'balance_type' => $balance_type,
                 );
 
                 $varify_data = array(
 
                     'ip_address' => $this->input->ip_address(),
                     'user_id' => $this->session->userdata('user_id'),
-                    'session_id' => $this->session->userdata('isLogIn'),
+                    'session_id' => $this->session->userdata('isLogIn'),                   
                     'verify_code' => $varify_code,
                     'data' => json_encode($transfar_data)
 
@@ -293,9 +306,8 @@ class Transfer extends CI_Controller
     public function transfer_verify()
     {
 
-
-    $code = $this->input->post('code');
-    $id = $this->input->post('id');
+        $code = $this->input->post('code');
+        $id = $this->input->post('id');
 
         $data = $this->db->select('*')
         ->from('verify_tbl')
@@ -307,15 +319,194 @@ class Transfer extends CI_Controller
         ->row();
 
         if($data!=NULL) {
-
+        
         $t_data = ((array) json_decode($data->data));
-
-
+        
+        $balance_type = $t_data['balance_type'];
+        unset($t_data['balance_type']);
 
         $result = $this->transfer_model->transfer($t_data);
 
         $appSetting = $this->common_model->get_setting();
         $set = $this->common_model->email_sms('email');
+
+        if($balance_type == 'company_balance'){
+
+            //deduct from sender
+            $deposit_data = array(
+                'user_id'           => $this->session->userdata('user_id'),
+                'deposit_amount'    => (0-$t_data['amount']),
+                'deposit_method'    => 'admin',
+                'deposit_type'    => 'normal_credit',
+                'fees'              => 0.0,
+                'comments'          => 'Transfer of Company Balance',
+                'deposit_date'      => date('Y-m-d h:i:s'),
+                'deposit_ip'        => $this->input->ip_address(),
+                'status'            => 1
+            );
+
+            $insert_deposit = $this->db->insert('deposit',$deposit_data);
+            $insert_id = $this->db->insert_id();
+
+            if($insert_id){
+
+                $transections_data = array(
+                'user_id'                   => $this->session->userdata('user_id'),
+                'transection_category'      => 'deposit',
+                'releted_id'                => $insert_id,
+                'amount'                    => (0-$t_data['amount']),
+                'comments'                  => 'Transfer of Company Balance',
+                'transection_date_timestamp'=> date('Y-m-d h:i:s')
+                );
+                $this->db->insert('transections',$transections_data);
+
+            }
+
+            //add to receiver
+            $deposit_data_recv = array(
+                'user_id'           => $t_data['receiver_user_id'],
+                'deposit_amount'    => $t_data['amount'],
+                'deposit_method'    => 'admin',
+                'deposit_type'    => 'normal_credit',
+                'fees'              => 0.0,
+                'comments'          => 'Transfer of Company Balance',
+                'deposit_date'      => date('Y-m-d h:i:s'),
+                'deposit_ip'        => $this->input->ip_address(),
+                'status'            => 1
+            );
+
+            $insert_deposit = $this->db->insert('deposit',$deposit_data_recv);
+            $insert_id = $this->db->insert_id();
+
+            if($insert_id){
+
+                $transections_data_recv = array(
+                'user_id'                   => $t_data['receiver_user_id'],
+                'transection_category'      => 'deposit',
+                'releted_id'                => $insert_id,
+                'amount'                    => $t_data['amount'],
+                'comments'                  => 'Transfer of Company Balance',
+                'transection_date_timestamp'=> date('Y-m-d h:i:s')
+                );
+                $this->db->insert('transections',$transections_data_recv);
+
+            }
+        }else if($balance_type == 'promotion_balance'){
+
+            //deduct from sender
+            $deposit_data = array(
+                'user_id'           => $this->session->userdata('user_id'),
+                'deposit_amount'    => (0-$t_data['amount']),
+                'deposit_method'    => 'admin',
+                'deposit_type'    => 'promotion_credit',
+                'fees'              => 0.0,
+                'comments'          => 'Transfer of Promotion Balance',
+                'deposit_date'      => date('Y-m-d h:i:s'),
+                'deposit_ip'        => $this->input->ip_address(),
+                'status'            => 1
+            );
+
+            $insert_deposit = $this->db->insert('deposit',$deposit_data);
+            $insert_id = $this->db->insert_id();
+
+            if($insert_id){
+
+                $transections_data = array(
+                'user_id'                   => $this->session->userdata('user_id'),
+                'transection_category'      => 'deposit',
+                'releted_id'                => $insert_id,
+                'amount'                    => (0-$t_data['amount']),
+                'comments'                  => 'Transfer of Promotion Balance',
+                'transection_date_timestamp'=> date('Y-m-d h:i:s')
+                );
+                $this->db->insert('transections',$transections_data);
+
+            }
+
+            //add to receiver
+            $deposit_data_recv = array(
+                'user_id'           => $t_data['receiver_user_id'],
+                'deposit_amount'    => $t_data['amount'],
+                'deposit_method'    => 'admin',
+                'deposit_type'    => 'promotion_credit',
+                'fees'              => 0.0,
+                'comments'          => 'Transfer of Promotion Balance',
+                'deposit_date'      => date('Y-m-d h:i:s'),
+                'deposit_ip'        => $this->input->ip_address(),
+                'status'            => 1
+            );
+
+            $insert_deposit = $this->db->insert('deposit',$deposit_data_recv);
+            $insert_id = $this->db->insert_id();
+
+            if($insert_id){
+
+                $transections_data_recv = array(
+                'user_id'                   => $t_data['receiver_user_id'],
+                'transection_category'      => 'deposit',
+                'releted_id'                => $insert_id,
+                'amount'                    => $t_data['amount'],
+                'comments'                  => 'Transfer of Promotion Balance',
+                'transection_date_timestamp'=> date('Y-m-d h:i:s')
+                );
+                $this->db->insert('transections',$transections_data_recv);
+
+            }
+
+
+        }else if($balance_type == 'roi_balance'){
+            //deduct from sender
+            $paydata1 = array(
+                'user_id'       => $this->session->userdata('user_id'),
+                'Purchaser_id'  => $t_data['receiver_user_id'],
+                'earning_type'  => 'type2',
+                'package_id'    => 0,
+                'order_id'      => 0,
+                'amount'        => (0-$t_data['amount']),
+                'date'          => date('Y-m-d'),
+            );
+
+            $this->db->insert('earnings',$paydata1);
+            //add to receiver
+            $paydata = array(
+                'user_id'       => $t_data['receiver_user_id'],
+                'Purchaser_id'  => $this->session->userdata('user_id'),
+                'earning_type'  => 'type2',
+                'package_id'    => 0,
+                'order_id'      => 0,
+                'amount'        => $t_data['amount'],
+                'date'          => date('Y-m-d'),
+            );
+
+            $this->db->insert('earnings',$paydata);
+
+        }else if($balance_type =='commission'){
+            //deduct from sender
+            $paydata1 = array(
+                'user_id'       => $this->session->userdata('user_id'),
+                'Purchaser_id'  => $t_data['receiver_user_id'],
+                'earning_type'  => 'type1',
+                'package_id'    => 0,
+                'order_id'      => 0,
+                'amount'        => (0-$t_data['amount']),
+                'date'          => date('Y-m-d'),
+            );
+
+            $this->db->insert('earnings',$paydata1);
+             //add to receiver
+            $paydata = array(
+                'user_id'       => $t_data['receiver_user_id'],
+                'Purchaser_id'  => $this->session->userdata('user_id'),
+                'earning_type'  => 'type1',
+                'package_id'    => 0,
+                'order_id'      => 0,
+                'amount'        => $t_data['amount'],
+                'date'          => date('Y-m-d'),
+            );
+
+            $this->db->insert('earnings',$paydata);
+
+        }
 
             $transections_data = array(
                 'user_id'                   => $this->session->userdata('user_id'),
@@ -459,6 +650,26 @@ class Transfer extends CI_Controller
         } else {
             return false;
         }
+    }
+
+    public function check_balance_all(){
+
+        $this->load->model('customer/deshboard_model');
+        $vallets = $this->deshboard_model->get_cata_wais_transections();
+        
+        $amount = $this->input->post('amount');
+        $balance_type = $this->input->post('balance_type');
+
+        if($balance_type =='roi_balance' && $amount > $vallets['my_earns']){
+            return FALSE;
+        }else if($balance_type == 'commission' && $amount > $vallets['commission']){
+            return FALSE;
+        }else if($balance_type == 'company_balance' && $amount > $vallets['company_balance']){
+            return FALSE;
+        }else if($balance_type == 'promotion_balance' && $amount > $vallets['promotion_balance']){
+            return FALSE;
+        }
+        return true;
     }
 
     /*

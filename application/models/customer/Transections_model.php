@@ -48,9 +48,10 @@ class Transections_model extends CI_Model {
 			if(@$value->transection_category=='deposit'){
 
 				$deposit = $this->getFees('deposit',$value->releted_id);
-				$dep_f = $dep_f + $deposit->fees;
-				$individule['d_fees'] = $dep_f;
-
+				if(is_object($deposit)){
+					$dep_f = $dep_f + $deposit->fees;
+					$individule['d_fees'] = $dep_f;
+				}
 				$dep = $dep + $value->amount;
 				$individule['deposit'] = $dep;
 			}

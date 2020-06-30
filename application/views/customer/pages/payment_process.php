@@ -93,10 +93,16 @@
         }
 
     </style>
+    <div class="col-lg-8 offset-lg-2">
+        <h2>Deposit created successfully</h2>
+        <p> Send payment in following wallet, we will approve your deposit once you send payment</p>
+        <p> If you have any queries, contact admin.</p>
+        <p style="color:green"> Wallet  : <b><?php echo $admin_wallet; ?></b></p>
+    </div>
 <?php
      
     // Display payment box  
-    echo $deposit_data['box']->display_cryptobox_bootstrap($deposit_data['coins'], $deposit_data['def_coin'], $deposit_data['def_language'], $deposit_data['custom_text'], $deposit_data['coinImageSize'], $deposit_data['qrcodeSize'], $deposit_data['show_languages'], $deposit_data['logoimg_path'], $deposit_data['resultimg_path'], $deposit_data['resultimgSize'], $deposit_data['redirect'], $deposit_data['method'], $deposit_data['debug']);
+    //echo $deposit_data['box']->display_cryptobox_bootstrap($deposit_data['coins'], $deposit_data['def_coin'], $deposit_data['def_language'], $deposit_data['custom_text'], $deposit_data['coinImageSize'], $deposit_data['qrcodeSize'], $deposit_data['show_languages'], $deposit_data['logoimg_path'], $deposit_data['resultimg_path'], $deposit_data['resultimgSize'], $deposit_data['redirect'], $deposit_data['method'], $deposit_data['debug']);
 
 ?>
 

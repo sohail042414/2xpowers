@@ -194,4 +194,11 @@ class common_model extends CI_Model {
 		->result();
 	}
 
+	public function get_countries(){
+		return $this->db->select('*')
+		->from('country')
+		->get()
+		->result();
+	}
+
 }
