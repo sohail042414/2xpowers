@@ -1381,3 +1381,22 @@ INSERT INTO `cron_jobs` (`name`, `log`) VALUES ('payout', '<br> ROI disabled for
 INSERT INTO `cron_jobs` (`name`, `log`) VALUES ('payout', '<br> ROI disabled for user  testing, Not processing this user.<br> ROI already exists for user 303NWX on Package 5 for date 2020-06-30<br> ROI already exists for user F3FREC on Package 8 for date 2020-06-30<br> ROI already exists for user 2XPOWR on Package 9 for date 2020-06-30');
 INSERT INTO `cron_jobs` (`name`, `log`) VALUES ('payout', '<br> ROI disabled for user  testing, Not processing this user.<br> ROI already exists for user 303NWX on Package 5 for date 2020-06-30<br> ROI already exists for user F3FREC on Package 8 for date 2020-06-30<br> ROI already exists for user 2XPOWR on Package 9 for date 2020-06-30');
 INSERT INTO `cron_jobs` (`name`, `log`) VALUES ('payout', '<br> ROI disabled for user  testing, Not processing this user.<br> ROI already exists for user 303NWX on Package 5 for date 2020-06-30<br> ROI already exists for user F3FREC on Package 8 for date 2020-06-30<br> ROI already exists for user 2XPOWR on Package 9 for date 2020-06-30');
+UPDATE `admin` SET `last_logout` = '2020-06-30 20:25:35'
+WHERE `id` IS NULL;
+UPDATE `admin` SET `last_login` = '2020-06-30 21:57:08', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `phone`, `reg_ip`, `status`, `roi_status`, `points`, `created`, `modified`) VALUES ('', 'FHA5CL', '2XPOWR', 'right', '303NWX', 'local_test', 'local', 'name', 'local_test@gmail.com', 'cae6139b77afaea9f612141eabd4f895', '234234', '127.0.0.1', '1', '1', '80', '2020-06-30 21:58:04', '2020-06-30 21:58:04');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`) VALUES ('2XPOWR', 'FHA5CL', '100', 0, '127.0.0.1', '2020-06-30 09:58:04', 'Initial account create transfer from parent to child', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2XPOWR', 'transfer', 49, '100', 'Initial transfer to FHA5CL on account creation from parent', '2020-06-30 09:58:04');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FHA5CL', 'reciver', 49, '100', 'Initial transfer to FHA5CL on account creation from parent', '2020-06-30 09:58:04');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`) VALUES ('FHA5CL', '2XPOWR', '1', '100', '2020-06-30', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FHA5CL', 'investment', 53, '100', '2020-06-30', 1, 'User FHA5CL Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('FHA5CL', 0, 0, 1, '2020-06-30 09:58:05');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('FHA5CL', 0, 0, 1, '2020-06-30 09:58:05');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2XPOWR', 'FHA5CL', 'type1', '1', 10, '2020-06-30');
+UPDATE `user_registration` SET `user_id` = 'FHA5CL', `password` = '2185de04e433aca2a0e03a04082768ab'
+WHERE `user_id` = 'FHA5CL';
+UPDATE `user_registration` SET `user_id` = 'FHA5CL', `password` = 'b4af804009cb036a4ccdc33431ef9ac9'
+WHERE `user_id` = 'FHA5CL';
+UPDATE `user_registration` SET `user_id` = 'FHA5CL', `password` = 'cae6139b77afaea9f612141eabd4f895'
+WHERE `user_id` = 'FHA5CL';

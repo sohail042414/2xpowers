@@ -373,25 +373,27 @@ class User extends CI_Controller {
 	public function change_password($uid)
 	{ 
 
+
+
 		$data['user'] = $user =  $this->user_model->single($uid);
 	
 		$data['title']  = "Change Password";
 
 		#------------------------#
-		$this->form_validation->set_rules('password', display('password'),'required|min_length[6]|max_length[32]|md5');
-		$this->form_validation->set_rules('conf_password', display('conf_password'),'required|min_length[6]|max_length[32]|md5|matches[password]');
+		$this->form_validation->set_rules('password', display('password'),'required|min_length[6]|max_length[32]');
+		$this->form_validation->set_rules('conf_password', display('conf_password'),'required|min_length[6]|max_length[32]|matches[password]');
 
-	
 		$submit = $this->input->post('submit');
 
 		if(!empty($submit)){
 			
 			if ($this->form_validation->run()) 
 			{
+				$password = $this->input->post('password');
 				//update fields that are allowed to update not all. 
 				$userdata = array(
 					'user_id' => $user->user_id,
-					'password' => md5($this->input->post('password')),
+					'password' => md5($password),					
 				);
 				
 				if ($this->user_model->update($userdata)) {
@@ -399,7 +401,8 @@ class User extends CI_Controller {
 				} else {
 					$this->session->set_flashdata('exception', display('please_try_again'));
 				}
-				
+
+				redirect("backend/user/user/");				
 			}
 		}
 			

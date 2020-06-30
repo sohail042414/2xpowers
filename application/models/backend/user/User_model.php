@@ -362,6 +362,8 @@ class User_model extends CI_Model {
 		//unset($data['package_id']);
 		return $this->db->where('user_id', $data["user_id"])
 			->update("user_registration", $data);
+
+		
 	}
 
 	public function delete($user_id = null)
