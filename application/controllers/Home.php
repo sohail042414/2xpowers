@@ -27,17 +27,15 @@ class Home extends CI_Controller
 
     public function index()
     {
-
         @$cat_id = $this->web_model->catidBySlug('home');
-
         //Language setting
         $data['lang']           = $this->langSet();
 
         $data['title']          = "Home";
         @$data['news']           = $this->db->select("*")->from('web_news')->order_by('article_id', 'desc')->limit(8)->get()->result();
         @$data['client']           = $this->web_model->article($this->web_model->catidBySlug('client')->cat_id);
-        @$data['cryptocoins']    = $this->db->select("Id, Url, ImageUrl, Name, Symbol,CoinName,FullName")->from('cryptolist')->order_by('SortOrder', 'asc')->limit(10,0)->get()->result();
-        @$data['testimonial']    = $this->web_model->article($this->web_model->catidBySlug('testimonial')->cat_id);
+        //@$data['cryptocoins']    = $this->db->select("Id, Url, ImageUrl, Name, Symbol,CoinName,FullName")->from('cryptolist')->order_by('SortOrder', 'asc')->limit(10,0)->get()->result();
+        //@$data['testimonial']    = $this->web_model->article($this->web_model->catidBySlug('testimonial')->cat_id);
         @$data['about']          = $this->web_model->article($this->web_model->catidBySlug('about')->cat_id);
         $data['article']        = $this->web_model->article($cat_id->cat_id);
         $data['slider']         = $this->web_model->active_slider();
@@ -78,13 +76,13 @@ class Home extends CI_Controller
         $data['lang']           = $this->langSet();
 
         $data['title']          = $this->uri->segment(1);
-        @$data['news']           = $this->db->select("*")->from('web_news')->order_by('article_id', 'desc')->limit(8)->get()->result();
+        //@$data['news']           = $this->db->select("*")->from('web_news')->order_by('article_id', 'desc')->limit(8)->get()->result();
         @$data['client']           = $this->web_model->article($this->web_model->catidBySlug('client')->cat_id);
-        @$data['cryptocoins']    = $this->db->select("Id, Url, ImageUrl, Name, Symbol,CoinName,FullName")->from('cryptolist')->order_by('SortOrder', 'asc')->limit(10,0)->get()->result();
-        @$data['testimonial']    = $this->web_model->article($this->web_model->catidBySlug('testimonial')->cat_id);
+        //@$data['cryptocoins']    = $this->db->select("Id, Url, ImageUrl, Name, Symbol,CoinName,FullName")->from('cryptolist')->order_by('SortOrder', 'asc')->limit(10,0)->get()->result();
+        //@$data['testimonial']    = $this->web_model->article($this->web_model->catidBySlug('testimonial')->cat_id);
         @$data['about']          = $this->web_model->article($this->web_model->catidBySlug('about')->cat_id);
-        $data['article']        = $this->web_model->article($cat_id->cat_id);
-        $data['slider']         = $this->web_model->active_slider();
+        //$data['article']        = $this->web_model->article($cat_id->cat_id);
+        //$data['slider']         = $this->web_model->active_slider();
 
         $this->load->view('website/header', $data);     
         $this->load->view('website/index', $data);
@@ -852,7 +850,7 @@ class Home extends CI_Controller
         
     }
 
-    public function login()
+    public function login_old()
     {
 
         if ($this->session->userdata('isLogIn'))
@@ -919,10 +917,80 @@ class Home extends CI_Controller
         }
 
         $this->load->view('website/header', $data);     
-        $this->load->view('website/register', $data);
+        $this->load->view('website/customer_login', $data);
         $this->load->view('website/footer', $data);
 
     }
+
+    public function customer_login(){
+        if ($this->session->userdata('isLogIn'))
+            redirect(base_url());
+
+        @$cat_id = $this->web_model->catidBySlug('register');
+        
+        $data['title']      = $this->uri->segment(1);
+        $data['article']    = $this->web_model->article($cat_id->cat_id);
+        $data['cat_info']   = $this->web_model->cat_info($this->uri->segment(1));
+
+        //Set Rules From validation
+        $this->form_validation->set_rules('email', display('email'), 'required|max_length[100]|trim');
+        $this->form_validation->set_rules('password', display('password'), 'required|max_length[32]|md5|trim');
+
+        $data['user'] = (object)$userData = array(
+            'email'      => $this->input->post('email'),
+            'password'   => $this->input->post('password'),
+        );
+        
+        //From Validation Check
+        if ($this->form_validation->run())
+        {            
+            $user = $this->web_model->checkUser($userData);
+            if($user->num_rows() > 0) {
+
+                if($user->row()->password==md5($userData['password']) && $user->row()->status==1) 
+                {
+                    $sData = array(
+                        'isLogIn'     => true,
+                        'id'          => $user->row()->uid,
+                        'user_id'     => $user->row()->user_id,
+                        'fullname'    => $user->row()->f_name.' '.$user->row()->l_name,
+                        'email'       => $user->row()->email,
+                        'sponsor_id'  => $user->row()->sponsor_id,
+                        'phone'       => $user->row()->phone,
+                    );
+                    //Store date to session & Login
+                    $this->session->set_userdata($sData);
+                    redirect(base_url());
+
+                }
+                else{
+                    if($user->row()->status==0){
+                        $this->session->set_flashdata('exception', display('account_active_mail'));
+                        //redirect(base_url('login#tab2'));
+
+                    }
+                    else{
+                        $this->session->set_flashdata('exception', display('incorrect_email_password'));
+                        //redirect(base_url('login#tab2'));
+
+                    }
+
+                }
+
+            }
+            else{
+                $this->session->set_flashdata('exception', display('incorrect_email_password'));
+                //redirect(base_url('login#tab2'));
+
+            }
+
+        }
+
+        $this->load->view('website/header', $data);     
+        $this->load->view('website/customer_login', $data);
+        $this->load->view('website/footer', $data);
+    }
+
 
     //Ajax Subscription Action
     public function subscribe()

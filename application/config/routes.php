@@ -83,6 +83,7 @@ $route['sells'] 				= 'home/sells';
 $route['buy'] 					= 'home/buy';
 $route['lending'] 				= 'home/lending';
 $route['pricing'] 				= 'home/lending';
+$route['customer_login'] 		= 'home/customer_login';
 $route['register'] 				= 'home/register';
 $route['login'] 				= 'home/login';
 $route['resetPassword'] 		= 'home/resetPassword';

@@ -37,6 +37,7 @@
                                         <?php foreach ($payment_gateway as $key => $value) {  ?>
                                         <option value="<?php echo $value->identity; ?>"><?php echo $value->agent; ?></option>
                                         <?php } ?>
+                                        <option value="bank_account">Bank Account</option>
                                     </select>
                                 </div>
                             </div>
@@ -92,16 +93,32 @@
             'data': {'method': method,'csrf_test_name':csrf_test_name },
             'dataType':'JSON',
             'success': function(data) { 
-               
+
                 if(data){
 
-                    $('[name="walletid"]').val(data.wallet_id);
-                    $('button[type=submit]').prop('disabled', false);
-                    $('#walletidis').text('Your Wallet Id Is '+data.wallet_id);
+                    if(method == 'bank_account'){
+                        
+                        $('button[type=submit]').prop('disabled', false);
+                        $('#walletidis').text('Your Bank Account Is '+data.bank_account);
+
+                    }else{ 
+
+                        $('[name="walletid"]').val(data.wallet_id);
+                        $('button[type=submit]').prop('disabled', false);
+                        $('#walletidis').text('Your Wallet Id Is '+data.wallet_id);
+                    }
                 
                 } else {
-                    $('button[type=submit]').prop('disabled', true);
-                    $('#walletidis').text('Your Have No Wallet Id ');
+
+                    if(method == 'bank_account'){
+                        
+                        $('button[type=submit]').prop('disabled', true);
+                        $('#walletidis').text('Your have not entered bank account, update your profile.');
+                    }else{
+
+                        $('button[type=submit]').prop('disabled', true);
+                        $('#walletidis').text('Your Have No Wallet Id ');
+                    }
                 }  
             }
         });

@@ -247,24 +247,12 @@ $countryArray = array(
             <div class="container">
                 <div class="col-sm-7 col-md-6">
                     <div class="">
-                        
-                        <div class="row">    
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                               <h2 style="color:white;">Register</h2> 
-                            </div>
-                        </div>
-
-                        <div class="row">    
-                            <div class="col-sm-12">
-                                <div class="input">                                    
-                                    Already have an account <a href="<?php echo base_url('customer_login'); ?>" class="checkbox-link">Login</a>
-                                </div>
-                                </div>
-                            </div>
-
+                        <ul class="nav nav-tabs">
+                            <li id="btntab1" class="active"><a href="#tab1" data-toggle="tab">Register</a></li>
+                            <li id="btntab2"><a href="#tab2" data-toggle="tab">Log in</a></li>
+                        </ul>
+                        <div class="tab-content">
                             <div class="row">
-                                
-
                                 <!-- alert message -->
                                 <?php if ($this->session->flashdata('message') != null) {  ?>
                                 <div class="alert alert-info alert-dismissable">
@@ -287,7 +275,7 @@ $countryArray = array(
                                 </div>
                                 <?php } ?> 
                             </div>
-                            
+                            <div class="tab-pane fade in active" id="tab1">
                                 <?php echo form_open('register','id="registerForm" name="registerForm" onsubmit="return validateForm()" '); ?>
                                 <div class="row">    
                                     <div class="col-sm-6">
@@ -417,7 +405,42 @@ $countryArray = array(
 
                                 <button type="submit" class="btn btn-reg"><?php echo display('sign_up'); ?></button>
                                 <?php echo form_close() ?>
-                        
+
+                            </div>
+                            <div class="tab-pane fade" id="tab2">
+                                <?php echo form_open('home/login','id="loginForm" '); ?>
+                                <div class="row">    
+                                    <div class="col-sm-12">
+                                        <div class="input">
+                                            <input class="input__field" type="text" name="email" id="useremail" autocomplete="off" required>
+                                            <label class="input__label" for="input">
+                                                <span class="input__label-content" data-content="<?php echo display('username_or_email'); ?>"><?php echo display('username_or_email'); ?></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">    
+                                    <div class="col-sm-12">
+                                        <div class="input">
+                                            <input class="input__field" type="password" name="password" id="password" required>
+                                            <label class="input__label" for="password">
+                                                <span class="input__label-content" data-content="<?php echo display('password'); ?>"><?php echo display('password'); ?></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">    
+                                    <div class="col-sm-12">
+                                        <div class="input">
+                                            <a href="#" data-toggle="modal" data-target="#forgotModal" class="forgot"><?php echo display('forgot_password'); ?>?</a><?php echo display('dont_have_an_account'); ?>? <a href="<?php echo base_url('register'); ?>" class="checkbox-link"><?php echo display('sign_up_now'); ?></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-reg"><?php echo display('login'); ?></button>
+                                <?php echo form_close();?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -5,6 +5,7 @@ $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 
     //datatable
+    
     $('.datatable').DataTable({ 
         responsive: true, 
         dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>tp", 
@@ -31,7 +32,7 @@ $(document).ready(function () {
             {extend: 'print', className: 'btn-sm'} 
         ] 
     });
- 
+    
 
     //datepicker
     $(".datepicker").datepicker({

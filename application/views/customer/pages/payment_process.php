@@ -4,7 +4,6 @@
             <h2><?php echo $title; ?></h2>
                 <?php if ($deposit->deposit_method=='bitcoin') { ?>
 
-
     <script src="<?php echo base_url("gourl/js/support.min.js"); ?>" crossorigin="anonymous"></script> 
     <!-- CSS for Payment Box -->
     <style>

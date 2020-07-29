@@ -113,6 +113,8 @@ class Credit extends CI_Controller {
                 $this->db->insert('transections',$transections_data);
 
             }
+
+            
             $this->session->set_flashdata('message','Send the amount successfully');
             redirect('backend/dashboard/credit/add_credit');
 

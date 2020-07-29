@@ -50,7 +50,7 @@ $settings = $this->db->select("*")
                             </ul>
                         </li>
                         <?php } else{ ?>
-                        <li><a href="<?php echo base_url('register'); ?>#tab2" class="btn nav-btn"><?php echo display('login'); ?></a></li>
+                        <li><a href="<?php echo base_url('customer_login'); ?>" class="btn nav-btn"><?php echo display('login'); ?></a></li>
                         <?php } ?>
 
                     </ul>

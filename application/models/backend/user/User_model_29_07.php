@@ -255,9 +255,277 @@ class User_model extends CI_Model {
 
 		$this->db->insert('earnings',$commission);
 
+		
+
 		return true;
 
 	}
+
+	private function add_binary_bonus($user,$package){
+
+		//left child
+		$left = $this->db->select('*')
+		->from('user_registration')
+		->where('parent',$user->user_id)
+		->where('position','left') 
+		->get()
+		->row();
+
+		//right child.
+		$right = $this->db->select('*')
+		->from('user_registration')
+		->where('parent',$user->user_id)
+		->where('position','right') 
+		->get()
+		->row();
+		
+		//if has ony left node, add businiss points what is on left.
+		if(is_object($left) && !is_object($right)){
+
+			if($this->generation_level == 1){
+
+				$update_from_left = array(
+					'business_points' => $left->points,
+					'power_leg' => 'left'
+				);
+
+			}else{
+
+				$update_from_left = array(
+					'business_points' => (int)$left->points+(int)$left->business_points,
+					'power_leg' => 'left'
+				);
+			}
+
+			$this->db->where('user_id',$user->user_id)->update('user_registration',$update_from_left);
+		}
+
+		//if has ony right node, add businiss points what is on right.
+		if(is_object($right) && !is_object($left)){
+
+			if($this->generation_level == 1){
+				$update_from_right = array(
+					'business_points' => $right->points,
+					'power_leg' => 'right'
+				);
+			}else{
+
+				$update_from_right = array(
+					'business_points' => (int)$right->points+(int)$right->business_points,
+					'power_leg' => 'right'
+				);
+			}
+			
+			$this->db->where('user_id',$user->user_id)->update('user_registration',$update_from_right);
+		}
+
+		//echo $this->db->last_query();
+
+		// echo "<br> Here after abc ";
+		// exit;
+
+		//check if both nodes exist.
+		if(is_object($left) && is_object($right) && $this->generation_level <= 10){
+
+			$total_points_left = $this->get_total_points($left);
+			/*
+			if($this->has_children($left)){
+				$left_points = $left->business_points;
+			}else{
+				$left_points = $left->points;
+			}
+			
+			if($this->has_children($right)){
+				$right_points = $right->business_points;
+			}else{
+				$right_points = $right->points;
+			}
+			*/
+
+			$left_points = $this->get_total_points($left);
+			$right_points = $this->get_total_points($right);
+
+			$user_investment = $this->db->select('*')
+			->from('investment')
+			->where('user_id', $user->user_id)
+			->get()
+			->row();
+
+			$user_package =  $this->db->select('*')
+			->from('package')
+			->where('package_id', $user_investment->package_id)
+			->get()
+			->row();
+
+			// echo "left Points : ".$left_points. ",  RIght point : ".$right_points;
+			// exit;
+
+			/*
+			if($this->generation_level ==1){
+				
+				$power_leg = 'right';
+				$points = $left->points;
+				$diff = $user->business_points - $left->points;
+				
+				if($right->points < $left->points){
+					$points = $right->points;
+					$diff = $user->business_points - $right->points;
+					$power_leg = 'left';					
+				}				
+				//when dealing first points business points
+				if($left->points == $right->points){
+					$power_leg = NULL;
+					$diff = $user->business_points - $left->points;
+					$points= $left->points;
+				}
+
+				$team_bonus = $this->db->select('*')
+				->from('team_bonus')
+				->where('user_id',$user->user_id)
+				->get()
+				->row();
+		
+				//$binary_bonus = (int) $package->package_amount*($user_package->indirect_bonus/100);
+				$binary_bonus = (int) $points*($user_package->indirect_bonus/100);
+		
+				$update = array(
+					'business_points' =>abs($diff),
+					'power_leg' => $power_leg,
+				);
+		
+				$this->db->where('user_id',$user->user_id)->update('user_registration',$update);
+				
+				if($team_bonus!=NULL){
+		
+					$sponsor_comission = @$team_bonus->sponser_commission + $binary_bonus;
+					$team_commssion = @$team_bonus->team_commission + $binary_bonus;
+					
+					$sdata = array(
+						'sponser_commission'=>$sponsor_comission,
+						'team_commission'=>$team_commssion,
+						'last_update'=>date('Y-m-d h:i:s')
+					);
+					
+					$detailsdata = array(
+						'user_id'=>$user->user_id,
+						'sponser_commission'=>$sponsor_comission,
+						'team_commission'=>$team_commssion,
+						'last_update'=>date('Y-m-d h:i:s')
+					);
+		
+					// Data Store Details Table
+					$this->db->insert('team_bonus_details',$detailsdata);
+					$this->db->where('user_id',$user->user_id)->update('team_bonus',$sdata);
+		
+				} else {
+		
+					$sponsor_comission = $binary_bonus;
+					$team_commssion = $binary_bonus;
+					
+					$sdata = array(
+						'user_id'=>$user->user_id,
+						'sponser_commission'=>$sponsor_comission,
+						'team_commission'=>$team_commssion,
+						'last_update'=>date('Y-m-d h:i:s')
+					);
+		
+					//  Data Store Details Table
+					
+					$this->db->insert('team_bonus_details',$sdata);
+					$this->db->insert('team_bonus',$sdata);
+		
+				}
+				
+			}else{
+				*/
+
+				if($left_points == $right_points){
+					$bonus_points = $left_points;
+					$diff = $user->business_points - $bonus_points;
+					$power_leg = NULL;	
+				}else if($left_points < $right_points){
+
+					$bonus_points = $left_points;
+					$diff = $user->business_points - $bonus_points;
+					$power_leg = 'right';	
+
+				}else{
+					$bonus_points = $right_points;
+					$diff = $user->business_points - $bonus_points;
+					$power_leg = 'left';	
+				}
+
+				$team_bonus = $this->db->select('*')
+				->from('team_bonus')
+				->where('user_id',$user->user_id)
+				->get()
+				->row();
+		
+				//$binary_bonus = (int) $package->package_amount*($user_package->indirect_bonus/100);
+				$binary_bonus = (int) $bonus_points*($user_package->indirect_bonus/100);
+		
+				$update = array(
+					'business_points' =>abs($diff),
+					'power_leg' => $power_leg
+				);
+		
+				$this->db->where('user_id',$user->user_id)->update('user_registration',$update);
+				
+
+				if($team_bonus!=NULL){
+		
+					$sponsor_comission = @$team_bonus->sponser_commission + $binary_bonus;
+					$team_commssion = @$team_bonus->team_commission + $binary_bonus;
+					
+					$sdata = array(
+						'sponser_commission'=>$sponsor_comission,
+						'team_commission'=>$team_commssion,
+						'last_update'=>date('Y-m-d h:i:s')
+					);
+					
+					$detailsdata = array(
+						'user_id'=>$user->user_id,
+						'sponser_commission'=>$sponsor_comission,
+						'team_commission'=>$team_commssion,
+						'last_update'=>date('Y-m-d h:i:s')
+					);
+		
+					// Data Store Details Table
+					$this->db->insert('team_bonus_details',$detailsdata);
+					$this->db->where('user_id',$user->user_id)->update('team_bonus',$sdata);
+		
+				} else {
+		
+					$sponsor_comission = $binary_bonus;
+					$team_commssion = $binary_bonus;
+					
+					$sdata = array(
+						'user_id'=>$user->user_id,
+						'sponser_commission'=>$sponsor_comission,
+						'team_commission'=>$team_commssion,
+						'last_update'=>date('Y-m-d h:i:s')
+					);
+		
+					//  Data Store Details Table
+					
+					$this->db->insert('team_bonus_details',$sdata);
+					$this->db->insert('team_bonus',$sdata);
+		
+				}
+
+			//}
+		}
+
+		$parent = $this->get_by_user_id($user->parent);
+
+		if(is_object($parent)){
+			$this->generation_level++;
+			$this->add_binary_bonus($parent,$package);
+		}
+
+		return true;		
+	}
+
 
 	public function read($limit, $offset)
 	{
@@ -730,7 +998,7 @@ class User_model extends CI_Model {
 			//$html.='<h3>'.strtoupper(substr($child->position,0,1)).' : '.$this->tree_model->get_total_points($child).'</h3>';
 			$html.='<h3>'.strtoupper(substr($child->position,0,1)).' : '.$child->points.'</h3>';
 		}
-		
+
 		return $html;
 	}
 

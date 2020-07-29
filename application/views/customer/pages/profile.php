@@ -35,7 +35,7 @@
 
                         <div class="form-group col-lg-6">
                             <label><?php echo display("email") ?> *</label>
-                            <input type="text" value="<?php echo $profile->email ?>" class="form-control" name="email" placeholder="<?php echo display("email") ?>">
+                            <input readonly type="text" value="<?php echo $profile->email ?>" class="form-control" name="email" placeholder="<?php echo display("email") ?>">
                         </div>
 
                         <div class="form-group col-lg-6">
@@ -44,6 +44,11 @@
                         </div>
 
                         <div class="form-group col-lg-6">
+                            <label>Bank Account Number (IBAN)</label>
+                            <input type="text" value="<?php echo $profile->bank_account ?>" id="bank-account" class="form-control" name="bank_account" placeholder="Bank Account IBAN">
+                        </div>
+
+                        <div class="form-group col-lg-6" style="display: none;">
                                 <label><?php echo display('language') ?></label>
                                 
                                 <select name="language" class="form-control">

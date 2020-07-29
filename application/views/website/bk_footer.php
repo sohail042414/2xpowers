@@ -144,8 +144,7 @@ $settings = $this->db->select("*")
         <!-- /.End of footer -->
 
 <!-- Home nad Coin Market Page Script -->
-<?php //if ($this->uri->segment(1)=='' || $this->uri->segment(1)=='home' || $this->uri->segment(1)=='coinmarket') {
-    if ($this->uri->segment(1)=='coinmarket') { ?>
+<?php if ($this->uri->segment(1)=='' || $this->uri->segment(1)=='home' || $this->uri->segment(1)=='coinmarket') { ?>
         <style type="text/css">
             /*#crypto  table tbody tr td > .up {
                 color: green;
@@ -166,7 +165,6 @@ $settings = $this->db->select("*")
                 color: #42f492;
             }
         </style>
-      
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
@@ -258,7 +256,7 @@ $settings = $this->db->select("*")
                     $('#CHANGE24HOURPCT_' + from).addClass("down");
                 }
             };
-        });         
+        });
 
         </script>
 
@@ -294,23 +292,22 @@ $settings = $this->db->select("*")
         <!-- jQuery -->
         <script src="<?php echo base_url('assets/website/js/jquery.min.js'); ?>"></script>        
         <script src="<?php echo base_url('assets/website/js/bootstrap.min.js'); ?>"></script>
-        <script src="<?php echo base_url('assets/website/js/parallax-background.min.js'); ?>"></script>
-        <script src="<?php echo base_url('assets/website/js/jquery.magnific-popup.min.js'); ?>"></script>
-        <script src="<?php echo base_url('assets/website/js/owl.carousel.min.js'); ?>"></script>
-        <?php /**/ ?>
         <script src="<?php echo base_url('assets/js/sparkline.min.js'); ?>"></script>
         <script src="<?php echo base_url('assets/website/js/bootsnav.min.js'); ?>"></script>
-        <script src="<?php echo base_url('assets/website/js/wow.min.js'); ?>"></script>        
+        <script src="<?php echo base_url('assets/website/js/owl.carousel.min.js'); ?>"></script>
+        <script src="<?php echo base_url('assets/website/js/wow.min.js'); ?>"></script>
+        <script src="<?php echo base_url('assets/website/js/parallax-background.min.js'); ?>"></script>
         <script src="<?php echo base_url('assets/website/js/jquery.dataTables.min.js'); ?>"></script>
         <script src="<?php echo base_url('assets/website/js/dataTables.bootstrap.min.js'); ?>"></script>
         <script src="<?php echo base_url('assets/website/js/dataTables.responsive.min.js'); ?>"></script>
         <script src="<?php echo base_url('assets/website/js/responsive.bootstrap.min.js'); ?>"></script>
         <script src="<?php echo base_url('assets/website/js/jquery.marquee.min.js'); ?>"></script>
         <script src="<?php echo base_url('assets/website/js/particles.min.js'); ?>"></script>
+        <script src="<?php echo base_url('assets/website/js/jquery.magnific-popup.min.js'); ?>"></script>
         <script src="<?php echo base_url('assets/website/js/bootstrap-select.min.js'); ?>"></script>
         <script src="<?php echo base_url('assets/website/js/app.js'); ?>"></script>
         <script src="<?php echo base_url('assets/website/js/classie.min.js'); ?>"></script>
-        <?php /**/ ?>
+
         <script src="<?php echo base_url('assets/website/js/custom.js'); ?>"></script>
 
         <!-- Calculator -->        

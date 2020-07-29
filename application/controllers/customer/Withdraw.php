@@ -153,7 +153,7 @@ public function withdraw_details($id=NULL)
 
         $this->form_validation->set_rules('amount', display('amount'), 'required'); 
         $this->form_validation->set_rules('varify_media', 'OTP Send To', 'required'); 
-        $this->form_validation->set_rules('walletid', 'Wallet id', 'required'); 
+        //$this->form_validation->set_rules('walletid', 'Wallet id', 'required'); 
 		$this->form_validation->set_rules('balance_type', "Balance Type", "required|callback_balance_type[]"); 
          
         $appSetting = $this->common_model->get_setting();
@@ -223,7 +223,7 @@ public function withdraw_details($id=NULL)
                         'user_id  ' => $this->session->userdata('user_id'),
                         'amount' => $this->input->post('amount'),
                         'fees' => @$fees,
-                        'walletid' => $this->input->post('walletid'),
+                        'walletid' => !empty($this->input->post('walletid')) ? $this->input->post('walletid'): 'bank_account' ,
                         'request_ip' => $this->input->ip_address(),
                         'request_date' => date('Y-m-d h:i:s'),
                         'method' => $this->input->post('method'),

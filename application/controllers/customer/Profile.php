@@ -50,7 +50,8 @@ class Profile extends CI_Controller {
 			'f_name' 	  => $this->input->post('f_name'),
 			'l_name' 	  => $this->input->post('l_name'),
 			'email' 	  => $this->input->post('email'),
-			'phone' 	  => $this->input->post('mobile'),
+            'phone' 	  => $this->input->post('mobile'),
+            'bank_account' 	  => $this->input->post('bank_account'),
 		
         );
 

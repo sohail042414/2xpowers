@@ -91,24 +91,26 @@
 
         </div>
         <!-- /.End of slider -->
+        <?php /* ?>
         <div class="ticker">
             <div class="list-wrpaaer">
                 <ul id="marquee-horizontal">
 
-<?php foreach ($cryptocoins as $coin_key => $coin_value) {?>
-                <li class="list-item" id="<?php echo $coin_value->Symbol ?>">
-                    <div class="list-item-currency"><?php echo $coin_value->Symbol ?></div>
-                    <div class="list-item-currency upgrade">
-                        <span></span>
-                    </div>
-                </li>
+            <?php foreach ($cryptocoins as $coin_key => $coin_value) {?>
+                            <li class="list-item" id="<?php echo $coin_value->Symbol ?>">
+                                <div class="list-item-currency"><?php echo $coin_value->Symbol ?></div>
+                                <div class="list-item-currency upgrade">
+                                    <span></span>
+                                </div>
+                            </li>
 
-<?php  } ?>
+            <?php  } ?>
 
                 </ul>
             </div>
         </div>
         <!-- /.End of tricker -->
+        <?php */ ?>
 
 <?php 
     $j=1; 
@@ -161,6 +163,7 @@
             </div>
         </div>
         <!-- /.End of about content -->
+        <?php /* ?>
         <div class="calculate">
             <div class="container">
                 <div class="row">
@@ -214,6 +217,7 @@
                 </div>
             </div>
         </div>
+        <?php */ ?>
         <!-- /.End of calculate -->
 
 <?php 
@@ -364,6 +368,7 @@
                 <a href="<?php echo base_url('buy'); ?>" class="btn btn-default"><?php echo display('get_start'); ?></a>
             </div>
         </div>
+        <?php /* ?>
         <!-- /.End of How to Get  Start -->
         <div class="currency-table">
             <div class="with-nav-tabs currency-tabs">
@@ -431,7 +436,9 @@
                 </div>
             </div>
         </div>
+        <?php */ ?>
         <!-- /.End of currency table -->
+        <?php /* ?>
         <div class="testimonial-wrapper">
             <div class="container">
                 <div class="row">
@@ -445,15 +452,15 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="owl-testimonial owl-carousel owl-theme">
-<?php
+                    <?php
 
-    foreach ($testimonial as $tes_key => $tes_value) {
-        $tes_headline     =   $tes_value->headline_en;
-        $tes_article1     =   $tes_value->article1_en;
-        $tes_article2     =   $tes_value->article2_en;
-        $tes_article_image=   $tes_value->article_image;
+                        foreach ($testimonial as $tes_key => $tes_value) {
+                            $tes_headline     =   $tes_value->headline_en;
+                            $tes_article1     =   $tes_value->article1_en;
+                            $tes_article2     =   $tes_value->article2_en;
+                            $tes_article_image=   $tes_value->article_image;
 
-?>
+                    ?>
                             <div class="testimonial-panel">
                                 <div class="tes-quoteInfo">
                                     <img src="<?php echo base_url($tes_article_image); ?>" class="quoteAvatar" alt="<?php echo strip_tags($tes_headline); ?>">
@@ -501,6 +508,8 @@
             </div>
         </div>
         <!-- /.End of testimonial content -->
+        <?php */ ?>
+        <?php /* ?>
         <div class="blog_content">
             <div class="container">
                 <div class="row">
@@ -514,18 +523,18 @@
                 <div class="row">
                     <div class="owl-blog owl-carousel owl-theme">
 
-<?php  
-    foreach ($news as $news_key => $news_value) {
-        $article_id         =   $news_value->article_id;
-        $cat_id             =   $news_value->cat_id;
-        $slug               =   $news_value->slug;
-        $news_headline      =   isset($lang) && $lang =="french"?$news_value->headline_fr:$news_value->headline_en;
-        $news_article1      =   isset($lang) && $lang =="french"?$news_value->article1_fr:$news_value->article1_en;
-        $news_article_image =   $news_value->article_image;
-        $publish_date       =   $news_value->publish_date;
+                    <?php  
+                        foreach ($news as $news_key => $news_value) {
+                            $article_id         =   $news_value->article_id;
+                            $cat_id             =   $news_value->cat_id;
+                            $slug               =   $news_value->slug;
+                            $news_headline      =   isset($lang) && $lang =="french"?$news_value->headline_fr:$news_value->headline_en;
+                            $news_article1      =   isset($lang) && $lang =="french"?$news_value->article1_fr:$news_value->article1_en;
+                            $news_article_image =   $news_value->article_image;
+                            $publish_date       =   $news_value->publish_date;
 
-        $cat_slug = $this->db->select("slug, cat_name_en, cat_name_fr")->from('web_category')->where('cat_id', $cat_id)->get()->row();
-?>
+                            $cat_slug = $this->db->select("slug, cat_name_en, cat_name_fr")->from('web_category')->where('cat_id', $cat_id)->get()->row();
+                    ?>
                         <div class="item">
                             <div class="post_grid">
                                 <div class="grid_img">
@@ -553,4 +562,5 @@
                 </div>
             </div>
         </div>
+        <?php */ ?>
         <!-- /.End of blog content -->

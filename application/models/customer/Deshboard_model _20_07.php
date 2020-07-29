@@ -16,7 +16,6 @@ class Deshboard_model extends CI_Model {
 			->where('amount >',0)
 			->get()
 			->row();
-
 		$pay = $my_payout->earns2;
 
 		// Deductions fro ROI's (negative transections)
@@ -28,9 +27,15 @@ class Deshboard_model extends CI_Model {
 		->get()
 		->row();
 
-		$negative_roi_sum = abs($negative_payout->negative_earning);
+		// echo $this->db->last_query();
+		// exit;
+	
 
-		$pay = $pay - $negative_roi_sum;
+		$negative_roi_sum = abs($negative_payout->negative_earning);
+		
+		$pay = $my_payout->earns2;
+
+		//$pay = $pay - $negative_roi_sum;
 
 		//Package Commission
 		$commission = $this->db->select("sum(amount) as earns1")
@@ -55,7 +60,7 @@ class Deshboard_model extends CI_Model {
 		//
 		$negative_com_sum = abs($negative_commission->negative_earning);
 
-		$pack_commission = $pack_commission - $negative_com_sum;
+		//$pack_commission = $pack_commission - $negative_com_sum;
 
 		//user lavel bonus
 		$bonus = $this->db->select("sum(bonus) as bonuss")
@@ -63,12 +68,11 @@ class Deshboard_model extends CI_Model {
 			->where('user_id',$user_id)
 			->get()
 			->row();
-
 		$team_bonus = $bonus->bonuss;
 
 		//total earning
-		//@$total_earn = @$pay + @$pack_commission + @$team_bonus;
-		@$total_earn = @$pay + @$pack_commission;
+		@$total_earn = @$pay + @$pack_commission + @$team_bonus;
+
 
 		//team bonus
 		$teambonus = $this->db->select("*")
@@ -103,11 +107,9 @@ class Deshboard_model extends CI_Model {
 		$promotion_balance =0;
 		$transfer = 0;
 
-		$company_balance_used = 0;
-		$promotion_balance_used = 0;
-
-		$commission_used= 0;
-		$roi_used= 0;
+		// echo '<pre>';
+		// print_r($data);
+		// exit; 
 
 		foreach ($data as $value) {
 
@@ -118,14 +120,13 @@ class Deshboard_model extends CI_Model {
 				$individule['d_fees'] = $dep_f;
 
 				$dep = $dep + $value->amount;
-				
+				$individule['deposit'] = $dep;
 
-				if(is_object($deposit) && $deposit->deposit_type == 'company_balance'){
+				if(is_object($deposit) && $deposit->deposit_type == 'normal_credit'){
 					$company_balance+=$value->amount; 
-				}else if(is_object($deposit) && $deposit->deposit_type == 'promotion_balance'){
+				}else if(is_object($deposit) && $deposit->deposit_type == 'promotion_credit'){
 					$promotion_balance+=$value->amount; 
 				}
-
 			}
 
 			if(@$value->transection_category=='withdraw'){
@@ -147,87 +148,47 @@ class Deshboard_model extends CI_Model {
 
 				$tras = $tras+$value->amount;
 				$individule['transfar'] = $tras;
-				
-				if(is_object($transfer) && $transfer->transfer_type == 'company_balance'){
-					$company_balance_used+=$value->amount; 
-				}else if(is_object($transfer) && $transfer->transfer_type == 'promotion_balance'){
-					$promotion_balance_used+=$value->amount; 
-				}
-				
-
 			}
-			
-			if(@$value->transection_category=='investment'){
 
+			if(@$value->transection_category=='investment'){
 				$invest = $invest+$value->amount;
 				$individule['investment'] = $invest;
-
-				$investment = $this->db->select('*')
-				->from('investment')
-				->where('order_id',$value->releted_id)
-				->get()
-				->row();
-
-				if(is_object($investment) && $investment->balance_type == 'company_balance'){
-					$company_balance_used+=$value->amount; 
-				}else if(is_object($investment) && $investment->balance_type == 'promotion_balance'){
-					$promotion_balance_used+=$value->amount; 
-				}else if(is_object($investment) && $investment->balance_type == 'commission'){
-					//could cause issue. 
-					$commission_used +=$value->amount;
-				}else if(is_object($investment) && $investment->balance_type == 'daily_roi'){
-					//can have issue. 
-					$roi_used +=$value->amount;
-				}
-
 			}
 
 			if(@$value->transection_category=='reciver'){
-				
 				$reciver = $reciver+$value->amount;
 				$individule['reciver'] = $reciver;
-
-				$transfer = $this->getFees('transfer',$value->releted_id);
-				
-				if(is_object($transfer) && $transfer->transfer_type == 'company_balance'){
-					$company_balance+=$value->amount; 
-				}else if(is_object($transfer) && $transfer->transfer_type == 'promotion_balance'){
-					$promotion_balance+=$value->amount; 
-				}
-
-
 			}
 		}
 
-		$individule['deposit'] = $dep;
 
-		// $data = $this->db->select('*')
-		// 	->from('transections')
-		// 	->where('user_id',$user_id)
-		// 	->where('status',1)
-		// 	->where('amount < ',0)
-		// 	->get()
-		// 	->result();
+		$data = $this->db->select('*')
+			->from('transections')
+			->where('user_id',$user_id)
+			->where('status',1)
+			->where('amount < ',0)
+			->get()
+			->result();
 
+			$company_balance_used = 0;
+			$promotion_balance_used = 0;
+			foreach ($data as $value) {
 
-			
-		// 	foreach ($data as $value) {
+				if(@$value->transection_category=='deposit'){
 
-		// 		if(@$value->transection_category=='deposit'){
-
-		// 			$deposit = $this->getFees('deposit',$value->releted_id);
+					$deposit = $this->getFees('deposit',$value->releted_id);
 	
-		// 			if(is_object($deposit) && $deposit->deposit_type == 'normal_credit'){
-		// 				$company_balance_used+= abs($value->amount); 
-		// 			}else if(is_object($deposit) && $deposit->deposit_type == 'promotion_credit'){
-		// 				$promotion_balance_used+= abs($value->amount); 
-		// 			}
-		// 		}
-		// 	}
+					if(is_object($deposit) && $deposit->deposit_type == 'normal_credit'){
+						$company_balance_used+= abs($value->amount); 
+					}else if(is_object($deposit) && $deposit->deposit_type == 'promotion_credit'){
+						$promotion_balance_used+= abs($value->amount); 
+					}
+				}
+			}
 
 
-			$individule['commission'] = empty(@$pack_commission) ? 0: $pack_commission-$commission_used;
-			$individule['my_earns'] = empty(@$pay) ? 0 : $pay -$roi_used;
+			$individule['commission'] = empty(@$pack_commission) ? 0: $pack_commission - $negative_com_sum ;
+			$individule['my_earns'] = empty(@$pay) ? 0 : $pay - $negative_roi_sum;
 			$individule['team_bonus'] = @$team_bonus;
 			$individule['team_commission'] = @$team_commission;
 			$individule['sponser_commission'] = @$sponser_commission;
@@ -239,11 +200,18 @@ class Deshboard_model extends CI_Model {
 			#-----------------------
 			
 			
-			//$individule['balance'] = (@$individule['deposit']+@$total_earn+@$individule['reciver'])-(@$individule['withdraw']+@$individule['investment']+@$individule['transfar']+@$total_fees);						
 			$individule['balance'] = (@$individule['deposit']+@$total_earn+@$individule['reciver'])-(@$individule['withdraw']+@$individule['investment']+@$individule['transfar']+@$total_fees);			
+			
+			$individule['balance'] = $individule['balance']+@$individule['w_fees'];
+
+			//$individule['balance'] = $individule['balance'] - $negative_com_sum - $negative_roi_sum;
 
 			$individule['negative_roi_sum'] = $negative_roi_sum;
 			$individule['negative_com_sum'] = $negative_com_sum;
+
+			echo '<pre>';
+			print_r($individule);
+			exit; 
 
 			return $individule;
 		

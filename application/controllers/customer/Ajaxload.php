@@ -66,15 +66,37 @@ class Ajaxload extends CI_Controller
     public function walletid()
     {   
         $method = $this->input->post('method'); 
+        
         $user_id = $this->session->userdata('user_id'); 
        
-        $result = $this->db->select('*')
-        ->from('payment_metod_setting')
-        ->where('method',$method)
-        ->where('user_id',$user_id)
-        ->get()
-        ->row();
-        echo json_encode($result);
+        if($method == 'bank_account'){
+            
+            $result = $this->db->select('*')
+            ->from('user_registration')            
+            ->where('user_id',$user_id)
+            ->get()
+            ->row();
+            if(is_object($result) && $result->bank_account != ''){
+                $data = array(
+                    'bank_account' => $result->bank_account
+                );
+            }else{
+                $data = NULL;
+            }
+
+            echo json_encode($data);
+
+        }else{
+
+            $result = $this->db->select('*')
+            ->from('payment_metod_setting')
+            ->where('method',$method)
+            ->where('user_id',$user_id)
+            ->get()
+            ->row();
+            echo json_encode($result);
+
+        }
 
     }
 

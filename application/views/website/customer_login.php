@@ -247,24 +247,15 @@ $countryArray = array(
             <div class="container">
                 <div class="col-sm-7 col-md-6">
                     <div class="">
-                        
-                        <div class="row">    
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                               <h2 style="color:white;">Register</h2> 
-                            </div>
-                        </div>
+                        <div class="tab-content">
 
-                        <div class="row">    
-                            <div class="col-sm-12">
-                                <div class="input">                                    
-                                    Already have an account <a href="<?php echo base_url('customer_login'); ?>" class="checkbox-link">Login</a>
-                                </div>
+                            <div class="row">    
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                <h2 style="color:white;">Login</h2> 
                                 </div>
                             </div>
 
                             <div class="row">
-                                
-
                                 <!-- alert message -->
                                 <?php if ($this->session->flashdata('message') != null) {  ?>
                                 <div class="alert alert-info alert-dismissable">
@@ -287,22 +278,14 @@ $countryArray = array(
                                 </div>
                                 <?php } ?> 
                             </div>
-                            
-                                <?php echo form_open('register','id="registerForm" name="registerForm" onsubmit="return validateForm()" '); ?>
+                           
+                                <?php echo form_open('home/customer_login','id="loginForm" '); ?>
                                 <div class="row">    
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-12">
                                         <div class="input">
-                                            <input class="input__field" type="text"  name="f_name" id="f_name" value="<?php echo $this->session->userData['f_name']; ?>" autocomplete="off" required>
-                                            <label class="input__label" for="f_name">
-                                                <span class="input__label-content" data-content="<?php echo display('firstname'); ?>"><?php echo display('firstname'); ?></span>
-                                            </label>
-                                        </div>
-                                    </div>    
-                                    <div class="col-sm-6">
-                                        <div class="input">
-                                            <input class="input__field" type="text"  name="l_name" id="l_name" value="<?php echo $this->session->userData['l_name']; ?>" autocomplete="off" required>
-                                            <label class="input__label" for="l_name">
-                                                <span class="input__label-content" data-content="<?php echo display('lastname'); ?>"><?php echo display('lastname'); ?></span>
+                                            <input class="input__field" type="text" name="email" id="useremail" autocomplete="off" required>
+                                            <label class="input__label" for="input">
+                                                <span class="input__label-content" data-content="<?php echo display('username_or_email'); ?>"><?php echo display('username_or_email'); ?></span>
                                             </label>
                                         </div>
                                     </div>
@@ -310,114 +293,26 @@ $countryArray = array(
                                 <div class="row">    
                                     <div class="col-sm-12">
                                         <div class="input">
-                                            <input class="input__field" type="text" name="username" id="username" required>
-                                            <label class="input__label" for="username">
-                                                <span class="input__label-content" data-content="<?php echo display('username'); ?>"><?php echo display('username'); ?></span>
-                                            </label>
-                                        </div>
-                                    </div>    
-                                    <?php
-
-                                        $this->load->helper(array('cookie', 'url'));
-                                        $ref=$this->input->get('ref'); 
-                                        if (isset($ref) && ($ref!="")) {
-                                            $user_id = $this->db->select('user_id')->where('user_id', $ref)->get('user_registration')->row();
-                                            if($user_id){
-                                                set_cookie('sponsor_id', $ref, 86400*30);
-                                                //echo $ref;
-                                            } else{
-                                                //echo "Invalid Sponsor";
-                                            }
-                                        }
-                                        else{
-                                            if (!get_cookie('sponsor_id')) {
-                                                $user_id = $this->db->select('user_id')->where('sponsor_id', 0)->get('user_registration')->row();
-                                                set_cookie('sponsor_id', $user_id->user_id, 86400*30);
-                                            }
-                                            
-                                            //echo get_cookie('sponsor_id');
-                                        }
-
-                                    ?>
-                                </div>
-                                <div class="row">    
-                                    <div class="col-sm-6">
-                                        <div class="input">
-                                            <select  class="selectpicker" data-width="100%" class="country input__field" id="country" name="country">
-                                                <option value="" selected>Select Country</option>
-                                                <?php
-                                                    foreach($countryArray as $code => $country){
-                                                        $countryName = ucwords(strtolower($country["name"]));
-                                                ?>
-                                                <option value="<?=$country["code"]?>"><?=$countryName." (+".$country["code"].")"?></option>
-                                                <?php } ?>
-                                            </select>
-                                            <label class="input__label" for="country">
-                                                <span class="input__label-content" data-content="<?php echo display('country'); ?>"><?php echo display('country'); ?></span>
-                                            </label>
-                                        </div>
-                                    </div>    
-                                    <div class="col-sm-6">
-                                        <div class="input">
-                                            <input class="input__field" type="number" name="phone" id="phone" autocomplete="off" required>
-                                            <label class="input__label" for="phone">
-                                                <span class="input__label-content" data-content="<?php echo display('phone'); ?>"><?php echo display('phone'); ?></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">    
-                                    <div class="col-sm-12">
-                                        <div class="input">
-                                            <input class="input__field" type="email" id="email" name="email" id="email" onkeydown="checkEmail()" value="<?php echo $this->session->userData['email']; ?>" autocomplete="off" required>
-                                            <label class="input__label" for="email">
-                                                <span class="input__label-content" data-content="<?php echo display('email'); ?>"><?php echo display('email'); ?></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">    
-                                    <div class="col-sm-12">
-                                        <div class="input">
-                                            <input class="input__field" type="password" name="pass" id="pass" onkeyup="strongPassword()" required>
-                                            <label class="input__label" for="pass">
+                                            <input class="input__field" type="password" name="password" id="password" required>
+                                            <label class="input__label" for="password">
                                                 <span class="input__label-content" data-content="<?php echo display('password'); ?>"><?php echo display('password'); ?></span>
                                             </label>
-                                            <div id="message">
-                                              <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                                              <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                                              <p id="special" class="invalid">A <b>special</b></p>
-                                              <p id="number" class="invalid">A <b>number</b></p>
-                                              <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">    
                                     <div class="col-sm-12">
                                         <div class="input">
-                                            <input class="input__field" type="password" name="r_pass" id="r_pass" onkeyup="rePassword()" required>
-                                            <label class="input__label" for="r_pass">
-                                                <span class="input__label-content" data-content="<?php echo display('conf_password'); ?>"><?php echo display('conf_password'); ?></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">    
-                                    <div class="col-sm-12">
-                                        <div class="input">
-                                            <label>
-                                                <input type="checkbox" id="checkbox" name="accept_terms" value="ptConfirm"> 
-                                            </label>
-                                            <?php echo display('your_password_at_global_crypto_are_encrypted_and_secured'); ?> <a target="_blank" href="<?php echo base_url(@$article_image[0]); ?>" class="checkbox-link">Privacy policy</a> and 
-                                                <a target="_blank" href="<?php echo base_url(@$article_image[0]); ?>" class="checkbox-link">Terms of Use</a>
+                                            <a href="#" data-toggle="modal" data-target="#forgotModal" class="forgot"><?php echo display('forgot_password'); ?>?</a>
+                                            <?php echo display('dont_have_an_account'); ?>? <a href="<?php echo base_url('register'); ?>" class="checkbox-link"><?php echo display('sign_up_now'); ?></a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <button type="submit" class="btn btn-reg"><?php echo display('sign_up'); ?></button>
-                                <?php echo form_close() ?>
-                        
+                                <button type="submit" class="btn btn-reg"><?php echo display('login'); ?></button>
+                                <?php echo form_close();?>
+                            
+                        </div>
                     </div>
                 </div>
             </div>

@@ -12,12 +12,12 @@
                         <table class="datatable2 table table-striped table-hover table-bordered">
                             <thead>
                                 <tr>
-                                    <th> Sender ID <?php //echo display('name');?></th>
-                                    <th> Receiver ID <?php //echo display('name');?></th>
+                                    <th><?php echo display('name');?></th>
                                     <th><?php echo display('type');?></th>
                                     <th><?php echo display('amount');?></th>
-                                    <th>Balance type</th>
                                     <th><?php echo display('date');?></th>
+                                    <th><?php echo display('mobile');?></th>
+                                    <th><?php echo display('action');?></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -27,12 +27,14 @@
 
                                 ?>
                                 <tr>
-                                    <td><?php echo $value->sender_user_id; ?></td>
-                                    <td><?php echo $value->receiver_user_id; ?></td>
+                                    <td><?php echo $value->f_name.' '.$value->l_name;?></td>
                                     <td><?php echo ($value->receiver_user_id==$user_id?'<b class="text-success">'.display('receive').'</b>':'<b class="text-danger">'.display('send').'</b>');?></td>
                                     <td><?php echo $value->amount;?></td>
-                                    <td><?php echo ucwords(str_replace("_", " ", $value->transfer_type));?></td>
                                     <td><?php echo $value->date;?></td>
+                                    <td><?php echo $value->phone;?></td>
+                                    <td>
+                                        <a class="btn btn-success" href="<?php echo base_url()?>customer/transfer/<?php echo ($value->receiver_user_id==$user_id?'receive_details':'send_details');?>/<?php echo $value->transfer_id;?>"><?php echo display('details')?></a>
+                                    </td>
                                 </tr>
                                 <?php } } ?>
 

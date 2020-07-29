@@ -7,10 +7,11 @@ class User extends CI_Controller {
  	{
 		 parent::__construct();
 		 
-		 $this->load->model('backend/user/user_model');
+		 $this->load->model('backend/user/user_model');		 
 		 $this->load->model('customer/deshboard_model');
 		 $this->load->model('common_model'); 	
-		 	
+		 $this->load->model('tree_model');
+
 		 if (!$this->session->userdata('isLogIn')) 
 		 redirect('login');
  
@@ -327,8 +328,8 @@ class User extends CI_Controller {
 
 			if (empty($uid)) 
 			{
-
-				if ($this->user_model->create($userdata)) {
+				//if ($this->user_model->create($userdata)) {
+				if ($this->tree_model->create_user($userdata)) {
 					$this->session->set_flashdata('message', display('save_successfully'));
 				} else {
 					$this->session->set_flashdata('exception', display('please_try_again'));
@@ -387,6 +388,11 @@ class User extends CI_Controller {
 
 	public function network(){
 
+		//$test_user_id = 'E52O0P';
+		//$test_user = $this->user_model->get_by_user_id($test_user_id);
+		//$this->tree_model->set_points($test_user);
+		//exit;
+
 		$user_id = $this->session->userdata('user_id');
 		$data['user'] = $this->user_model->get_by_user_id($user_id);
 		
@@ -397,9 +403,10 @@ class User extends CI_Controller {
 		// echo '<pre>';
 		// print_r($data['network_tree']);
 		// exit; 
+		$data['total_points'] = $data['user']->business_points;
 
 		$data['title'] = 'Network Tree';
-		$data['content'] = $this->load->view("customer/user/network", $data, true);
+		$data['content'] = $this->load->view("backend/user/network", $data, true);
 		$this->load->view("customer/layout/main_wrapper", $data);
 
 	}

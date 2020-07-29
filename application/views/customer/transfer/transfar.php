@@ -26,7 +26,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label">Balance Type *</label>
                                 <div class="col-sm-8">
-                                    <select name="balance_type" class="form-control">
+                                    <select name="transfer_type" class="form-control">
                                         <?php foreach($vallets  as $id => $name){ ?>
                                         <option value="<?php echo $id; ?>" ><?php echo $name; ?></option>
                                         <?php } ?>
