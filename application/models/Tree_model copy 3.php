@@ -247,10 +247,6 @@ class Tree_model extends CI_Model{
 	public function create_user($data = array())
 	{
 
-		echo '<pre>';
-		print_r($data);
-		exit; 
-
 		$post_data = $this->input->post();
 		
 		$package_id = $data['package_id'];

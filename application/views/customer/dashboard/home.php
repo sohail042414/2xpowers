@@ -50,12 +50,21 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-sm-6 col-md-3" style="display:none;">
                             <div class="count_panel">
                                 <div class="stats-title ">
                                     <h4><?php //echo display('team_turnover')?>Binary Commission</h4>
                                 </div>
                                 <h1 class="currency_text text-success">$<?php echo (@$team_commission!=0?number_format($team_commission, 2):'0.0');?></h1>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="count_panel">
+                                <div class="stats-title ">
+                                    <h4><?php //echo display('team_turnover')?>Binary Commission</h4>
+                                </div>
+                                <h1 class="currency_text text-success">$<?php echo (@$binary_bonus!=0?number_format($binary_bonus, 2):'0.0');?></h1>
                             </div>
                         </div>
 

@@ -56,6 +56,7 @@ $route['logout'] 				= 'backend/dashboard/auth/logout';
 #-------------------------------------------------
 #     CUSTOMER ROUETS
 $route['customer'] 				= 'customer/auth/login';
+$route['login'] 		        = 'home/customer_login';
 $route['log_out'] 				= 'customer/auth/logout';
 #-------------------------------------------------
 
@@ -85,7 +86,7 @@ $route['lending'] 				= 'home/lending';
 $route['pricing'] 				= 'home/lending';
 $route['customer_login'] 		= 'home/customer_login';
 $route['register'] 				= 'home/register';
-$route['login'] 				= 'home/login';
+$route['login'] 				= 'home/customer_login';
 $route['resetPassword'] 		= 'home/resetPassword';
 $route['paymentform'] 			= 'home/paymentform';
 $route['(:any)'] 				= 'home/page';

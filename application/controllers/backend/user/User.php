@@ -438,7 +438,7 @@ class User extends CI_Controller {
 		//$data['network_tree'] = $this->user_model->get_network_tree($top_user->user_id);
 		$data['network_tree_html'] = $this->user_model->get_network_tree_html($top_user->user_id,$isAdmin);
 
-		$data['total_points'] = $this->tree_model->get_total_points($top_user);
+		$data['total_points'] = $top_user->business_points;
 
 		$data['title'] = 'Network Tree';
 		$data['content'] = $this->load->view("backend/user/network", $data, true);

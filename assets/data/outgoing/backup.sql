@@ -1852,3 +1852,390 @@ UPDATE `user_registration` SET `business_points` = 5040, `power_leg` = 'right'
 WHERE `user_id` = '0SMT2V';
 UPDATE `user_registration` SET `business_points` = 5520, `power_leg` = 'left'
 WHERE `user_id` = '2xpowr';
+UPDATE `admin` SET `last_login` = '2020-07-30 22:58:36', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', 'MPQCP0', '2xpowr', 'right', 'GLJ6BE', 'user454', 'user', 'khan', 'user5454@gmail.com', '4ce40f35ca6445e73da38a50d26c0d3e', '3', '313525514', '127.0.0.1', 1, '400', 0, '2020-08-10 12:41:31', '2020-08-10 12:41:31');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'MPQCP0', '500', 0, 'company_balance', '127.0.0.1', '2020-08-10 12:41:31', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 62, '500', 'Initial account create transfer from parent to child from company balance', '2020-08-10 12:41:31');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MPQCP0', 'reciver', 62, '500', 'Initial account create transfer from parent to child from company balance', '2020-08-10 12:41:31');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MPQCP0', '2xpowr', '12', '500', '2020-08-10', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MPQCP0', 'investment', 76, '500', '2020-08-10', 1, 'User MPQCP0 Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('MPQCP0', 0, 0, 1, '2020-08-10 12:41:31');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('MPQCP0', 0, 0, 1, '2020-08-10 12:41:31');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'MPQCP0', 'type1', '12', 75, '2020-08-10');
+UPDATE `user_registration` SET `business_points` = 400, `power_leg` = 'right'
+WHERE `user_id` = 'GLJ6BE';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'E52O0P';
+UPDATE `user_registration` SET `business_points` = 5280, `power_leg` = 'left'
+WHERE `user_id` = '9B0SEW';
+UPDATE `user_registration` SET `business_points` = 5440, `power_leg` = 'right'
+WHERE `user_id` = '0SMT2V';
+UPDATE `user_registration` SET `business_points` = 5920, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', 'I7SPZX', '2xpowr', 'left', 'GLJ6BE', 'user12322', 'user', 'sdfasdf', 'user12322@gmail.com', 'fd71f6c2f7f88e5aebf2da0cdf57f0e2', '162', '343434', '127.0.0.1', 1, '800', 0, '2020-08-10 12:52:49', '2020-08-10 12:52:49');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'I7SPZX', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-10 12:52:49', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 63, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-10 12:52:49');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('I7SPZX', 'reciver', 63, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-10 12:52:49');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('I7SPZX', '2xpowr', '13', '1000', '2020-08-10', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('I7SPZX', 'investment', 77, '1000', '2020-08-10', 1, 'User I7SPZX Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('I7SPZX', 0, 0, 1, '2020-08-10 12:52:49');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('I7SPZX', 0, 0, 1, '2020-08-10 12:52:49');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'I7SPZX', 'type1', '13', 150, '2020-08-10');
+UPDATE `user_registration` SET `business_points` = 1200, `power_leg` = 'left'
+WHERE `user_id` = 'GLJ6BE';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'right'
+WHERE `user_id` = 'E52O0P';
+UPDATE `user_registration` SET `business_points` = 6080, `power_leg` = 'left'
+WHERE `user_id` = '9B0SEW';
+UPDATE `user_registration` SET `business_points` = 6240, `power_leg` = 'right'
+WHERE `user_id` = '0SMT2V';
+UPDATE `user_registration` SET `business_points` = 6720, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', '70MFMV', '2xpowr', 'left', 'MPQCP0', 'user_234234', 'user', 'khan', 'user_234234@gmail.com', '82f787e35bead13aecaac8544712c3b1', '162', '343423423', '127.0.0.1', 1, '800', 0, '2020-08-11 11:44:06', '2020-08-11 11:44:06');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '70MFMV', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 11:44:06', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 64, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-11 11:44:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('70MFMV', 'reciver', 64, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-11 11:44:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('70MFMV', '2xpowr', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('70MFMV', 'investment', 78, '1000', '2020-08-11', 1, 'User 70MFMV Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('70MFMV', 0, 0, 1, '2020-08-11 11:44:07');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('70MFMV', 0, 0, 1, '2020-08-11 11:44:07');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'MPQCP0';
+UPDATE `user_registration` SET `business_points` = 2000, `power_leg` = 'right'
+WHERE `user_id` = 'GLJ6BE';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'right'
+WHERE `user_id` = 'E52O0P';
+UPDATE `user_registration` SET `business_points` = 6880, `power_leg` = 'left'
+WHERE `user_id` = '9B0SEW';
+UPDATE `user_registration` SET `business_points` = 7040, `power_leg` = 'right'
+WHERE `user_id` = '0SMT2V';
+UPDATE `user_registration` SET `business_points` = 7520, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', '70MFMV', 'type3', '13', 168, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', '70MFMV', 'type3', '13', 168, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('GLJ6BE', '70MFMV', 'type3', '13', 64, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', '70MFMV', 'type3', '13', 168, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', '70MFMV', 'type3', '13', 168, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', '70MFMV', 'type3', '13', 168, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', '70MFMV', 'type3', '13', 168, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('GLJ6BE', '70MFMV', 'type3', '13', 64, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', '70MFMV', 'type3', '13', 168, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', '70MFMV', 'type3', '13', 168, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', '70MFMV', 'type3', '13', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '70MFMV', 'type3', '13', 8, '2020-08-11');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', 'YSP7XF', '2xpowr', 'left', 'I7SPZX', 'user_2342342', 'user', 'kasdf', 'user_2342342@gmail.com', '086ef2e394893cdf995146568078031a', '1', '343234', '127.0.0.1', 1, '80', 0, '2020-08-11 11:48:22', '2020-08-11 11:48:22');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YSP7XF', '100', 0, 'company_balance', '127.0.0.1', '2020-08-11 11:48:22', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 65, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 11:48:22');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YSP7XF', 'reciver', 65, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 11:48:22');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YSP7XF', '2xpowr', '11', '100', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YSP7XF', 'investment', 79, '100', '2020-08-11', 1, 'User YSP7XF Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('YSP7XF', 0, 0, 1, '2020-08-11 11:48:22');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('YSP7XF', 0, 0, 1, '2020-08-11 11:48:22');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type1', '11', 15, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = 'I7SPZX';
+UPDATE `user_registration` SET `business_points` = 2080, `power_leg` = 'right'
+WHERE `user_id` = 'GLJ6BE';
+UPDATE `user_registration` SET `business_points` = 2480, `power_leg` = 'right'
+WHERE `user_id` = 'E52O0P';
+UPDATE `user_registration` SET `business_points` = 6960, `power_leg` = 'left'
+WHERE `user_id` = '9B0SEW';
+UPDATE `user_registration` SET `business_points` = 7120, `power_leg` = 'right'
+WHERE `user_id` = '0SMT2V';
+UPDATE `user_registration` SET `business_points` = 7600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', 'YSP7XF', 'type3', '11', 172.8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', 'YSP7XF', 'type3', '11', 172.8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('GLJ6BE', 'YSP7XF', 'type3', '11', 70.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', 'YSP7XF', 'type3', '11', 172.8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', 'YSP7XF', 'type3', '11', 172.8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', 'YSP7XF', 'type3', '11', 172.8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', 'YSP7XF', 'type3', '11', 172.8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('GLJ6BE', 'YSP7XF', 'type3', '11', 70.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', 'YSP7XF', 'type3', '11', 172.8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('9B0SEW', 'YSP7XF', 'type3', '11', 172.8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('0SMT2V', 'YSP7XF', 'type3', '11', 6.4, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YSP7XF', 'type3', '11', 8, '2020-08-11');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', 'HISDIL', '2xpowr', 'left', '5ETIZG', 'user_2342778', 'user', 'tes', 'user_2342778@gmail.com', '6db26ef273b7ca6619c67fdf9086bff9', '3', '3423242', '127.0.0.1', 1, '80', 0, '2020-08-11 11:51:15', '2020-08-11 11:51:15');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'HISDIL', '100', 0, 'company_balance', '127.0.0.1', '2020-08-11 11:51:15', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 66, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 11:51:15');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('HISDIL', 'reciver', 66, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 11:51:15');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('HISDIL', '2xpowr', '11', '100', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('HISDIL', 'investment', 80, '100', '2020-08-11', 1, 'User HISDIL Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('HISDIL', 0, 0, 1, '2020-08-11 11:51:15');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('HISDIL', 0, 0, 1, '2020-08-11 11:51:15');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'HISDIL', 'type1', '11', 15, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = '5ETIZG';
+UPDATE `user_registration` SET `business_points` = 7680, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'HISDIL', 'type3', '11', 16, '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'HISDIL', 'type3', '11', 16, '2020-08-11');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', 'Z8CTNZ', '2xpowr', 'right', '5ETIZG', 'user_ab', 'user', 'ab', 'user_ab@gmail.com', 'cc066ec12be054a43d204429690938fa', '5', '343242', '127.0.0.1', 1, '80', 0, '2020-08-11 11:55:41', '2020-08-11 11:55:41');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'Z8CTNZ', '100', 0, 'company_balance', '127.0.0.1', '2020-08-11 11:55:41', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 67, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 11:55:41');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('Z8CTNZ', 'reciver', 67, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 11:55:41');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('Z8CTNZ', '2xpowr', '11', '100', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('Z8CTNZ', 'investment', 81, '100', '2020-08-11', 1, 'User Z8CTNZ Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('Z8CTNZ', 0, 0, 1, '2020-08-11 11:55:41');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('Z8CTNZ', 0, 0, 1, '2020-08-11 11:55:41');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'Z8CTNZ', 'type1', '11', 15, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = ''
+WHERE `user_id` = '5ETIZG';
+UPDATE `user_registration` SET `business_points` = 7760, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', 'Z8CTNZ', 'type3', '11', 24, 'Binary bonus on addition of user Z8CTNZ', '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('5ETIZG', 'Z8CTNZ', 'type3', '11', 4.8, 'Binary bonus on addition of user Z8CTNZ', '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', 'Z8CTNZ', 'type3', '11', 24, 'Binary bonus on addition of user Z8CTNZ', '2020-08-11');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', '1DIBTI', '2xpowr', 'left', 'HISDIL', 'user_kamal', 'user', 'kmal', 'user_kamal@gmail.com', 'd661030988ebca49726d1005ca458adf', '16', '34234243', '127.0.0.1', 1, '80', 0, '2020-08-11 11:58:44', '2020-08-11 11:58:44');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '1DIBTI', '100', 0, 'company_balance', '127.0.0.1', '2020-08-11 11:58:44', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 68, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 11:58:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('1DIBTI', 'reciver', 68, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 11:58:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('1DIBTI', '2xpowr', '11', '100', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('1DIBTI', 'investment', 82, '100', '2020-08-11', 1, 'User 1DIBTI Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('1DIBTI', 0, 0, 1, '2020-08-11 11:58:44');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('1DIBTI', 0, 0, 1, '2020-08-11 11:58:44');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '1DIBTI', 'type1', '11', 15, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = 'HISDIL';
+UPDATE `user_registration` SET `business_points` = 240, `power_leg` = 'left'
+WHERE `user_id` = '5ETIZG';
+UPDATE `user_registration` SET `business_points` = 7840, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', '1DIBTI', 'type3', '11', 32, 'Binary bonus on addition of user 1DIBTI', '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('5ETIZG', '1DIBTI', 'type3', '11', 4.8, 'Binary bonus on addition of user 1DIBTI', '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', '1DIBTI', 'type3', '11', 32, 'Binary bonus on addition of user 1DIBTI', '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', '1DIBTI', 'type3', '11', 32, 'Binary bonus on addition of user 1DIBTI', '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('5ETIZG', '1DIBTI', 'type3', '11', 4.8, 'Binary bonus on addition of user 1DIBTI', '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', '1DIBTI', 'type3', '11', 32, 'Binary bonus on addition of user 1DIBTI', '2020-08-11');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', 'FAG3P7', '2xpowr', 'left', '1DIBTI', 'user_km', 'user', 'km', 'user_km@gmail.comm', 'fc3cb070358aba362c23a9c1cbb7edb8', '41', '34234234', '127.0.0.1', 1, '80', 0, '2020-08-11 12:03:54', '2020-08-11 12:03:54');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FAG3P7', '100', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:03:54', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 69, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:03:54');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FAG3P7', 'reciver', 69, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:03:54');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FAG3P7', '2xpowr', '11', '100', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FAG3P7', 'investment', 83, '100', '2020-08-11', 1, 'User FAG3P7 Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('FAG3P7', 0, 0, 1, '2020-08-11 12:03:54');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('FAG3P7', 0, 0, 1, '2020-08-11 12:03:54');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FAG3P7', 'type1', '11', 15, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = '1DIBTI';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'left'
+WHERE `user_id` = 'HISDIL';
+UPDATE `user_registration` SET `business_points` = 320, `power_leg` = 'left'
+WHERE `user_id` = '5ETIZG';
+UPDATE `user_registration` SET `business_points` = 7920, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('5ETIZG', 'FAG3P7', 'type3', '11', 4.8, 'Binary bonus on addition of user FAG3P7', '2020-08-11');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', 'FAG3P7', 'type3', '11', 40, 'Binary bonus on addition of user FAG3P7', '2020-08-11');
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', 'Q1ZNPZ', '2xpowr', 'left', '2xpowr', 'user_11', 'user', '11', 'user_11@gmail.com', 'b7843d8a594c9d4af5174a9402c45339', '6', '234234', '127.0.0.1', 1, '80', 0, '2020-08-11 12:22:54', '2020-08-11 12:22:54');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'Q1ZNPZ', '100', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:22:54', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:22:54');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('Q1ZNPZ', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:22:54');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('Q1ZNPZ', '2xpowr', '11', '100', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('Q1ZNPZ', 'investment', 84, '100', '2020-08-11', 1, 'User Q1ZNPZ Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('Q1ZNPZ', 0, 0, 1, '2020-08-11 12:22:54');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('Q1ZNPZ', 0, 0, 1, '2020-08-11 12:22:54');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'Q1ZNPZ', 'type1', '11', 15, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', 'OIWS62', '2xpowr', 'right', '2xpowr', 'user_22', 'user', '22', 'user_22@gmail.com', '9ce2213a41c96bb031d257bd5c5d1dd6', '39', '3243234', '127.0.0.1', 1, '80', 0, '2020-08-11 12:26:13', '2020-08-11 12:26:13');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'OIWS62', '100', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:26:13', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:26:13');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('OIWS62', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:26:13');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('OIWS62', '2xpowr', '11', '100', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('OIWS62', 'investment', 85, '100', '2020-08-11', 1, 'User OIWS62 Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('OIWS62', 0, 0, 1, '2020-08-11 12:26:13');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('OIWS62', 0, 0, 1, '2020-08-11 12:26:13');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'OIWS62', 'type1', '11', 15, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = ''
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', 'OIWS62', 'type3', '11', 8, 'Binary bonus on addition of user OIWS62', '2020-08-11');
+UPDATE `user_registration` SET `used_points` = 80
+WHERE `user_id` = '2xpowr';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', 'YR1UGK', '2xpowr', 'left', 'OIWS62', 'user_23', 'user', '234', 'user_23@gmail.com', '8d6fcf70cedb6eba30ea92a3e381e651', '5', '3343', '127.0.0.1', 1, '4000', 0, '2020-08-11 12:44:01', '2020-08-11 12:44:01');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YR1UGK', '5000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:44:01', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:44:01');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YR1UGK', 'reciver', 3, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:44:01');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YR1UGK', '2xpowr', '14', '5000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YR1UGK', 'investment', 86, '5000', '2020-08-11', 1, 'User YR1UGK Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('YR1UGK', 0, 0, 1, '2020-08-11 12:44:01');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('YR1UGK', 0, 0, 1, '2020-08-11 12:44:01');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YR1UGK', 'type1', '14', 750, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 4000, `power_leg` = 'left'
+WHERE `user_id` = 'OIWS62';
+UPDATE `user_registration` SET `business_points` = 4160, `power_leg` = 'right'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', '524MNI', '2xpowr', 'left', 'Q1ZNPZ', 'user_234', 'user', '234', 'user_234@gmail.com', '4c5f343338e5bf2500d9fd7f9f449dc5', '41', '343234', '127.0.0.1', 1, '800', 0, '2020-08-11 12:46:02', '2020-08-11 12:46:02');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '524MNI', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:46:02', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:46:02');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('524MNI', 'reciver', 4, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:46:02');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('524MNI', '2xpowr', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('524MNI', 'investment', 87, '1000', '2020-08-11', 1, 'User 524MNI Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('524MNI', 0, 0, 1, '2020-08-11 12:46:02');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('524MNI', 0, 0, 1, '2020-08-11 12:46:02');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '524MNI', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'Q1ZNPZ';
+UPDATE `user_registration` SET `business_points` = 4960, `power_leg` = 'right'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', '524MNI', 'type3', '13', 80, 'Binary bonus on addition of user 524MNI', '2020-08-11');
+UPDATE `user_registration` SET `used_points` = 880
+WHERE `user_id` = '2xpowr';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', 'JYQDPH', '2xpowr', 'right', 'Q1ZNPZ', 'user_bk', 'user', 'bk', 'user_bk@gmail.com', '0ab69f3c0d0ba1244afedd0ff3dea2c5', '2', '34324234', '127.0.0.1', 1, '80', 0, '2020-08-11 12:47:21', '2020-08-11 12:47:21');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'JYQDPH', '5000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:47:21', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:47:21');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('JYQDPH', 'reciver', 5, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:47:21');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('JYQDPH', '2xpowr', '11', '5000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('JYQDPH', 'investment', 88, '5000', '2020-08-11', 1, 'User JYQDPH Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('JYQDPH', 0, 0, 1, '2020-08-11 12:47:21');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('JYQDPH', 0, 0, 1, '2020-08-11 12:47:21');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'JYQDPH', 'type1', '11', 15, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'left'
+WHERE `user_id` = 'Q1ZNPZ';
+UPDATE `user_registration` SET `business_points` = 5040, `power_leg` = 'right'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('Q1ZNPZ', 'JYQDPH', 'type3', '11', 4.8, 'Binary bonus on addition of user JYQDPH', '2020-08-11');
+UPDATE `user_registration` SET `used_points` = 80
+WHERE `user_id` = 'Q1ZNPZ';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', 'JYQDPH', 'type3', '11', 8, 'Binary bonus on addition of user JYQDPH', '2020-08-11');
+UPDATE `user_registration` SET `used_points` = 960
+WHERE `user_id` = '2xpowr';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', '2K7UVM', '2xpowr', 'left', 'JYQDPH', 'user_abc', 'user', 'abc', 'user_abc@gmail.com', 'c95c3944b155ed4ca5f46902ea79a2d9', '5', '234234234', '127.0.0.1', 1, '4000', 0, '2020-08-11 12:49:45', '2020-08-11 12:49:45');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '2K7UVM', '5000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:49:45', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:49:45');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2K7UVM', 'reciver', 6, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:49:45');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2K7UVM', '2xpowr', '14', '5000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('2K7UVM', 'investment', 89, '5000', '2020-08-11', 1, 'User 2K7UVM Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('2K7UVM', 0, 0, 1, '2020-08-11 12:49:45');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('2K7UVM', 0, 0, 1, '2020-08-11 12:49:45');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '2K7UVM', 'type1', '14', 750, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 4000, `power_leg` = 'left'
+WHERE `user_id` = 'JYQDPH';
+UPDATE `user_registration` SET `business_points` = 4880, `power_leg` = 'right'
+WHERE `user_id` = 'Q1ZNPZ';
+UPDATE `user_registration` SET `business_points` = 9040, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('Q1ZNPZ', '2K7UVM', 'type3', '14', 43.2, 'Binary bonus on addition of user 2K7UVM', '2020-08-11');
+UPDATE `user_registration` SET `used_points` = 800
+WHERE `user_id` = 'Q1ZNPZ';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', '2K7UVM', 'type3', '14', 312, 'Binary bonus on addition of user 2K7UVM', '2020-08-11');
+UPDATE `user_registration` SET `used_points` = 4080
+WHERE `user_id` = '2xpowr';
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', '2WWHY0', '2xpowr', 'right', 'JYQDPH', 'user_psc', 'user', 'psc', 'user_psc@gmail.com', '4860e32d5c0193e3cfde3aaa9bb55384', '109', '34342343', '127.0.0.1', 1, '2000', 0, '2020-08-11 12:52:19', '2020-08-11 12:52:19');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '2WWHY0', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:52:19', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 7, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:52:19');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2WWHY0', 'reciver', 7, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-11 12:52:19');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2WWHY0', '2xpowr', '15', '2500', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('2WWHY0', 'investment', 90, '2500', '2020-08-11', 1, 'User 2WWHY0 Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('2WWHY0', 0, 0, 1, '2020-08-11 12:52:19');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('2WWHY0', 0, 0, 1, '2020-08-11 12:52:19');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '2WWHY0', 'type1', '15', 375, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'JYQDPH';
+UPDATE `user_registration` SET `business_points` = 6880, `power_leg` = 'right'
+WHERE `user_id` = 'Q1ZNPZ';
+UPDATE `user_registration` SET `business_points` = 11040, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('JYQDPH', '2WWHY0', 'type3', '15', 120, 'Binary bonus on addition of user 2WWHY0', '2020-08-11');
+UPDATE `user_registration` SET `used_points` = 2000
+WHERE `user_id` = 'JYQDPH';
+UPDATE `admin` SET `last_logout` = '2020-08-11 13:45:37'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_login` = '2020-08-11 13:45:43', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_logout` = '2020-08-12 10:18:57'
+WHERE `id` IS NULL;

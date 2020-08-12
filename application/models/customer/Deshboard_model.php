@@ -82,6 +82,17 @@ class Deshboard_model extends CI_Model {
 			
 		
 
+		//Package Commission
+		$binary_query  = $this->db->select("sum(amount) as binary_sum")
+			->from('earnings')
+			->where('user_id',$user_id)
+			->where('earning_type','type3')
+			->where('amount > ',0)
+			->get()
+			->row();
+		
+		$binary_bonus = $binary_query->binary_sum;
+
 		$data = $this->db->select('*')
 		->from('transections')
 		->where('user_id',$user_id)
@@ -195,7 +206,6 @@ class Deshboard_model extends CI_Model {
 					$promotion_balance+=$value->amount; 
 				}
 
-
 			}
 		}
 
@@ -244,6 +254,9 @@ class Deshboard_model extends CI_Model {
 
 			$individule['negative_roi_sum'] = $negative_roi_sum;
 			$individule['negative_com_sum'] = $negative_com_sum;
+
+			$individule['binary_bonus'] = $binary_bonus;
+			$individule['balance'] = $individule['balance'] + $binary_bonus;
 
 			return $individule;
 		

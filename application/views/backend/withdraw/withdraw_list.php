@@ -17,6 +17,7 @@
                                 <th><?php echo display('wallet_id') ?></th>
                                 <th><?php echo display('amount') ?></th>
                                 <th><?php echo display('status') ?></th>
+                                <th>Date</th>
                                 <th><?php echo display('action') ?></th>
                             </tr>
                         </thead>
@@ -38,6 +39,7 @@
                                      <a  class="btn btn-danger btn-sm"><?php echo display('cancel')?></a>
                                      <?php } ?>
                                  </td>
+                                 <td><?php echo $value->request_date; ?></td>
                                  <td>
                                      <?php if($value->status==1){?>
                                      <a href="<?php echo base_url()?>backend/withdraw/withdraw/confirm_withdraw?id=<?php echo $value->withdraw_id;?>&user_id=<?php echo $value->user_id;?>&set_status=2" class="btn btn-success btn-sm"><?php echo display('confirm')?></a>

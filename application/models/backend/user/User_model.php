@@ -714,10 +714,75 @@ class User_model extends CI_Model {
 
 		$html ='<h3>Total : '.$user->business_points.'</h3>';
 		
+		$left_sum = 0;
+		$right_sum = 0;
+		$power_leg = '';
+		$points_remaining = 0;
+		$bonus_points = 0;
+
 		foreach($children as $child){
 			//$html.='<h3>'.strtoupper(substr($child->position,0,1)).' : '.$this->tree_model->get_total_points($child).'</h3>';
 			$html.='<h3>'.strtoupper(substr($child->position,0,1)).' : '.($child->points+$child->business_points).'</h3>';
 		}
+
+
+		//left child
+		$left = $this->db->select('*')
+		->from('user_registration')
+		->where('parent',$user->user_id)
+		->where('position','left') 
+		->get()
+		->row();
+
+		//right child.
+
+		$right = $this->db->select('*')
+		->from('user_registration')
+		->where('parent',$user->user_id)
+		->where('position','right') 
+		->get()
+		->row();
+
+		if(is_object($left)){
+			$left_sum = (int)$left->points+(int)$left->business_points;			
+		}
+
+		if(is_object($right)){
+			$right_sum = (int)$right->points+(int)$right->business_points;
+		}
+
+		if($left_sum > $right_sum){
+			
+			$power_leg = 'left';
+			
+			$points_remaining = $left_sum- $user->used_points;
+			/*
+			if($right_sum > 0){
+				//$points_remaining = $left_sum-$right_sum- $user->used_points;
+			}
+			*/
+
+		}else if ($right_sum > $left_sum){
+			$power_leg = 'right';							
+			$points_remaining = $right_sum- $user->used_points;
+			/*
+			if($left_sum > 0){
+				$points_remaining = $right_sum-$right_sum- $user->used_points;
+			}
+			*/
+
+		}else{
+			$power_leg = '';
+			if($left_sum > 0 && $right_sum > 0 && $left_sum == $right_sum){
+				//both are same, 
+				$points_remaining = $left_sum-$user->used_points;
+			}
+		}
+
+
+		//$points_remaining = $bonus_points - $user->used_points;
+
+		$html.='<h3> Power: '.strtoupper(substr($power_leg,0,1)).' , Remaining : '.$points_remaining.', Used : '.$user->used_points.'</h3>';		
 
 		return $html;
 	}
@@ -729,7 +794,9 @@ class User_model extends CI_Model {
 		foreach($children as $child){
 			//$html.='<h3>'.strtoupper(substr($child->position,0,1)).' : '.$this->tree_model->get_total_points($child).'</h3>';
 			$html.='<h3>'.strtoupper(substr($child->position,0,1)).' : '.$child->points.'</h3>';
+			$html.='<h3>'.strtoupper(substr($child->position,0,1)).' : '.$child->points.'</h3>';
 		}
+		
 		
 		return $html;
 	}
