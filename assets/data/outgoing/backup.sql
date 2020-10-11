@@ -2239,3 +2239,7937 @@ UPDATE `admin` SET `last_login` = '2020-08-11 13:45:43', `ip_address` = '127.0.0
 WHERE `id` = '1';
 UPDATE `admin` SET `last_logout` = '2020-08-12 10:18:57'
 WHERE `id` IS NULL;
+UPDATE `admin` SET `last_login` = '2020-08-17 20:41:11', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES (NULL, NULL, 'type1', NULL, 0, NULL);
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES (NULL, NULL, 'type1', NULL, 0, NULL);
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES (NULL, NULL, 'type1', '11', 0, '2020-05-13');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES (NULL, NULL, 'type1', '11', 0, '2020-05-13');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 0, `power_leg` = ''
+WHERE `user_id` = '2xpowr';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-17 10:38:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-17 10:38:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 2, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 0, `power_leg` = ''
+WHERE `user_id` = '2xpowr';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-17 10:41:22');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-17 10:41:22');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 3, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 0, `power_leg` = ''
+WHERE `user_id` = '2xpowr';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-17 10:41:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-17 10:41:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 0, `power_leg` = ''
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-17 10:47:58');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-17 10:47:58');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 5, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-17 10:50:01');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-17 10:50:01');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 6, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `admin` SET `last_logout` = '2020-08-18 00:42:26'
+WHERE `id` IS NULL;
+UPDATE `user_registration` SET `points` = NULL, `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` IS NULL;
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES (NULL, NULL, 'type1', NULL, 0, NULL);
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:54:13');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 6, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:54:13');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 7, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 240, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 7, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:54:13');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 7, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:54:13');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 8, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 320, `power_leg` = ''
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 8, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 8, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 9, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 240, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 9, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 9, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 10, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 320, `power_leg` = ''
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 10, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 10, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 11, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 400, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 11, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 11, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 12, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 8000, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 8080, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 8160, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 12, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 12, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 13, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 4080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 12160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 12240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 12480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 13, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 13, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 14, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 4000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 8080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 16080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 16160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 16240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 16480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 15, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 4800, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 8880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 16880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 16960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 16, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 5600, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 9680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 17680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 17760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18080, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 16, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 16, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 17, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 9680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 17680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 17760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18080, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 18, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 10480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 18480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 18560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 18640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18880, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 19, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 20240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 20480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 20, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 20240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 20480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 20, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 20, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 21, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 20560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 21, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 21, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 22, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 21360, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 23, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 6400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 12880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 21040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 22160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 24, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 7200, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 13680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 21680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 21760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 21840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 22960, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 25, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 16480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 24480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 24560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 24640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25760, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 26, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10800, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 26560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 26, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 26, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:11');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 27, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `business_points` = 8800, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 10400, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 26080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 34240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 35360, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:12');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:12');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 28, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 7600, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 11600, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 26880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 28, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:12');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 28, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:12');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 29, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `business_points` = 8800, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 10400, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 26880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 29, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:12');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 29, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 12:55:12');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 30, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 35680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 35760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36960, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = NULL, `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'OIY4BE';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'OIY4BE', 'type1', NULL, 0, NULL);
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investments` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 240, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 320, `power_leg` = ''
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 4, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 400, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 4, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 5, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 8000, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 8080, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 8160, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 5, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 5, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 6, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 4080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 12160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 12240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 12480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 6, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 6, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 7, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 4000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 8080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 16080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 16160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 16240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 16480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 7, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 7, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 8, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 4800, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 8880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 16880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 16960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 8, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 8, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 9, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 5600, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 9680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 17680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 17760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18080, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 9, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 9, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 10, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 9680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 17680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 17760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18080, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 11, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 10480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 18480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 18560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 18640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18880, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 11, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 11, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 12, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 20240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 20480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 13, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 20240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 20480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 13, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 13, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 14, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 20560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 15, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 21360, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 16, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 6400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 12880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 21040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 22160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 17, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 7200, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 13680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 21680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 21760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 21840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 22960, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 18, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 16480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 24480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 24560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 24640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25760, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 19, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10800, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 26560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 19, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 19, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 20, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `business_points` = 8800, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 10400, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 26080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 34240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 35360, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 21, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 7600, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 11600, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 26880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 21, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 22, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `business_points` = 8800, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 10400, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 26880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:17:52');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 23, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 35680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 35760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36960, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = NULL, `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'OIY4BE';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'OIY4BE', 'type1', NULL, 0, NULL);
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 240, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 320, `power_leg` = ''
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 4, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 400, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 4, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 5, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 8000, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 8080, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 8160, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 5, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 5, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 6, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 4080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 12160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 12240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 12480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 6, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 6, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 7, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 4000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 8080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 16080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 16160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 16240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 16480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 7, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 7, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 8, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 4800, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 8880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 16880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 16960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 8, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 8, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 9, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 5600, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 9680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 17680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 17760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18080, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 9, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 9, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 10, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 9680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 17680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 17760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18080, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 11, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 10480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 18480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 18560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 18640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18880, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 11, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 11, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 12, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 20240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 20480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 13, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 20240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 20480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 13, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 13, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 14, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 20560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 15, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 21360, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 16, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 6400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 12880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 21040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 22160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 17, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 7200, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 13680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 21680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 21760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 21840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 22960, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 18, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 16480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 24480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 24560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 24640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25760, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 19, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10800, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 26560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 19, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 19, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 20, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `business_points` = 8800, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 10400, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 26080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 34240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 35360, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 21, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 7600, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 11600, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 26880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 21, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 22, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `business_points` = 8800, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 10400, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 26880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:06');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 23, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 35680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 35760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36960, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = NULL, `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'OIY4BE';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'OIY4BE', 'type1', NULL, 0, NULL);
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 240, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 320, `power_leg` = ''
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 4, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 400, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 4, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 5, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 8000, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 8080, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 8160, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 5, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 5, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 6, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 4080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 12160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 12240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 12480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 6, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 6, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 7, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 4000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 8080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 16080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 16160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 16240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 16480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 7, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 7, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 8, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 4800, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 8880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 16880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 16960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 8, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 8, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 9, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 5600, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 9680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 17680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 17760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18080, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 9, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 9, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 10, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 9680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 17680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 17760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18080, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 11, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 10480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 18480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 18560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 18640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18880, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 11, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 11, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 12, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 20240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 20480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 13, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 20240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 20480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 13, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 13, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 14, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 20560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 15, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 21360, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 16, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 6400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 12880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 21040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 22160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 17, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 7200, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 13680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 21680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 21760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 21840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 22960, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 18, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 16480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 24480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 24560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 24640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25760, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 19, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10800, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 26560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 19, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 19, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 20, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `business_points` = 8800, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 10400, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 26080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 34240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 35360, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 21, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 7600, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 11600, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 26880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 21, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 22, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `business_points` = 8800, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 10400, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 26880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:20:48');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 23, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 35680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 35760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36960, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 240, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 320, `power_leg` = ''
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 4, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 400, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 4, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 5, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 8000, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 8080, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 8160, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 5, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 5, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 6, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 4080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 12160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 12240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 12480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 6, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 6, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 7, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 4000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 8080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 16080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 16160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 16240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 16480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 7, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 7, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 8, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 4800, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 8880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 16880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 16960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 8, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 8, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 9, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 5600, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 9680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 17680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 17760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18080, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 9, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 9, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 10, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 9680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 17680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 17760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 17840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18080, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 11, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 10480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 18480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 18560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 18640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 18880, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 11, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 11, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 12, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 20240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 20480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 13, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = ''
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 12080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 20240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 20480, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 13, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 13, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 14, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 80, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 160, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 20560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 15, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 21360, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 16, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 6400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 12880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 20880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 20960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 21040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 22160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 17, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 7200, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 13680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 21680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 21760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 21840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 22960, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 18, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 16480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 24480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 24560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 24640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25760, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 19, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10800, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 26560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 19, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 19, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 20, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `business_points` = 8800, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 10400, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 26080, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34080, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34160, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 34240, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 35360, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 21, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 7600, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 11600, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 26880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 21, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 22, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `business_points` = 8800, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 10400, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 26880, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 34880, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 34960, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35040, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36160, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 23, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 11200, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 35680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 35760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 35840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 36960, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 24, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 28480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 36480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 36560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 36640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37760, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 24, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 24, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 25, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 28480, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 36480, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 36560, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 36640, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37760, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:29:57');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 26, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:36:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:39:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:42:50');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 1, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 1, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 2, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 0, '2020-08-12');
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 2, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 2, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 3, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 0, '2020-08-12');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 3, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 3, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 4, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 0, '2020-08-11');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 4, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 4, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 5, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 0, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 5, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 5, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 6, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 0, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 6, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 6, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 7, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 0, '2020-07-16');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 7, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 7, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 8, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 0, '2020-06-30');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 8, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 8, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 9, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 0, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 10, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 0, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 11, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 0, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 11, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 12, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 0, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 13, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 13, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 13, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 14, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 0, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 15, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 16, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 0, '2020-05-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 17, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 17, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 18, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 0, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 19, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 0, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 20, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 0, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 20, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 20, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 21, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 0, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 21, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 21, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 22, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 0, '2020-05-13');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 22, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 22, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 23, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 23, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 23, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 24, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 24, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 24, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 25, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 25, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 25, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 26, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 26, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 26, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 27, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 27, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 27, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:45:30');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 28, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:46:40');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-18 01:49:27');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'right'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 7280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 15280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 15360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 15440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 15600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'right'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 7280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 15280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 15360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 15440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 15600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 19680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 27760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 27840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 28000, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 19680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 27760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 27840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 28000, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('3X3GS2', '735KJF', 'type3', '13', 160, 'Binary bonus on addition of user 735KJF', '2020-08-18');
+UPDATE `user_registration` SET `used_points` = 1600
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('P1H21Z', '735KJF', 'type3', '13', 1288, 'Binary bonus on addition of user 735KJF', '2020-08-18');
+UPDATE `user_registration` SET `used_points` = 12880
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', '735KJF', 'type3', '13', 104, 'Binary bonus on addition of user 735KJF', '2020-08-18');
+UPDATE `user_registration` SET `used_points` = 1040
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('S22N8Z', '735KJF', 'type3', '13', 200, 'Binary bonus on addition of user 735KJF', '2020-08-18');
+UPDATE `user_registration` SET `used_points` = 2000
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('DHSN30', '735KJF', 'type3', '13', 80, 'Binary bonus on addition of user 735KJF', '2020-08-18');
+UPDATE `user_registration` SET `used_points` = 800
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('K68D6F', '735KJF', 'type3', '13', 160, 'Binary bonus on addition of user 735KJF', '2020-08-18');
+UPDATE `user_registration` SET `used_points` = 1600
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('S22N8Z', '735KJF', 'type3', '13', 200, 'Binary bonus on addition of user 735KJF', '2020-08-18');
+UPDATE `user_registration` SET `used_points` = 2000
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('K68D6F', '735KJF', 'type3', '13', 160, 'Binary bonus on addition of user 735KJF', '2020-08-18');
+UPDATE `user_registration` SET `used_points` = 1600
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('3X3GS2', '735KJF', 'type3', '13', 160, 'Binary bonus on addition of user 735KJF', '2020-08-18');
+UPDATE `user_registration` SET `used_points` = 1600
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('DHSN30', '735KJF', 'type3', '13', 80, 'Binary bonus on addition of user 735KJF', '2020-08-18');
+UPDATE `user_registration` SET `used_points` = 800
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('P1H21Z', '735KJF', 'type3', '13', 1288, 'Binary bonus on addition of user 735KJF', '2020-08-18');
+UPDATE `user_registration` SET `used_points` = 12880
+WHERE `user_id` = 'P1H21Z';
+UPDATE `admin` SET `last_login` = '2020-08-19 12:38:26', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `user_registration` SET `user_id` = 'YOU8F1', `password` = '3dffa56bb72050f8104ef987ebd06cee'
+WHERE `user_id` = 'YOU8F1';
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:42');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0, `processed` = 1
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:46:43');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'right'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 7280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 15280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 15360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 15440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 15600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'right'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 7280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 15280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 15360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 15440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 15600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 19680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 27760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 27840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 28000, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 19680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 27760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 27840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 28000, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('3X3GS2', '735KJF', 'type3', '13', 160, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 1600
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('P1H21Z', '735KJF', 'type3', '13', 1288, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 12880
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('2xpowr', '735KJF', 'type3', '13', 104, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 1040
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('S22N8Z', '735KJF', 'type3', '13', 200, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 2000
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('DHSN30', '735KJF', 'type3', '13', 80, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 800
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('K68D6F', '735KJF', 'type3', '13', 160, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 1600
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('S22N8Z', '735KJF', 'type3', '13', 200, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 2000
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('K68D6F', '735KJF', 'type3', '13', 160, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 1600
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('3X3GS2', '735KJF', 'type3', '13', 160, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 1600
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('DHSN30', '735KJF', 'type3', '13', 80, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 800
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('P1H21Z', '735KJF', 'type3', '13', 1288, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 12880
+WHERE `user_id` = 'P1H21Z';
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:57:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:10');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'right'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 7280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 15280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 15360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 15440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 15600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'right'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 7280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 15280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 15360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 15440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 15600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 19680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 27760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 27840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 28000, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 19680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 27760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 27840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 28000, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 12:59:44');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'right'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 7280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 15280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 15360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 15440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 15600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'right'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 3200, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 7280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 15280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 15360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 15440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 15600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2800, `power_leg` = 'right'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 3600, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 4400, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 10000, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 17280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 25280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 25360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 25440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 25600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 19680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 27760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 27840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 28000, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 19680, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 27680, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 27760, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 27840, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 28000, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 1600, `power_leg` = 'left'
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 2400, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 5200, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 6000, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 37600, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'right'
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 800, `power_leg` = 'left'
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 9600, `power_leg` = 'left'
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12000, `power_leg` = 'left'
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12800, `power_leg` = 'left'
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 6800, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 8400, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 12400, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 29280, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37280, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 880, `power_leg` = 'right'
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `business_points` = 960, `power_leg` = 'right'
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `business_points` = 38560, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('3X3GS2', '735KJF', 'type3', '13', 160, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 1600
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('P1H21Z', '735KJF', 'type3', '13', 1288, 'Binary bonus on addition of user 735KJF', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 12880
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '735KJF';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type3', '15', 200, 'Binary bonus on addition of user QALQ8Y', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 2000
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('DHSN30', 'QALQ8Y', 'type3', '15', 80, 'Binary bonus on addition of user QALQ8Y', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 800
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('K68D6F', 'ANM00F', 'type3', '13', 160, 'Binary bonus on addition of user ANM00F', '2020-08-19');
+UPDATE `user_registration` SET `used_points` = 1600
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'ANM00F';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '7USI3X';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '7USI3X';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'ANM00F';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:07:35');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '735KJF';
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0, `used_points` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '7USI3X';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'ANM00F';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:08:25');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '735KJF';
+TRUNCATE `transfer`;
+TRUNCATE `deposit`;
+TRUNCATE `transections`;
+TRUNCATE `investment`;
+Delete from earnings where earning_type = 'type1' OR earning_type='type3';
+UPDATE `user_registration` SET `processed` = 0, `used_points` = 0;
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_id`, `status`) VALUES ('2xpowr', 100000, 'admin', 'company_balance', '0', 'Initial deposit from admin to top level user', '2020-05-01 00:00:00', '', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'deposit', 1, 100000, 'Initial deposit from admin to top level user', '2020-05-01 00:00:00');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('2xpowr', '2xpowr', 16, 10000, '2020-05-01 00:00:00', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'investment', 1, 10000, 'Package activated for user 2xpowr', '2020-05-01 00:00:00');
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'YOU8F1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'YOU8F1', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('YOU8F1', 'reciver', 1, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('YOU8F1', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('YOU8F1', 'investment', 2, '100', '2020-05-13', 1, 'User YOU8F1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'YOU8F1', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XOYETJ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'XOYETJ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XOYETJ', 'reciver', 2, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XOYETJ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XOYETJ', 'investment', 3, '100', '2020-05-13', 1, 'User XOYETJ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'XOYETJ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'XOYETJ';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DJI47I';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DJI47I', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DJI47I', 'reciver', 3, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DJI47I', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DJI47I', 'investment', 4, '100', '2020-05-13', 1, 'User DJI47I Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'FI0NJZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'FI0NJZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('FI0NJZ', 'reciver', 4, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('FI0NJZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('FI0NJZ', 'investment', 5, '100', '2020-05-13', 1, 'User FI0NJZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'FI0NJZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'UBH5FQ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'UBH5FQ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('UBH5FQ', 'reciver', 5, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('UBH5FQ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('UBH5FQ', 'investment', 6, '100', '2020-05-13', 1, 'User UBH5FQ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'UBH5FQ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'P1H21Z', '10000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'reciver', 6, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('P1H21Z', '2xpowr', '16', '10000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('P1H21Z', 'investment', 7, '10000', '2020-05-13', 1, 'User P1H21Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'P1H21Z', 'type1', '16', 1500, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '8NW04C';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '8NW04C', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'reciver', 7, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('8NW04C', 'P1H21Z', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('8NW04C', 'investment', 8, '5000', '2020-05-13', 1, 'User 8NW04C Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '8NW04C', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `points` = '4000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('8NW04C', 'DHSN30', '5000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('8NW04C', 'transfer', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'reciver', 8, '5000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DHSN30', '8NW04C', '14', '5000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DHSN30', 'investment', 9, '5000', '2020-05-13', 1, 'User DHSN30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('8NW04C', 'DHSN30', 'type1', '14', 750, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'R3LODO';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'R3LODO', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('R3LODO', 'reciver', 9, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('R3LODO', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('R3LODO', 'investment', 10, '1000', '2020-05-13', 1, 'User R3LODO Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'R3LODO', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('DHSN30', 'MHW3CH', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'transfer', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('MHW3CH', 'reciver', 10, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('MHW3CH', 'DHSN30', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('MHW3CH', 'investment', 11, '1000', '2020-05-13', 1, 'User MHW3CH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('DHSN30', 'MHW3CH', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'MHW3CH';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3G4L0B';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '3G4L0B', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3G4L0B', 'reciver', 11, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3G4L0B', 'P1H21Z', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3G4L0B', 'investment', 12, '100', '2020-05-13', 1, 'User 3G4L0B Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '3G4L0B', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '3G4L0B';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '3X3GS2';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '3X3GS2', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'reciver', 12, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('3X3GS2', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('3X3GS2', 'investment', 13, '1000', '2020-05-13', 1, 'User 3X3GS2 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '3X3GS2', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '3X3GS2';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'K68D6F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'K68D6F', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'reciver', 13, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('K68D6F', '3X3GS2', '13', '1000', '2020-05-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('K68D6F', 'investment', 14, '1000', '2020-05-16', 1, 'User K68D6F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'K68D6F', 'type1', '13', 150, '2020-05-16');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'K68D6F';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'TM0J30';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('3X3GS2', 'TM0J30', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'transfer', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'reciver', 14, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('TM0J30', '3X3GS2', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('TM0J30', 'investment', 15, '1000', '2020-05-13', 1, 'User TM0J30 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('3X3GS2', 'TM0J30', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'TM0J30';
+UPDATE `user_registration` SET `points` = '80', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DGXQWZ';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', 'DGXQWZ', '100', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DGXQWZ', 'reciver', 15, '100', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DGXQWZ', '2xpowr', '11', '100', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DGXQWZ', 'investment', 16, '100', '2020-05-13', 1, 'User DGXQWZ Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', 'DGXQWZ', 'type1', '11', 15, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DGXQWZ';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '7USI3X';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('2xpowr', '7USI3X', '1000', 0, 'company_balance', '127.0.0.1', '2020-05-13 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('7USI3X', 'reciver', 16, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('7USI3X', '2xpowr', '13', '1000', '2020-05-13', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('7USI3X', 'investment', 17, '1000', '2020-05-13', 1, 'User 7USI3X Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('2xpowr', '7USI3X', 'type1', '13', 150, '2020-05-13');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '7USI3X';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'BR0VC6';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'BR0VC6', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('BR0VC6', 'reciver', 17, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('BR0VC6', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('BR0VC6', 'investment', 18, '1000', '2020-06-29', 1, 'User BR0VC6 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'BR0VC6', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'S22N8Z';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'S22N8Z', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 18, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('S22N8Z', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('S22N8Z', 'investment', 19, '1000', '2020-06-29', 1, 'User S22N8Z Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'S22N8Z', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'XQLRRK';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'XQLRRK', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('XQLRRK', 'reciver', 19, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('XQLRRK', 'S22N8Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('XQLRRK', 'investment', 20, '1000', '2020-06-29', 1, 'User XQLRRK Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'XQLRRK', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '9RH9WB';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', '9RH9WB', '1000', 0, 'company_balance', '127.0.0.1', '2020-06-29 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('9RH9WB', 'reciver', 20, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('9RH9WB', 'P1H21Z', '13', '1000', '2020-06-29', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('9RH9WB', 'investment', 21, '1000', '2020-06-29', 1, 'User 9RH9WB Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', '9RH9WB', 'type1', '13', 150, '2020-06-29');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '9RH9WB';
+UPDATE `user_registration` SET `points` = '8000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'DK7UCH';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'DK7UCH', '10000', 0, 'company_balance', '127.0.0.1', '2020-06-30 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DK7UCH', 'reciver', 21, '10000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('DK7UCH', 'K68D6F', '16', '10000', '2020-06-30', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('DK7UCH', 'investment', 22, '10000', '2020-06-30', 1, 'User DK7UCH Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'DK7UCH', 'type1', '16', 1500, '2020-06-30');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'DK7UCH';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'V18NHL';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'V18NHL', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-16 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('V18NHL', 'reciver', 22, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('V18NHL', 'P1H21Z', '13', '1000', '2020-07-16', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('V18NHL', 'investment', 23, '1000', '2020-07-16', 1, 'User V18NHL Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'V18NHL', 'type1', '13', 150, '2020-07-16');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'V18NHL';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'L2AEFT';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'L2AEFT', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('L2AEFT', 'reciver', 23, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('L2AEFT', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('L2AEFT', 'investment', 24, '1000', '2020-07-17', 1, 'User L2AEFT Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'L2AEFT', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'L2AEFT';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'ANM00F';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('K68D6F', 'ANM00F', '1000', 0, 'company_balance', '127.0.0.1', '2020-07-17 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'transfer', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('ANM00F', 'reciver', 24, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('ANM00F', 'K68D6F', '13', '1000', '2020-07-17', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('ANM00F', 'investment', 25, '1000', '2020-07-17', 1, 'User ANM00F Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('K68D6F', 'ANM00F', 'type1', '13', 150, '2020-07-17');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'ANM00F';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'PS7NI1';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('P1H21Z', 'PS7NI1', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-11 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'transfer', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PS7NI1', 'reciver', 25, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PS7NI1', 'P1H21Z', '13', '1000', '2020-08-11', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PS7NI1', 'investment', 26, '1000', '2020-08-11', 1, 'User PS7NI1 Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('P1H21Z', 'PS7NI1', 'type1', '13', 150, '2020-08-11');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'PS7NI1';
+UPDATE `user_registration` SET `points` = '2000', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = 'QALQ8Y';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'QALQ8Y', '2500', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('QALQ8Y', 'reciver', 26, '2500', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('QALQ8Y', 'S22N8Z', '15', '2500', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('QALQ8Y', 'investment', 27, '2500', '2020-08-12', 1, 'User QALQ8Y Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'QALQ8Y', 'type1', '15', 375, '2020-08-12');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = 'QALQ8Y';
+UPDATE `user_registration` SET `points` = '800', `business_points` = 0, `used_points` = 0
+WHERE `user_id` = '735KJF';
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('TM0J30', '735KJF', '1000', 0, 'company_balance', '127.0.0.1', '2020-08-12 12:00:00', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'transfer', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('735KJF', 'reciver', 27, '1000', 'Initial account create transfer from parent to child from company balance', '2020-08-19 01:09:47');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('735KJF', 'TM0J30', '13', '1000', '2020-08-12', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('735KJF', 'investment', 28, '1000', '2020-08-12', 1, 'User 735KJF Added');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('TM0J30', '735KJF', 'type1', '13', 150, '2020-08-12');
+UPDATE `user_registration` SET `processed` = 1
+WHERE `user_id` = '735KJF';
+UPDATE `admin` SET `last_logout` = '2020-08-19 14:42:43'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_login` = '2020-08-19 14:42:50', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_ip`, `status`) VALUES ('P1H21Z', '10100', 'admin', 'company_balance', 0, 'Transfer from admin for accounts', '2020-08-19 02:45:19', '127.0.0.1', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('P1H21Z', 'deposit', 2, '10100', 'Transfer from admin for accounts', '2020-08-19 02:45:19');
+UPDATE `user_registration` SET `user_id` = '8NW04C', `f_name` = 'Asma', `l_name` = 'Bibi', `email` = 'hazara4000@gmail.com', `phone` = '03460804000', `status` = 1, `roi_status` = 1
+WHERE `user_id` = '8NW04C';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_ip`, `status`) VALUES ('Pakistan1', '5000', 'admin', 'company_balance', 0, 'Transfer from admin for accounts', '2020-08-19 02:57:39', '127.0.0.1', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('Pakistan1', 'deposit', 3, '5000', 'Transfer from admin for accounts', '2020-08-19 02:57:39');
+UPDATE `user_registration` SET `user_id` = '8NW04C', `f_name` = 'Asma', `l_name` = 'Bibi', `email` = 'hazara4000@gmail.com', `phone` = '03460804000', `status` = 0, `roi_status` = 0
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `user_id` = 'DHSN30', `f_name` = 'Husnain ', `l_name` = 'Kazmi ', `email` = 'husnainkazmi897@gmail.com', `phone` = '03455236878', `status` = 1, `roi_status` = 1
+WHERE `user_id` = 'DHSN30';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_ip`, `status`) VALUES ('DHSN30', '2000', 'admin', 'company_balance', 0, 'transfer from admin for accounts', '2020-08-19 03:01:08', '127.0.0.1', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('DHSN30', 'deposit', 4, '2000', 'transfer from admin for accounts', '2020-08-19 03:01:08');
+UPDATE `user_registration` SET `user_id` = 'DHSN30', `f_name` = 'Husnain ', `l_name` = 'Kazmi ', `email` = 'husnainkazmi897@gmail.com', `phone` = '03455236878', `status` = 0, `roi_status` = 0
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `user_id` = 'R3LODO', `f_name` = 'Junaid ', `l_name` = 'Ahmad', `email` = 'Cutejony@gmail.com', `phone` = '03143908925', `status` = 1, `roi_status` = 1
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `user_id` = 'R3LODO', `f_name` = 'Junaid ', `l_name` = 'Ahmad', `email` = 'Cutejony@gmail.com', `phone` = '03143908925', `status` = 0, `roi_status` = 0
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `user_id` = 'MHW3CH', `f_name` = 'Habib ', `l_name` = 'Ur Rehman ', `email` = 'habiburrehman786@gmail.com', `phone` = '03155537230', `status` = 1, `roi_status` = 1
+WHERE `user_id` = 'MHW3CH';
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_ip`, `status`) VALUES ('3X3GS2', '2000', 'admin', 'company_balance', 0, 'Transfer from admin for accounts', '2020-08-19 03:06:59', '127.0.0.1', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('3X3GS2', 'deposit', 5, '2000', 'Transfer from admin for accounts', '2020-08-19 03:06:59');
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_ip`, `status`) VALUES ('K68D6F', '12000', 'admin', 'company_balance', 0, 'Transfer from admin for accounts', '2020-08-19 03:08:21', '127.0.0.1', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('K68D6F', 'deposit', 6, '12000', 'Transfer from admin for accounts', '2020-08-19 03:08:21');
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_ip`, `status`) VALUES ('TM0J30', '1000', 'admin', 'company_balance', 0, 'Transfer from admin for accounts', '2020-08-19 03:10:15', '127.0.0.1', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('TM0J30', 'deposit', 7, '1000', 'Transfer from admin for accounts', '2020-08-19 03:10:16');
+INSERT INTO `deposit` (`user_id`, `deposit_amount`, `deposit_method`, `deposit_type`, `fees`, `comments`, `deposit_date`, `deposit_ip`, `status`) VALUES ('S22N8Z', '3500', 'admin', 'company_balance', 0, 'transfer from admin for accounts', '2020-08-19 03:14:29', '127.0.0.1', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'deposit', 8, '3500', 'transfer from admin for accounts', '2020-08-19 03:14:29');
+UPDATE `admin` SET `last_logout` = '2020-08-19 15:21:57'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_login` = '2020-08-19 15:50:09', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_logout` = '2020-08-19 15:58:45'
+WHERE `id` = '1';
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', '2xpowr', 1, 'QQ4OX5', '{\"sender_user_id\":\"2xpowr\",\"receiver_user_id\":\"DJI47I\",\"amount\":\"10\",\"fees\":0,\"request_ip\":\"127.0.0.1\",\"date\":\"2020-08-19 04:01:53\",\"comments\":\"test binary transfer\",\"status\":1,\"transfer_type\":\"binary_bonus\"}');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`, `transfer_type`) VALUES ('2xpowr', 'DJI47I', '10', 0, '127.0.0.1', '2020-08-19 04:01:53', 'test binary transfer', 1, 'binary_bonus');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type3', 0, 28, -10, '2020-08-19');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('DJI47I', 0, 'type3', 0, 28, '10', '2020-08-19');
+UPDATE `verify_tbl` SET `status` = 0
+WHERE `id` = '54'
+AND `session_id` = 1;
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', '2xpowr', 1, 'II0YSD', '{\"sender_user_id\":\"2xpowr\",\"receiver_user_id\":\"DJI47I\",\"amount\":\"15\",\"fees\":0,\"request_ip\":\"127.0.0.1\",\"date\":\"2020-08-19 04:05:01\",\"comments\":\"transfer 15 binary bonus\",\"status\":1,\"transfer_type\":\"binary_bonus\"}');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`, `transfer_type`) VALUES ('2xpowr', 'DJI47I', '15', 0, '127.0.0.1', '2020-08-19 04:05:01', 'transfer 15 binary bonus', 1, 'binary_bonus');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('2xpowr', 'DJI47I', 'type3', 0, 29, -15, '2020-08-19');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('DJI47I', 0, 'type3', 0, 29, '15', '2020-08-19');
+UPDATE `verify_tbl` SET `status` = 0
+WHERE `id` = '55'
+AND `session_id` = 1;
+UPDATE `admin` SET `last_login` = '2020-10-10 20:56:09', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `web_slider` SET `slider_id` = '2', `slider_h1_en` = 'Bitcoin <span class=\"bright-turquoise\">Exchange</span><br>You Can Trust', `slider_h1_fr` = '', `slider_h2_en` = '2X POWER’s goal is to become the premier source for financial services worldwide. This is accomplished by connecting the masses to the global market place and establishing our own financial ecosystem', `slider_h2_fr` = '', `slider_h3_en` = 'Click Here', `slider_h3_fr` = '', `slider_img` = 'upload/slider/0e4a7d6316e326b8618ad1edb0f7c312.jpg', `custom_url` = 'https://2xpowers.com/', `status` = '1'
+WHERE `slider_id` = '2';
+UPDATE `web_category` SET `cat_id` = '8', `slug` = 'about', `cat_name_en` = 'About', `cat_name_fr` = 'Sur', `parent_id` = '7', `cat_image` = 'upload/b40e7e093d856ff3c5037421efade783.jpg', `cat_title1_en` = 'About Us', `cat_title1_fr` = '', `cat_title2_en` = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that', `cat_title2_fr` = '', `menu` = '3', `position_serial` = '1', `status` = '1'
+WHERE `cat_id` = '8';
+UPDATE `web_category` SET `cat_id` = '2', `slug` = 'coinmarket', `cat_name_en` = 'Coinmarket', `cat_name_fr` = 'Coinmarket', `parent_id` = '0', `cat_image` = 'upload/61f2731418cee75eecde8fd5cadb2663.jpg', `cat_title1_en` = 'Bitcoin Currency Prices', `cat_title1_fr` = '', `cat_title2_en` = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that', `cat_title2_fr` = '', `menu` = '3', `position_serial` = '2', `status` = '0'
+WHERE `cat_id` = '2';
+UPDATE `web_category` SET `cat_id` = '6', `slug` = 'sells', `cat_name_en` = 'Sells', `cat_name_fr` = 'Vend', `parent_id` = '0', `cat_image` = 'upload/c68e8154891b01bb15f967d02a5ee3da.jpg', `cat_title1_en` = 'Sells', `cat_title1_fr` = '', `cat_title2_en` = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that', `cat_title2_fr` = '', `menu` = '0', `position_serial` = '6', `status` = '0'
+WHERE `cat_id` = '6';
+UPDATE `web_category` SET `cat_id` = '6', `slug` = 'sells', `cat_name_en` = 'Sells', `cat_name_fr` = 'Vend', `parent_id` = '0', `cat_image` = 'upload/c68e8154891b01bb15f967d02a5ee3da.jpg', `cat_title1_en` = 'Sells', `cat_title1_fr` = '', `cat_title2_en` = 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that', `cat_title2_fr` = '', `menu` = '0', `position_serial` = '6', `status` = '0'
+WHERE `cat_id` = '6';
+DELETE FROM `web_category`
+WHERE `cat_id` = '6';
+UPDATE `admin` SET `last_logout` = '2020-10-10 21:05:35'
+WHERE `id` IS NULL;
+UPDATE `admin` SET `last_login` = '2020-10-11 00:57:06', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `web_article` SET `article_id` = '32', `slug` = 'security-protected', `headline_en` = 'Security Protected', `headline_fr` = '', `article1_en` = 'We have our own trading platform. ​', `article1_fr` = '', `article2_en` = '<p>We have our own trading platform. ​We have our own trading platform. ​We have our own trading platform. ​We have our own trading platform. ​We have our own trading platform. ​We have our own trading platform. ​We have our own trading platform. ​We have our own trading platform. ​We have our own trading platform. ​<br></p>', `article2_fr` = '', `video` = 'flaticon-secure-shield', `cat_id` = '11', `publish_date` = '2020-10-11 12:57:55am', `publish_by` = 'admin@gmail.com'
+WHERE `article_id` = '32';
+UPDATE `web_category` SET `cat_id` = '11', `slug` = 'service', `cat_name_en` = 'Service', `cat_name_fr` = 'un service', `parent_id` = '7', `cat_image` = 'upload/bbe04e1e2d4d77e63f90f06d034fe576.jpg', `cat_title1_en` = 'Service', `cat_title1_fr` = '', `cat_title2_en` = '', `cat_title2_fr` = '', `menu` = '3', `position_serial` = '4', `status` = '1'
+WHERE `cat_id` = '11';

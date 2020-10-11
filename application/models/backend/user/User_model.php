@@ -803,8 +803,7 @@ class User_model extends CI_Model {
 
 	private function get_add_buttons($children,$user,$isAdmin){
 
-		$tree_html='';
-
+		$tree_html='';		
 		if(!$this->has_left($children)){ 
 			if($isAdmin){
 				$tree_html.= '<a href="'.base_url().'backend/user/user/add_child?parent='.$user->user_id.'&position=left" class="btn btn-xs btn-primary pull-left">Add Left </a>';
@@ -820,6 +819,12 @@ class User_model extends CI_Model {
 				$tree_html.= '<a href="'.base_url().'customer/user/user/add_child?parent='.$user->user_id.'&position=right" class="btn btn-xs btn-primary pull-right">Add Right </a>';
 			}
 		}
+
+
+		if(count($children) == 0){
+			//$tree_html.= '<a class="btn btn-danger" href="'.base_url().'customer/user/user/reprocess?user_id='.$user->user_id.'">Reprocess </a>';
+		}
+
 
 		return $tree_html;
 	}

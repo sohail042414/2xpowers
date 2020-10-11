@@ -49,6 +49,7 @@ img.star {
                 <div class="panel-title">
                     <h2><?php echo (!empty($title)?$title:null) ?> | Total points: <?php echo $total_points; ?></h2>
                 </div>
+                <a class="btn btn-danger" href="<?php echo base_url().'customer/user/user/all_reset'; ?>"> All reset </a>
             </div>
             <div class="panel-body">
  

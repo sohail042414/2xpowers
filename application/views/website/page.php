@@ -9,7 +9,7 @@ $cat_title2  = isset($lang) && $lang =="french"?$cat_info->cat_title2_fr:$cat_in
                         <div class="col-sm-8 col-sm-offset-2">
                             <div class="haeder-text">
                                 <h1><?php echo $cat_title1; ?></h1>
-                                <p><?php echo $cat_title2; ?></p>
+                                <p><?php //echo $cat_title2; ?></p>
                             </div>
                         </div>
                     </div>
@@ -34,9 +34,9 @@ if ($article) {
             <div class="container">
                 <div class="row about-text justify-content">
                     <div class="col-md-12">
-                        <h1><?php echo $headline; ?></h1>
-                        <img src="<?php echo base_url($article_image); ?>" alt="<?php echo strip_tags($headline); ?>">
+                        <h1><?php echo $headline; ?></h1>                        
                         <?php echo $article1; ?>
+                        <br>
                         <?php echo $article2; ?>
                     </div>
                 </div>

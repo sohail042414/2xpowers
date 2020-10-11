@@ -254,6 +254,7 @@ $settings = $this->db->select("*")
                                 <li class="<?php echo (($this->uri->segment(3) == "web_language") ? "active" : null) ?>"><a href="<?php echo base_url("backend/cms/web_language") ?>"><?php echo display('language_setting') ?></a></li>
                             </ul> 
                         </li>
+                        <?php /* ?>
                         <li class="treeview <?php echo (($this->uri->segment(3) == "exchange" ||$this->uri->segment(3) == "currency" ||$this->uri->segment(3) == "local_currency" ||$this->uri->segment(3) == "exchange_wallet" || $this->uri->segment(3) == "payment_gateway") ? "active" : null) ?>">
                             <a href="#">
                                 <i class="fa fa ti-settings"></i> <span><?php echo display('exchange_setting')?></span>
@@ -275,6 +276,7 @@ $settings = $this->db->select("*")
                         <li>
                             <a target="_blank" href="https://forum.bdtask.com/"><i class="fa fa-question-circle"></i>Support</a>
                         </li>
+                         <?php */ ?>
      
                     </ul>
                 </div> <!-- /.sidebar -->

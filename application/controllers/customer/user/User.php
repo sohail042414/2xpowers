@@ -467,4 +467,153 @@ class User extends CI_Controller {
     |----------------------------------------------
     */
 
+	public function all_reset(){
+		die("Already done");
+
+		$this->db->truncate('transfer');
+		$this->db->truncate('deposit');
+		$this->db->truncate('transections');
+		$this->db->truncate('investment');
+
+		$this->db->query("Delete from earnings where earning_type = 'type1' OR earning_type='type3'");
+
+		$this->db->update('user_registration',array('processed' => 0,'used_points' => 0));
+
+
+		$top_deposit = array(
+			'user_id' => '2xpowr',
+			'deposit_amount' => 100000,
+			'deposit_method' => 'admin',
+			'deposit_type' => 'company_balance',
+			'fees' => '0',
+			'comments' => 'Initial deposit from admin to top level user',
+			'deposit_date' => '2020-05-01 00:00:00',
+			'deposit_id' => '',
+			'status' => 1			
+		);
+
+		$this->db->insert('deposit', $top_deposit);
+
+		$depost_id = $this->db->insert_id();
+
+		$transections_data = array(
+			'user_id'                   => '2xpowr',
+			'transection_category'      => 'deposit',
+			'releted_id'                => $depost_id,
+			'amount'                    => 100000,
+			'comments'                  => 'Initial deposit from admin to top level user',
+			'transection_date_timestamp'=> '2020-05-01 00:00:00'
+		);
+		
+		$this->db->insert('transections',$transections_data);
+
+
+		$investment = [
+			'user_id' => '2xpowr',
+			'sponsor_id' => '2xpowr',
+			'package_id' => 16,
+			'amount' => 10000,
+			'invest_date' => '2020-05-01 00:00:00',
+			'day' => 1,
+			'balance_type' => 'company_balance'
+		];
+
+		$this->db->insert('investment', $investment);
+
+		$investment_id = $this->db->insert_id();
+
+		$inv_transections_data = array(
+			'user_id'                   => '2xpowr',
+			'transection_category'      => 'investment',
+			'releted_id'                => $investment_id,
+			'amount'                    => 10000,
+			'comments'                  => 'Package activated for user 2xpowr',
+			'transection_date_timestamp'=> '2020-05-01 00:00:00'
+		);
+		
+		$this->db->insert('transections',$inv_transections_data);
+
+		$users =  $this->db->select('*')
+		->from('user_registration')
+		->where('user_id !=','2xpowr')
+		->order_by('uid','ASC')
+		->get()->result();
+
+		$this->db->trans_start();
+
+		foreach($users as $user){
+			echo "<br><br> Reprocessing User ".$user->user_id;		
+			$this->tree_model->correct_user($user->user_id);
+
+			$user_update = array(
+				'processed' => 1
+			);
+	
+			$this->db->where('user_id',$user->user_id)->update('user_registration',$user_update);
+	
+		}
+
+		/*
+		$users =  $this->db->select('*')
+		->from('user_registration')
+		->where('user_id !=','2xpowr')
+		->order_by('uid','DESC')
+		->get()->result();
+
+
+		foreach($users as $user){
+			echo "<br><br> Setting points for User ".$user->user_id;		
+			$this->tree_model->correct_points($user->user_id);
+		}
+
+
+
+		foreach($users as $user){
+			echo "<br><br> Setting binary User ".$user->user_id;		
+			$this->tree_model->correct_binary_bonus($user->user_id);
+
+			$user_update = array(
+				'processed' => 1
+			);
+	
+			$this->db->where('user_id',$user->user_id)->update('user_registration',$user_update);
+	
+		}
+		*/
+
+		$this->db->trans_complete();
+
+		if ($this->db->trans_status() === FALSE)
+		{
+			echo "<br>Error<br>";
+		}
+
+		echo "<br> <br> End";
+		exit;
+
+	}
+
+
+	public function reprocess(){
+
+		die("Already done");
+
+		$user_id = $this->input->get('user_id');
+
+		$this->db->trans_start();
+
+		//$this->tree_model->correct_user($user_id);
+		$this->tree_model->correct_points($user_id);
+		$this->tree_model->correct_binary_bonus($user_id);
+
+		$this->db->trans_complete();
+
+		if ($this->db->trans_status() === FALSE)
+		{
+			echo "Reprocessinng complete for  ".$user_id;
+		}
+
+		echo "End";
+		exit;
+	}
 }

@@ -26,6 +26,9 @@ class Package extends CI_Controller
 
     public function index()
     {   
+        //Package and Buy feature is disabled so redirect to home. 
+        redirect('customer/home');
+
         $data['title']   = display('package'); 
         $data['package'] = $this->package_model->all_package();
         $data['content'] = $this->load->view('customer/pages/package', $data, true);
@@ -33,7 +36,11 @@ class Package extends CI_Controller
     }
 
     public function confirm_package($package_id=NULL)
-    {   
+{   
+        //Package and Buy feature is disabled so redirect to home. 
+        redirect('customer/home');
+
+
         $data['title']   = display('package'); 
         $data['my_info'] = $this->Profile_model->my_info();
         $data['package'] = $this->package_model->package_info_by_id($package_id);
@@ -50,6 +57,10 @@ class Package extends CI_Controller
     */
     public function buy($package_id=NULL)
     { 
+        //Package and Buy feature is disabled so redirect to home. 
+        redirect('customer/home');
+
+        
 
         // balance chcck
         $blance = $this->check_balance($package_id);
@@ -660,7 +671,10 @@ class Package extends CI_Controller
     ***************************/
     public function check_investment($user_id=NULL)
     {
+        //Package and Buy feature is disabled so redirect to home. 
+        redirect('customer/home');
 
+        
         return $this->db->select('*')
          ->from('investment')
          ->where('user_id',$user_id)
@@ -676,7 +690,10 @@ class Package extends CI_Controller
     ***************************/
     public function setUserLevel($sponsor_id)
     {
+        //Package and Buy feature is disabled so redirect to home. 
+        redirect('customer/home');
 
+        
         $investment = $this->db->select('*')->from('investment')->where('user_id',$sponsor_id)->get()->num_rows();
             
         if($investment !=NUll){
@@ -808,6 +825,12 @@ class Package extends CI_Controller
     */
     public function setlevel_withbonus($sponsor_id)
     {
+
+        //Package and Buy feature is disabled so redirect to home. 
+        redirect('customer/home');
+
+        
+
         $appSetting = $this->common_model->get_setting();
 
         $investment = $this->db->select('*')->from('investment')->where('user_id',$sponsor_id)->get()->num_rows();

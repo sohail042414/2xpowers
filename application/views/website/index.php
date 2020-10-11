@@ -134,7 +134,7 @@
                     <div class="col-md-6">
                         <div class="about-info">
                             <h2><?php echo @$abo_headline[0]; ?></h2>
-                            <div class="definition"><?php echo @$abo_article1[0]; ?></div>
+                            <div class="definition" style="width:95%;"><?php echo @$abo_article1[0]; ?></div>
                             <?php echo @$abo_article2[0]; ?>
                             <a href="<?php echo base_url('contact'); ?>" class="btn btn-default mr-20 mb-10"><?php echo display('contact_us'); ?></a>
                             <div class="play-button">
@@ -265,9 +265,9 @@
                 <div class="col-sm-3">
                     <div class="feature__box">
                         <i class="<?php echo @$ser_icon[2]; ?>"></i>
-                        <div class="feature__content">
-                            <h3><a href="<?php echo base_url("service/".@$ser_slug[2]) ?>"><?php echo @$ser_headline[2]; ?></a></h3>
-                                <p><?php echo @$ser_article1[2]; ?></p>
+                        <div class="feature__content">  
+                        <h3><a href="<?php echo base_url("service/".@$ser_slug[2]) ?>"><?php echo @$ser_headline[2]; ?></a></h3>     
+                        <p><?php echo @$ser_article1[2]; ?></p>
                         </div>
                     </div>
                 </div>
@@ -318,7 +318,7 @@
                 </div>
             </div>
         </div>
-        <!-- End of features content -->
+        <!-- End of features content get-start -->
         <div class="crypto-strat">
             <div class="container">
                 <div class="row">
@@ -365,7 +365,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="<?php echo base_url('buy'); ?>" class="btn btn-default"><?php echo display('get_start'); ?></a>
+                <a href="<?php echo base_url('contact'); ?>" class="btn btn-default"><?php echo display('get_start'); ?></a>
             </div>
         </div>
         <?php /* ?>

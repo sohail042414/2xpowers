@@ -37,7 +37,7 @@ class Home extends CI_Controller
         //@$data['cryptocoins']    = $this->db->select("Id, Url, ImageUrl, Name, Symbol,CoinName,FullName")->from('cryptolist')->order_by('SortOrder', 'asc')->limit(10,0)->get()->result();
         //@$data['testimonial']    = $this->web_model->article($this->web_model->catidBySlug('testimonial')->cat_id);
         @$data['about']          = $this->web_model->article($this->web_model->catidBySlug('about')->cat_id);
-        $data['article']        = $this->web_model->article($cat_id->cat_id);
+        $data['article']        = $this->web_model->article($cat_id->cat_id);                
         $data['slider']         = $this->web_model->active_slider();
 
         $this->load->view('website/header', $data);     
@@ -65,6 +65,8 @@ class Home extends CI_Controller
         $this->load->view('website/footer', $data);
 
     } 
+
+
 
 
     public function home()
@@ -497,7 +499,8 @@ class Home extends CI_Controller
         $data['title']              = $this->uri->segment(1);
 
         //For Coin Tricker
-        $data['cryptocoins']        = $this->web_model->cryptoCoin(10, 0);
+        $data['cryptocoins'] = array();
+        //$data['cryptocoins']        = $this->web_model->cryptoCoin(10, 0);
         $data['recentnews']         = $this->db->select("*")->from('web_news')->order_by('article_id', 'desc')->limit(3)->get()->result();
 
         if ($slug2=="" || $slug2==NULL || is_numeric($slug2)) {

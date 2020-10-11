@@ -239,10 +239,11 @@ $unsen = $this->db->select('*')->from('notifications')->where('user_id',$user_id
 
 								<li><a href="<?php echo base_url('customer/commission/my_payout') ?>"><?php echo display('my_payout') ?></a></li>
 								<li><a href="<?php echo base_url('customer/commission/my_commission') ?>"><?php echo display('my_commission') ?></a></li>
+								<?php /* ?>
 								<li><a href="<?php echo base_url('customer/commission/team_bonus') ?>"><?php echo display('team_bonus') ?></a></li>
 								<li><a href="<?php echo base_url('customer/team') ?>"><?php echo display('my_generation') ?></a></li>
 								<li><a href="<?php echo base_url('customer/commission/my_level_info') ?>"><?php echo display('my_level_info') ?></a></li>
-								
+								<?php */ ?>
 							</ul>
 						</li>
 
@@ -304,6 +305,12 @@ $unsen = $this->db->select('*')->from('notifications')->where('user_id',$user_id
 							</ul>
 						</li>
 
+						<li class="package">
+							<a href="<?php echo base_url('customer/investment') ?>">
+								<i class="ti-package"></i> <span><?php echo display('my_package') ?></span>		
+							</a>
+						</li>			
+						<?php /* ?>
 						<li class="treeview package">
 							<a href="#">
 								<i class="ti-package"></i> <span><?php echo display('package') ?></span>
@@ -317,16 +324,11 @@ $unsen = $this->db->select('*')->from('notifications')->where('user_id',$user_id
 								
 							</ul>
 						</li>
-
-
-
-						<li class="transection"><a href="<?php echo base_url('customer/transection') ?>"><i class="fa fa-exchange"></i> <span><?php echo display('transection') ?></span></a></li>
-						
+						<?php */ ?>
+						<li class="transection"><a href="<?php echo base_url('customer/transection') ?>"><i class="fa fa-exchange"></i> <span><?php echo display('transection') ?></span></a></li>			
 						<li class="notification"><a href="<?php echo base_url('customer/notification') ?>"><i class="fa fa-comment-o"></i> <span><?php echo display('notification') ?></span></a></li>
-						<li class="message"><a href="<?php echo base_url('customer/message') ?>"><i class="ti-email"></i> <span><?php echo display('sms') ?></span></a></li>
-
-		
-
+						<?php /* ?>
+						<li class="message"><a href="<?php echo base_url('customer/message') ?>"><i class="ti-email"></i> <span><?php echo display('sms') ?></span></a></li>						
 						<li class="treeview exchange">
                             <a href="#">
                                 <i class="fa fa-exchange" aria-hidden="true"></i> <span><?php echo display('exchange')?></span>
@@ -340,7 +342,7 @@ $unsen = $this->db->select('*')->from('notifications')->where('user_id',$user_id
                                 <li><a href="<?php echo base_url("customer/sell/form") ?>"><?php echo display('sell')?></a></li>
                             </ul>  
 						</li>
-						
+						<?php */ ?>
 
 
                         <li class="treeview settings">

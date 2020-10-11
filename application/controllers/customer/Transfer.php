@@ -37,7 +37,8 @@ class Transfer extends CI_Controller
             'daily_roi' => "Daily ROI ($". $vallets['my_earns'].")",
             'commission' => "Commission ($".$vallets['commission'].")",
             'company_balance' => "Company Balance ($".$vallets['company_balance'].")",
-            'promotion_balance' => "Promotion Balance ($".$vallets['promotion_balance'].")",            
+            'promotion_balance' => "Promotion Balance ($".$vallets['promotion_balance'].")",
+            'binary_bonus' => "Binary Bonus ($".$vallets['binary_bonus'].")"            
         );
         $data['title']   = display('transfer'); 
         $data['content'] = $this->load->view('customer/transfer/transfar', $data, true);
@@ -323,7 +324,7 @@ class Transfer extends CI_Controller
         if($data!=NULL) {
         
             $t_data = ((array) json_decode($data->data));
-            
+             
             $result = $this->transfer_model->make_transfer($t_data);
 
             $appSetting = $this->common_model->get_setting();

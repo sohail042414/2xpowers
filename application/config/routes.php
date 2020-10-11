@@ -91,5 +91,7 @@ $route['resetPassword'] 		= 'home/resetPassword';
 $route['paymentform'] 			= 'home/paymentform';
 $route['(:any)'] 				= 'home/page';
 
+// $route['real-state'] 		= 'home/page/$1';
+// $route['it-services'] 		= 'home/page/$1';
 $route['404_override'] 			= '';
 $route['translate_uri_dashes'] 	= FALSE;

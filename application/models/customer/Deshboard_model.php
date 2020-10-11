@@ -82,7 +82,7 @@ class Deshboard_model extends CI_Model {
 			
 		
 
-		//Package Commission
+		//Binary Bonuse 
 		$binary_query  = $this->db->select("sum(amount) as binary_sum")
 			->from('earnings')
 			->where('user_id',$user_id)
@@ -92,6 +92,20 @@ class Deshboard_model extends CI_Model {
 			->row();
 		
 		$binary_bonus = $binary_query->binary_sum;
+
+
+		// Deductions from binary (negative transections)
+		$negative_binary_query = $this->db->select("sum(amount) as binary_negative")
+		->from('earnings')
+		->where('user_id',$user_id)
+		->where('earning_type','type3')
+		->where('amount < ',0)
+		->get()
+		->row();
+		//
+		$negative_binary_sum = abs($negative_binary_query->binary_negative);
+
+		$binary_bonus = $binary_bonus-$negative_binary_sum;
 
 		$data = $this->db->select('*')
 		->from('transections')

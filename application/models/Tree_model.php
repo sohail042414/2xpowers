@@ -545,4 +545,371 @@ class Tree_model extends CI_Model{
 	}
 
 
+	public function correct_user($user_id)
+	{	
+
+		$user = $this->get_by_user_id($user_id);
+
+		if($user->processed == 1){
+			echo "<br> ".$user_id." Already processed ";
+			return false;
+		}
+
+		$parent_id = $user->parent;
+		
+		$bk_investment = $this->db->select('*')
+		->from('bk_investment')
+		->where('user_id', $user->user_id)
+		->get()
+		->row();
+
+		if(!is_object($bk_investment)){
+			echo '<pre>It does not have investment';
+			print_r($user);
+			exit; 
+		}
+
+		$package_id = $bk_investment->package_id;
+
+		$package=  $this->db->select('*')
+		->from('package')
+		->where('package_id', $package_id)
+		->get()
+		->row();
+
+		$user_update = array(
+			'points' => $package->points,
+			'business_points'=> 0,
+			'used_points' => 0
+		);
+
+		$this->db->where('user_id',$user->user_id)->update('user_registration',$user_update);
+
+
+		$this->current_package = $package;
+
+		$date_short = $bk_investment->invest_date;
+
+		$date_time = date('Y-m-d h:i:s',strtotime($bk_investment->invest_date));
+
+		$this->current_user = $user;
+
+		$sponser_user = $this->get_by_user_id($user->sponsor_id);
+
+		$sponsor_investment = $this->db->select('*')
+		->from('investment')
+		->where('user_id', $user->sponsor_id)
+		->get()
+		->row();
+
+		$sponsor_package =  $this->db->select('*')
+		->from('package')
+		->where('package_id', $sponsor_investment->package_id)
+		->get()
+		->row();
+
+		$post_data = array(
+			'company_balance_used' => 0,
+			'promotion_balance_used' => 0,
+			'commission_used' => 0,
+			'roi_used' => 0,
+		);
+
+
+		$post_data['company_balance_used'] = $package->package_amount;
+
+		//deduct from appropriate balances. 
+		if($post_data['company_balance_used'] > 0){
+
+			$transfer_data_company = array(
+				'sender_user_id' => $user->sponsor_id,
+				'receiver_user_id' => $user->user_id,
+				'amount' => $post_data['company_balance_used'],
+				'fees' =>0,
+				'transfer_type' => 'company_balance',
+				'request_ip' => $this->input->ip_address(),
+				'date' => $date_time,
+				'comments' => 'Initial account create transfer from parent to child from company balance',
+				'status' => 1,
+			);
+
+			$this->transfer_model->make_transfer($transfer_data_company);
+
+			$investment = [
+				'user_id' => $user->user_id,
+				'sponsor_id' => $user->sponsor_id,
+				'package_id' => $package_id,
+				'amount' => $post_data['company_balance_used'],
+				'invest_date' => $date_short,
+				'day' => 1,
+				'balance_type' => 'company_balance'
+			];
+	
+			$this->db->insert('investment', $investment);
+	
+			$investment_id = $this->db->insert_id();
+	
+			$transection = [
+				'user_id' => $user->user_id,
+				'transection_category' => 'investment',
+				'releted_id' => $investment_id,
+				'amount' => $post_data['company_balance_used'],
+				'transection_date_timestamp' => $date_short,
+				'status' => 1,
+				'comments' => 'User '.$user->user_id. " Added",
+			];
+	
+			$this->db->insert('transections', $transection);
+
+		}
+
+		if($post_data['promotion_balance_used'] > 0){
+
+			$transfer_data_promotion = array(
+				'sender_user_id' => $user->sponsor_id,
+				'receiver_user_id' => $user->user_id,
+				'amount' => $post_data['promotion_balance_used'],
+				'fees' =>0,
+				'transfer_type' => 'promotion_balance',
+				'request_ip' => $this->input->ip_address(),
+				'date' => $date_time,
+				'comments' => 'Initial account create transfer from parent to child from promotion balance',
+				'status' => 1,
+			);
+
+			$this->transfer_model->make_transfer($transfer_data_promotion);
+
+
+			$investment = [
+				'user_id' => $user->user_id,
+				'sponsor_id' => $user->sponsor_id,
+				'package_id' => $package_id,
+				'amount' => $post_data['promotion_balance_used'],
+				'invest_date' => $date_short,
+				'day' => 1,
+				'balance_type' => 'promotion_balance'
+			];
+	
+			$this->db->insert('investment', $investment);
+	
+			$investment_id = $this->db->insert_id();
+	
+			$transection = [
+				'user_id' => $user->user_id,
+				'transection_category' => 'investment',
+				'releted_id' => $investment_id,
+				'amount' => $post_data['promotion_balance_used'],
+				'transection_date_timestamp' => $date_short,
+				'status' => 1,
+				'comments' => 'User '.$user->user_id. " Added",
+			];
+	
+			$this->db->insert('transections', $transection);
+
+		}
+
+		if($post_data['commission_used'] > 0){
+
+			$transfer_data_com = array(
+				'sender_user_id' => $user->sponsor_id,
+				'receiver_user_id' => $user->user_id,
+				'amount' => $post_data['commission_used'],
+				'fees' =>0,
+				'transfer_type' => 'commission',
+				'request_ip' => $this->input->ip_address(),
+				'date' => $date_time,
+				'comments' => 'Initial account create transfer from parent to child from promotion balance',
+				'status' => 1,
+			);
+
+			$this->transfer_model->make_transfer($transfer_data_com);
+
+			$investment = [
+				'user_id' => $user->user_id,
+				'sponsor_id' => $user->sponsor_id,
+				'package_id' => $package_id,
+				'amount' => $post_data['commission_used'],
+				'invest_date' => $date_short,
+				'day' => 1,
+				'balance_type' => 'commission'
+			];
+	
+			$this->db->insert('investment', $investment);
+	
+			$investment_id = $this->db->insert_id();
+	
+			$transection = [
+				'user_id' => $user->user_id,
+				'transection_category' => 'investment',
+				'releted_id' => $investment_id,
+				'amount' => $post_data['commission_used'],
+				'transection_date_timestamp' =>$date_short,
+				'status' => 1,
+				'comments' => 'User '.$user->user_id. " Added",
+			];	
+			
+			$this->db->insert('transections', $transection);
+
+		}
+
+		
+		if($post_data['roi_used'] > 0){
+
+			$transfer_data_roi = array(
+				'sender_user_id' => $user->sponsor_id,
+				'receiver_user_id' => $user->user_id,
+				'amount' => $post_data['roi_used'],
+				'fees' =>0,
+				'transfer_type' => 'daily_roi',
+				'request_ip' => $this->input->ip_address(),
+				'date' => $date_time,
+				'comments' => 'Initial account create transfer from parent to child from promotion balance',
+				'status' => 1,
+			);
+
+			$this->transfer_model->make_transfer($transfer_data_roi);
+
+			$investment = [
+				'user_id' => $user->user_id,
+				'sponsor_id' => $user->sponsor_id,
+				'package_id' => $package_id,
+				'amount' => $post_data['roi_used'],
+				'invest_date' => $date_short,
+				'day' => 1,
+				'balance_type' => 'daily_roi'
+			];
+	
+			$this->db->insert('investment', $investment);
+	
+			$investment_id = $this->db->insert_id();
+	
+			$transection = [
+				'user_id' => $user->user_id,
+				'transection_category' => 'investment',
+				'releted_id' => $investment_id,
+				'amount' => $post_data['roi_used'],
+				'transection_date_timestamp' => $date_short,
+				'status' => 1,
+				'comments' => 'User '.$user->user_id. " added",
+			];	
+
+			$this->db->insert('transections', $transection);
+		}
+				
+		//commission data save
+		$commission_amount = ($package->package_amount/100)*$sponsor_package->direct_bonus;
+		$commission = array(
+			'user_id'       => $user->sponsor_id,
+			'Purchaser_id'  => $user->user_id,
+			'earning_type'  => 'type1',
+			'package_id'    => $package->package_id,
+			'amount'        => $commission_amount,
+			//'date'          => date('Y-m-d'),
+			'date'          => $date_short,
+
+		);
+
+		$this->db->insert('earnings',$commission);
+
+		//$parent = $this->get_by_user_id($parent_id);
+		
+		//$this->first_parent = $parent;
+
+		//$this->set_points($parent);
+
+		//echo "<br> STarting on binary bonus<br>";
+		
+		//$this->set_binary_bonus($parent);
+
+		//echo "<br> <br> All done"; exit;
+
+		return true;
+
+	}
+
+
+	public function correct_points($user_id)
+	{	
+
+		$user = $this->get_by_user_id($user_id);
+
+		// if($user->processed == 1){
+		// 	echo "<br> ".$user_id." Already processed ";
+		// 	return false;
+		// }
+
+		$parent_id = $user->parent;
+		
+		$bk_investment = $this->db->select('*')
+		->from('bk_investment')
+		->where('user_id', $user->user_id)
+		->get()
+		->row();
+
+		if(!is_object($bk_investment)){
+			echo '<pre>It does not have investment';
+			print_r($user);
+			exit; 
+		}
+
+		$package_id = $bk_investment->package_id;
+
+		$package=  $this->db->select('*')
+		->from('package')
+		->where('package_id', $package_id)
+		->get()
+		->row();
+
+		$this->current_user = $user;
+		$this->current_package = $package;
+
+		$this->set_points($user);
+
+		return true;
+
+	}
+
+
+	public function correct_binary_bonus($user_id)
+	{	
+
+		$user = $this->get_by_user_id($user_id);
+
+		// if($user->processed == 1){
+		// 	echo "<br> ".$user_id." Already processed ";
+		// 	return false;
+		// }
+
+		$parent_id = $user->parent;
+		
+		$bk_investment = $this->db->select('*')
+		->from('bk_investment')
+		->where('user_id', $user->user_id)
+		->get()
+		->row();
+
+		if(!is_object($bk_investment)){
+			echo '<pre>It does not have investment';
+			print_r($user);
+			exit; 
+		}
+
+		$package_id = $bk_investment->package_id;
+
+		$package=  $this->db->select('*')
+		->from('package')
+		->where('package_id', $package_id)
+		->get()
+		->row();
+
+		$this->current_user = $user;
+		$this->current_package = $package;
+
+		$this->set_binary_bonus($user);
+		
+		return true;
+
+	}
+
+
 }

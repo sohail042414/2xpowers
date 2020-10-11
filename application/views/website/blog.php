@@ -16,24 +16,24 @@ $cat_title2  = isset($lang) && $lang =="french"?$cat_info->cat_title2_fr:$cat_in
                 </div>
             </div>
         </div>
+        <?php /* ?>
         <!--  /.End of page header -->
-        <div class="ticker">
+        <div class="ticker" style="display: none;;">
             <div class="list-wrpaaer">
                 <ul id="marquee-horizontal">
                     
-<?php foreach ($cryptocoins as $coin_key => $coin_value) {?>
+                <?php foreach ($cryptocoins as $coin_key => $coin_value) {?>
                 <li class="list-item" id="<?php echo $coin_value->Symbol ?>">
                     <div class="list-item-currency"><?php echo $coin_value->Symbol ?></div>
                     <div class="list-item-currency upgrade">
                         <span></span>
                     </div>
                 </li>
-
-<?php  } ?>
-
+            <?php  } ?>
                 </ul>
             </div>
         </div>
+        <?php */ ?>
 
         <!-- /.End of tricker -->
         <div class="blog_wrapper">

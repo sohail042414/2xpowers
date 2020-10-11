@@ -100,6 +100,31 @@ class Transfer_model extends CI_Model {
             );
             $this->db->insert('earnings',$paydata);
 
+		}else if($transfer_type =='binary_bonus'){
+            //deduct from sender
+            $paydata1 = array(
+                'user_id'       => $t_data['sender_user_id'],
+                'Purchaser_id'  => $t_data['receiver_user_id'],
+                'earning_type'  => 'type3',
+                'package_id'    => 0,
+                'order_id'      => $result['transfer_id'],
+                'amount'        => (0-$t_data['amount']),
+                'date'          => date('Y-m-d'),
+            );
+
+            $this->db->insert('earnings',$paydata1);
+            //add to receiver
+            $paydata = array(
+                'user_id'       => $t_data['receiver_user_id'],
+                'Purchaser_id'  =>0,
+                'earning_type'  => 'type3',
+                'package_id'    => 0,
+                'order_id'      => $result['transfer_id'],
+                'amount'        => $t_data['amount'],
+                'date'          => date('Y-m-d'),
+            );
+            $this->db->insert('earnings',$paydata);
+
 		}
 		
 		return $result;
