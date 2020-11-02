@@ -114,6 +114,7 @@ class User extends CI_Controller {
 
     public function username_check($username, $uid)
     { 
+
         $usernameExists = $this->db->select('username')
             ->where('username',$username) 
             ->where_not_in('uid',$uid) 
@@ -160,6 +161,22 @@ class User extends CI_Controller {
 		return true;
 	}
 
+
+	public function username_check23232($username,$user_id){
+
+		echo $username; 
+		echo $user_id;
+
+		exit;
+
+
+        // if($pak_info->package_amount > $data['balance']){
+		// 	$this->form_validation->set_message('sponsor_id_check', 'This Sponsor does not have enough balance.');
+		// 	return false;
+		// }
+
+		return true;
+	}
  
 	public function add_child(){
 
@@ -229,7 +246,7 @@ class User extends CI_Controller {
 		);
 
 		/*-----------------------------------*/
-		$this->form_validation->set_rules('username', display('username'),'required|max_length[20]');	
+		//$this->form_validation->set_rules('username', display('username'),'required|max_length[20]');	
 		$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),"required|max_length[6]|callback_sponsor_id_check[$package_id]");		
 		$this->form_validation->set_rules('f_name', display('firstname'),'required|max_length[50]');
 		$this->form_validation->set_rules('l_name', display('lastname'),'required|max_length[50]');
@@ -313,10 +330,14 @@ class User extends CI_Controller {
 		//get sponsers based on parent selected. 
 		
 		$sponsor = $this->user_model->get_by_user_id($user->sponsor_id);
-
-		$data['sponsers'] = array(
-			$sponsor->user_id => $sponsor->f_name.' '.$sponsor->l_name."(".$sponsor->user_id.")"
-		);
+		
+		if($sponsor != NULL){
+			$data['sponsers'] = array(
+				$sponsor->user_id => $sponsor->f_name.' '.$sponsor->l_name."(".$sponsor->user_id.")"
+			);
+		}else{
+			$data['sponsers'] = array();
+		}
 
 		//parent can only be one selected from tree
 		$parent = $this->user_model->get_by_user_id($parent);
@@ -329,13 +350,15 @@ class User extends CI_Controller {
 		}
 
 		/*-----------------------------------*/
-
+		$this->form_validation->set_rules('username', display('username'),"required|callback_username_check[$uid]");
 		$this->form_validation->set_rules('f_name', display('firstname'),'required|max_length[50]');
 		$this->form_validation->set_rules('l_name', display('lastname'),'required|max_length[50]');
 		$this->form_validation->set_rules('email', 'Email Address', "required|valid_email|max_length[100]|callback_email_check[$uid]|trim"); 
 		$this->form_validation->set_rules('mobile', display('mobile'),'max_length[30]');
 		$this->form_validation->set_rules('status', display('status'),'required|max_length[1]');
 		$this->form_validation->set_rules('roi_status', "ROI Status",'required|max_length[1]');
+
+		//$this->form_validation->set_rules('sponsor_id', display('sponsor_id'),"required|max_length[6]|callback_sponsor_id_check[$package_id]");		
 
 		/*-----------------------------------*/
 		$submit = $this->input->post('submit');
@@ -347,6 +370,7 @@ class User extends CI_Controller {
 				//update fields that are allowed to update not all. 
 				$userdata = array(
 					'user_id' => $user->user_id,
+					'username' => $this->input->post('username'),
 					'f_name' 	  => $this->input->post('f_name'),
 					'l_name' 	  => $this->input->post('l_name'),
 					'email' 	  => $this->input->post('email'),

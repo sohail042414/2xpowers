@@ -126,46 +126,60 @@
                                         <input readonly type="text" class="form-control" name="company_balance_display" id="company_balance_display" value="" placeholder="Available : <?php echo "$".$vallet['company_balance']; ?>" >
                                     </div>
                                     <div class="form-group col-lg-6 col-md-6 col-sm-6" style="margin-left:0px; padding-left:1px;">
-                                        <input type="text" value="<?php //echo $user->l_name ?>" class="form-control" name="company_balance_used" placeholder="100">
+                                        <input type="text" value="<?php //echo $user->l_name ?>" class="form-control" name="company_balance_used" placeholder="80">
                                     </div>
                                 </div>
                             </div>  
                             
                             <div class="form-group">
-                                <label><?php //echo display("") ?>Promotion Balance (max 20%) *</label>                                
+                                <label><?php //echo display("") ?>Promotion Balance (max 20%) </label>                                
                                 <div class="row">
                                     <div class="form-group col-lg-6 col-md-6 col-sm-6" style="margin-right:0px; padding-right:1px;">
                                         <input type="hidden" name="promotion_balance_available" id="promotion_balance_available" value=" <?php echo $vallet['promotion_balance']; ?>" >
                                         <input readonly type="text" class="form-control" name="promotion_balance_display" id="promotion_balance_display" value="" placeholder="Available : <?php echo "$".$vallet['promotion_balance']; ?>" >
                                     </div>
                                     <div class="form-group col-lg-6 col-md-6 col-sm-6" style="margin-left:0px; padding-left:1px;">
-                                        <input type="text" value="<?php //echo $user->l_name ?>" class="form-control" name="promotion_balance_used" placeholder="100">
+                                        <input type="text" value="<?php //echo $user->l_name ?>" class="form-control" name="promotion_balance_used" placeholder="0">
                                     </div>
                                 </div>
                             </div>  
 
                             <div class="form-group">
-                                <label><?php //echo display("") ?>Commission *</label>                                
+                                <label><?php //echo display("") ?>Commission </label>                                
                                 <div class="row">
                                     <div class="form-group col-lg-6 col-md-6 col-sm-6" style="margin-right:0px; padding-right:1px;">
                                         <input type="hidden" name="commission_available" id="commission_available" value=" <?php echo $vallet['commission']; ?>" >
                                         <input readonly type="text" class="form-control" name="commission_display" id="commission_display" value="" placeholder="Available : <?php echo "$".$vallet['commission']; ?>" >
                                     </div>
                                     <div class="form-group col-lg-6 col-md-6 col-sm-6" style="margin-left:0px; padding-left:1px;">
-                                        <input type="text" value="<?php //echo $user->l_name ?>" class="form-control" name="commission_used" placeholder="100">
+                                        <input type="text" value="<?php //echo $user->l_name ?>" class="form-control" name="commission_used" placeholder="0">
                                     </div>
                                 </div>
                             </div>  
 
                             <div class="form-group">
-                                <label><?php //echo display("") ?>ROI *</label>                                
+                                <label><?php //echo display("") ?>ROI </label>                                
                                 <div class="row">
                                     <div class="form-group col-lg-6 col-md-6 col-sm-6" style="margin-right:0px; padding-right:1px;">
                                         <input type="hidden" name="roi_available" id="roi_available" value=" <?php echo $vallet['my_earns']; ?>" >
                                         <input readonly type="text" class="form-control" name="roi_display" id="roi_display" value="" placeholder="Available : <?php echo "$".$vallet['my_earns']; ?>" >
                                     </div>
                                     <div class="form-group col-lg-6 col-md-6 col-sm-6" style="margin-left:0px; padding-left:1px;">
-                                        <input type="text" value="" class="form-control" name="roi_used" placeholder="100">
+                                        <input type="text" value="" class="form-control" name="roi_used" placeholder="0">
+                                    </div>
+                                </div>
+                            </div>  
+                            
+
+                            <div class="form-group">
+                                <label><?php //echo display("") ?>Binary Bonus </label>                                
+                                <div class="row">
+                                    <div class="form-group col-lg-6 col-md-6 col-sm-6" style="margin-right:0px; padding-right:1px;">
+                                        <input type="hidden" name="binary_available" id="binary_bonus" value=" <?php echo $vallet['binary_bonus']; ?>" >
+                                        <input readonly type="text" class="form-control" name="binary_display" id="binary_display" value="" placeholder="Available : <?php echo "$".$vallet['binary_bonus']; ?>" >
+                                    </div>
+                                    <div class="form-group col-lg-6 col-md-6 col-sm-6" style="margin-left:0px; padding-left:1px;">
+                                        <input type="text" value="" class="form-control" name="binary_used" placeholder="0">
                                     </div>
                                 </div>
                             </div>  
@@ -212,6 +226,10 @@ $(document).ready(function(){
 
                 $('#roi_display').attr('placeholder','Available : $'+response.my_earns);
                 $('#roi_available').val(response.my_earns);
+
+                $('#binary_display').attr('placeholder','Available : $'+response.binary_bonus);
+                $('#binary_available').val(response.binary_bonus);
+                
             }
         }); 
 

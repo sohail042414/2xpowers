@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="form-group col-lg-6">
                             <label><?php echo display("username") ?> *</label>
-                            <input type="text" readonly value="<?php echo $user->username ?>" class="form-control" name="username" placeholder="<?php echo display("username") ?>">
+                            <input type="text" value="<?php echo $user->username ?>" class="form-control" name="username" placeholder="<?php echo display("username") ?>">
                         </div>                        
                         <div class="form-group col-lg-6">
                             <label><?php echo display("package_id") ?> *</label>

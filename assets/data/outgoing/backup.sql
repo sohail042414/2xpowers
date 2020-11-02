@@ -10173,3 +10173,35 @@ UPDATE `web_article` SET `article_id` = '32', `slug` = 'security-protected', `he
 WHERE `article_id` = '32';
 UPDATE `web_category` SET `cat_id` = '11', `slug` = 'service', `cat_name_en` = 'Service', `cat_name_fr` = 'un service', `parent_id` = '7', `cat_image` = 'upload/bbe04e1e2d4d77e63f90f06d034fe576.jpg', `cat_title1_en` = 'Service', `cat_title1_fr` = '', `cat_title2_en` = '', `cat_title2_fr` = '', `menu` = '3', `position_serial` = '4', `status` = '1'
 WHERE `cat_id` = '11';
+UPDATE `admin` SET `last_login` = '2020-10-11 16:27:04', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `user_registration` SET `user_id` = '2xpowr', `f_name` = '2xpowers', `l_name` = '.com', `email` = '2xpowers@gmail.com', `phone` = '8801922296392', `status` = 1, `roi_status` = 1
+WHERE `user_id` = '2xpowr';
+UPDATE `user_registration` SET `user_id` = '8NW04C', `f_name` = 'Asma', `l_name` = 'Bibi', `email` = 'hazara4000@gmail.com', `phone` = '03460804000', `status` = 0, `roi_status` = 0
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `user_id` = '8NW04C', `username` = 'Pakistan1111', `f_name` = 'Asma', `l_name` = 'Bibi', `email` = 'hazara4000@gmail.com', `phone` = '03460804000', `status` = 0, `roi_status` = 0
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `user_id` = '8NW04C', `username` = 'Pakistan1111', `f_name` = 'Asma', `l_name` = 'Bibi', `email` = 'hazara4000@gmail.com', `phone` = '03460804000', `status` = 0, `roi_status` = 0
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `user_id` = '8NW04C', `username` = 'Pakistan1111', `f_name` = 'Asma', `l_name` = 'Bibi', `email` = 'hazara4000@gmail.com', `phone` = '03460804000', `status` = 0, `roi_status` = 0
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `user_id` = 'DJI47I', `username` = 'comapnyleft123', `f_name` = 'comapny', `l_name` = 'left', `email` = 'comapnyleft@gmail.com', `phone` = '03365412122', `status` = 1, `roi_status` = 1
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `user_id` = 'DJI47I', `username` = 'comapnyleft', `f_name` = 'comapny', `l_name` = 'left', `email` = 'comapnyleft@gmail.com', `phone` = '03365412122', `status` = 1, `roi_status` = 1
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `user_id` = 'YOU8F1', `username` = 'comapnyright123', `f_name` = 'comapny', `l_name` = 'right', `email` = 'comapnyright@gmail.com', `phone` = '032732838439', `status` = 1, `roi_status` = 1
+WHERE `user_id` = 'YOU8F1';
+UPDATE `user_registration` SET `user_id` = 'YOU8F1', `username` = 'comapnyright', `f_name` = 'comapny', `l_name` = 'right', `email` = 'comapnyright@gmail.com', `phone` = '032732838439', `status` = 1, `roi_status` = 1
+WHERE `user_id` = 'YOU8F1';
+UPDATE `admin` SET `last_logout` = '2020-10-11 16:52:32'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_login` = '2020-10-11 16:52:35', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_logout` = '2020-10-11 16:52:38'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_login` = '2020-10-13 11:44:52', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_logout` = '2020-10-13 11:45:34'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_login` = '2020-11-02 12:20:06', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';

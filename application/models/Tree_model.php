@@ -164,7 +164,7 @@ class Tree_model extends CI_Model{
 				'transfer_type' => 'commission',
 				'request_ip' => $this->input->ip_address(),
 				'date' => date('Y-m-d h:i:s'),
-				'comments' => 'Initial account create transfer from parent to child from promotion balance',
+				'comments' => 'Initial account create transfer from parent to child from commission balance',
 				'status' => 1,
 			);
 
@@ -209,7 +209,7 @@ class Tree_model extends CI_Model{
 				'transfer_type' => 'daily_roi',
 				'request_ip' => $this->input->ip_address(),
 				'date' => date('Y-m-d h:i:s'),
-				'comments' => 'Initial account create transfer from parent to child from promotion balance',
+				'comments' => 'Initial account create transfer from parent to child from roi ',
 				'status' => 1,
 			);
 
@@ -234,6 +234,50 @@ class Tree_model extends CI_Model{
 				'transection_category' => 'investment',
 				'releted_id' => $investment_id,
 				'amount' => $post_data['roi_used'],
+				'transection_date_timestamp' => date('Y-m-d'),
+				'status' => 1,
+				'comments' => 'User '.$user->user_id. " Added",
+			];	
+
+			$this->db->insert('transections', $transection);
+		}
+
+
+		if($post_data['binary_used'] > 0){
+
+			$transfer_data_roi = array(
+				'sender_user_id' => $user->sponsor_id,
+				'receiver_user_id' => $user->user_id,
+				'amount' => $post_data['binary_used'],
+				'fees' =>0,
+				'transfer_type' => 'binary_bonus',
+				'request_ip' => $this->input->ip_address(),
+				'date' => date('Y-m-d h:i:s'),
+				'comments' => 'Initial account create transfer from parent to child from binary bonus',
+				'status' => 1,
+			);
+
+			$this->transfer_model->make_transfer($transfer_data_roi);
+
+			$investment = [
+				'user_id' => $user->user_id,
+				'sponsor_id' => $user->sponsor_id,
+				'package_id' => $package_id,
+				'amount' => $post_data['binary_used'],
+				'invest_date' => date('Y-m-d'),
+				'day' => 1,
+				'balance_type' => 'binary_bonus'
+			];
+	
+			$this->db->insert('investment', $investment);
+	
+			$investment_id = $this->db->insert_id();
+	
+			$transection = [
+				'user_id' => $user->user_id,
+				'transection_category' => 'investment',
+				'releted_id' => $investment_id,
+				'amount' => $post_data['binary_used'],
 				'transection_date_timestamp' => date('Y-m-d'),
 				'status' => 1,
 				'comments' => 'User '.$user->user_id. " Added",

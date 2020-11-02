@@ -204,6 +204,12 @@ class Deshboard_model extends CI_Model {
 					//can have issue. 
 					$roi_used +=$value->amount;
 				}
+				/*
+				else if(is_object($investment) && $investment->balance_type == 'binary_used'){
+					//can have issue. 
+					$binary_used +=$value->amount;
+				}
+				*/
 
 			}
 

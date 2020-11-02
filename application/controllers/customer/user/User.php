@@ -152,10 +152,10 @@ class User extends CI_Controller {
 
 		$package = $this->db->from('package')->where('package_id',$package_id)->get()->row();
 
-		$total_used = (int)$post_data['company_balance_used']+ (int)$post_data['promotion_balance_used']+(int)$post_data['commission_used']+(int)$post_data['roi_used'];
+		$total_used = (int)$post_data['company_balance_used']+ (int)$post_data['promotion_balance_used']+(int)$post_data['commission_used']+(int)$post_data['roi_used']+(int)$post_data['binary_used'];
 		
-		if($total_used < $package->package_amount){
-			$this->form_validation->set_message('company_balance_check', 'You have not used full package amount from balance ($'.$package->package_amount.')');
+		if($total_used != $package->package_amount){
+			$this->form_validation->set_message('company_balance_check', 'You should spend amount exactly equal to package amount ($'.$package->package_amount.') from balances.');
 			return FALSE;
 		}
 
@@ -190,6 +190,11 @@ class User extends CI_Controller {
 
 		if($post_data['roi_used'] > $post_data['roi_available']){
 			$this->form_validation->set_message('company_balance_check', 'Sponsor does not have enough ROI balance ($'.$post_data['roi_used'].')');
+			return FALSE;
+		}
+
+		if($post_data['binary_used'] > $post_data['binary_available']){
+			$this->form_validation->set_message('company_balance_check', 'Sponsor does not have enough binary bonus ($'.$post_data['binary_used'].')');
 			return FALSE;
 		}
 
@@ -236,6 +241,8 @@ class User extends CI_Controller {
 		$data['countries'] = $this->common_model->get_countries();
 
 		$data['vallet'] = $this->deshboard_model->get_cata_wais_transections($parent);
+
+
 		//parent can only be one selected from tree
 		$parent = $this->user_model->get_by_user_id($parent);
 		$data['parents'] = [
