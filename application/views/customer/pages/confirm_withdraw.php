@@ -28,8 +28,11 @@
                                         </tr>
                                        
                                          <tr>
-                                            <th><?php echo display('enter_verify_code');?></th>
+                                            <th><?php echo display('enter_verify_code'); ?></th>
                                             <td><input class="form-control" type="text" name="code" id="code"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Your verify code is : <?php echo $v->verify_code; ?></td>
                                         </tr>
                                     </tbody>
                                 </table>

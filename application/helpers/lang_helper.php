@@ -71,6 +71,11 @@ if (!function_exists('display')) {
  
 }
 
+function camelize($input, $separator = '_')
+{
+    return str_replace($separator, ' ', ucwords($input, $separator));
+}
+
 // $autoload['helper'] =  array('language_helper');
 
 /*display a language*/

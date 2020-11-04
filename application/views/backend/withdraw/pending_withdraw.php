@@ -14,7 +14,7 @@
                             <tr>
                                 <th><?php echo display('user_id') ?></th>
                                 <th><?php echo display('payment_method') ?></th>
-                                <th><?php echo display('wallet_id') ?></th>
+                                <th><?php //echo display('wallet_id') ?>Wallet/Account</th>
                                 <th><?php echo display('amount') ?></th>
                                 <th><?php echo display('status') ?></th>
                                 <th><?php echo display('action') ?></th>
@@ -26,8 +26,8 @@
                             <?php foreach ($withdraw as $value) { ?>
                             <tr>
                                 <td><?php echo $value->user_id; ?></td>
-                                <td><?php echo $value->method; ?></td>
-                                <td><?php echo $value->walletid; ?></td>
+                                <td><?php echo camelize($value->method); ?></td>
+                                <td><?php echo ($value->method =='bank_account')? $value->bank_account:$value->walletid; ?></td>
                                 <td><?php echo $value->amount; ?></td>
                                 <td>
                                     <?php if($value->status==1){?>

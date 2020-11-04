@@ -55,12 +55,19 @@ public function update_language()
     {   
         $user_id = $this->session->userdata('user_id');
         $data['bitcoin'] = $this->db->select('*')->from('payment_metod_setting')->where('user_id',$user_id)->where('method','bitcoin')->get()->row();
+        /*
         $data['payeer'] = $this->db->select('*')->from('payment_metod_setting')->where('user_id',$user_id)->where('method','payeer')->get()->row();
         $data['phone'] = $this->db->select('*')->from('payment_metod_setting')->where('user_id',$user_id)->where('method','phone')->get()->row();
         $data['paypal'] = $this->db->select('*')->from('payment_metod_setting')->where('user_id',$user_id)->where('method','paypal')->get()->row();
         $data['stripe'] = $this->db->select('*')->from('payment_metod_setting')->where('user_id',$user_id)->where('method','stripe')->get()->row();
-        $data['paystack'] = $this->db->select('*')->from('payment_metod_setting')->where('user_id',$user_id)->where('method','paystack')->get()->row();
-        
+        $data['paystack'] = $this->db->select('*')->from('payment_metod_setting')->where('user_id',$user_id)->where('method','paystack')->get()->row();        
+        */
+        $data['bank_account'] = $this->db->select('*')->from('payment_metod_setting')->where('user_id',$user_id)->where('method','bank_account')->get()->row();
+
+        // echo '<pre>';
+        // print_r($data['bank_account']);
+        // exit; 
+
         $data['title']   = display('payment_method_setting'); 
         $data['content'] = $this->load->view('customer/settings/bitcoin_settings', $data, true);
         $this->load->view('customer/layout/main_wrapper', $data);  
@@ -76,11 +83,14 @@ public function update_language()
     { 
 
          $bitcoin = $this->input->post('bitcoin');  
+        /*
          $payeer = $this->input->post('payeer');
          $phone = $this->input->post('phone');
          $paypal = $this->input->post('paypal');
          $stripe = $this->input->post('stripe');
          $paystack = $this->input->post('paystack');
+         */
+         $bank_account = $this->input->post('bank_account');
          $user_id = $this->session->userdata('user_id');
 
         if($bitcoin!=NULL) {
@@ -94,7 +104,7 @@ public function update_language()
             }
         } 
 
-
+        /*
         if($payeer!=NULL) {
 
             $data = array('user_id'=>$user_id,'method'=>$payeer,'wallet_id'=>$this->input->post('payeer_wallet_id'));
@@ -158,6 +168,20 @@ public function update_language()
                 $this->db->insert('payment_metod_setting',$data); 
             }
         } 
+        */
+
+        
+        if($bank_account!=NULL) {
+
+            $data = array('user_id'=>$user_id,'method'=>'bank_account','wallet_id'=>$this->input->post('bank_account_value'));
+            $check = $this->db->select('*')->from('payment_metod_setting')->where('user_id',$user_id)->where('method','bank_account')->get()->row();
+           
+            if($check!=NULL) {
+               $this->db->where('user_id',$user_id)->where('method','bank_account')->update('payment_metod_setting',$data); 
+            } else {
+                $this->db->insert('payment_metod_setting',$data); 
+            }
+        }
 
         $this->session->set_flashdata('message',display('update_successfully')); 
         

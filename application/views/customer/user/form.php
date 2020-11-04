@@ -175,7 +175,7 @@
                                 <label><?php //echo display("") ?>Binary Bonus </label>                                
                                 <div class="row">
                                     <div class="form-group col-lg-6 col-md-6 col-sm-6" style="margin-right:0px; padding-right:1px;">
-                                        <input type="hidden" name="binary_available" id="binary_bonus" value=" <?php echo $vallet['binary_bonus']; ?>" >
+                                        <input type="hidden" name="binary_available" id="binary_available" value=" <?php echo $vallet['binary_bonus']; ?>" >
                                         <input readonly type="text" class="form-control" name="binary_display" id="binary_display" value="" placeholder="Available : <?php echo "$".$vallet['binary_bonus']; ?>" >
                                     </div>
                                     <div class="form-group col-lg-6 col-md-6 col-sm-6" style="margin-left:0px; padding-left:1px;">

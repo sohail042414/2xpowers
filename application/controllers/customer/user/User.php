@@ -150,6 +150,7 @@ class User extends CI_Controller {
 
 		$post_data = $this->input->post();
 
+
 		$package = $this->db->from('package')->where('package_id',$package_id)->get()->row();
 
 		$total_used = (int)$post_data['company_balance_used']+ (int)$post_data['promotion_balance_used']+(int)$post_data['commission_used']+(int)$post_data['roi_used']+(int)$post_data['binary_used'];

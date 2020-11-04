@@ -69,6 +69,16 @@ class Ajaxload extends CI_Controller
         
         $user_id = $this->session->userdata('user_id'); 
        
+        $result = $this->db->select('*')
+        ->from('payment_metod_setting')
+        ->where('method',$method)
+        ->where('user_id',$user_id)
+        ->get()
+        ->row();
+        echo json_encode($result);
+
+
+        /*
         if($method == 'bank_account'){
             
             $result = $this->db->select('*')
@@ -97,6 +107,7 @@ class Ajaxload extends CI_Controller
             echo json_encode($result);
 
         }
+        */
 
     }
 

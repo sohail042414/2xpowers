@@ -51,7 +51,7 @@ class Profile extends CI_Controller {
 			'l_name' 	  => $this->input->post('l_name'),
 			'email' 	  => $this->input->post('email'),
             'phone' 	  => $this->input->post('mobile'),
-            'bank_account' 	  => $this->input->post('bank_account'),
+            //'bank_account' 	  => $this->input->post('bank_account'),
 		
         );
 
@@ -98,6 +98,15 @@ class Profile extends CI_Controller {
 
     public function profile_verify($id=NULL)
     {
+        $user_id = $this->session->userdata('user_id');
+        
+        $data['ver'] = $this->db->select('*')
+        ->from('verify_tbl')
+        ->where('user_id',$user_id)
+        ->order_by('id','DESC')
+        ->get()
+        ->row();
+
         $data['title']   = display('change_verify'); 
         $data['content'] = $this->load->view('customer/pages/profile_verify', $data, true);
         $this->load->view('customer/layout/main_wrapper', $data);

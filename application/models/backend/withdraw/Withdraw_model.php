@@ -10,8 +10,9 @@ class Withdraw_model extends CI_Model {
 
 	public function read($limit, $offset)
 	{
-		return $this->db->select("*")
+		return $this->db->select("withdraw.*,user_registration.bank_account")
 			->from('withdraw')
+			->join('user_registration', 'user_registration.user_id = withdraw.user_id')
 			->order_by('withdraw_id', 'DESC')
 			->limit($limit, $offset)
 			->get()

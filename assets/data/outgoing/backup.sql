@@ -10205,3 +10205,164 @@ UPDATE `admin` SET `last_logout` = '2020-10-13 11:45:34'
 WHERE `id` = '1';
 UPDATE `admin` SET `last_login` = '2020-11-02 12:20:06', `ip_address` = '127.0.0.1'
 WHERE `id` = '1';
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', '2xpowr', 1, 'WCJZFB', '{\"language\":\"english\",\"f_name\":\"2xpowers\",\"l_name\":\".com\",\"email\":\"2xpowers@gmail.com\",\"phone\":\"8801922296392\",\"bank_account\":\"0qwerqwerqwerqwerqwer\"}');
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', 'BR0VC6', 1, '7XF708', '{\"user_id  \":\"BR0VC6\",\"amount\":\"100\",\"fees\":10,\"walletid\":\"bank_account\",\"request_ip\":\"127.0.0.1\",\"request_date\":\"2020-11-02 12:47:39\",\"method\":\"bank_account\",\"balance_type\":\"roi_balance\"}');
+INSERT INTO `withdraw` (`user_id`, `amount`, `fees`, `walletid`, `request_ip`, `request_date`, `method`, `balance_type`) VALUES ('BR0VC6', '100', 10, 'bank_account', '127.0.0.1', '2020-11-02 12:47:39', 'bank_account', 'roi_balance');
+INSERT INTO `message` (`sender_id`, `receiver_id`, `subject`, `message`, `datetime`) VALUES (1, 'BR0VC6', 'Withdraw', 'You successfully withdraw the amount is $100. from your account. Your new balance is $89', '2020-11-02 12:48:19');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('BR0VC6', 'BR0VC6', 'type2', 0, 0, -100, '2020-11-02');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`) VALUES ('BR0VC6', 'withdraw', 5, '100', '2020-11-02 12:48:19');
+UPDATE `verify_tbl` SET `status` = 0
+WHERE `id` = '57'
+AND `session_id` = 1;
+UPDATE `transections` SET `status` = 0
+WHERE `transection_category` = 'withdraw'
+AND `user_id` = 'BR0VC6'
+AND `releted_id` = '5';
+UPDATE `withdraw` SET `cancel_date` = '2020-11-02 12:5110', `status` = '3'
+WHERE `withdraw_id` = '5'
+AND `user_id` = 'BR0VC6';
+UPDATE `admin` SET `last_logout` = '2020-11-03 08:21:50'
+WHERE `id` IS NULL;
+UPDATE `admin` SET `last_login` = '2020-11-03 08:51:55', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+UPDATE `transections` SET `status` = 0
+WHERE `transection_category` = 'withdraw'
+AND `user_id` = 'BR0VC6'
+AND `releted_id` = '5';
+UPDATE `withdraw` SET `cancel_date` = '2020-11-03 09:0939', `status` = '3'
+WHERE `withdraw_id` = '5'
+AND `user_id` = 'BR0VC6';
+UPDATE `transections` SET `status` = 0
+WHERE `transection_category` = 'withdraw'
+AND `user_id` = 'BR0VC6'
+AND `releted_id` = '5';
+UPDATE `withdraw` SET `cancel_date` = '2020-11-03 09:1207', `status` = '3'
+WHERE `withdraw_id` = '5'
+AND `user_id` = 'BR0VC6';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('BR0VC6', 'BR0VC6', 'type2', 0, 0, '100', '2020-11-03', 'Canceled , Withdraw id : 5 , type:  ROI, amount :100');
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', 'P1H21Z', 1, 'WVYT28', '{\"user_id  \":\"P1H21Z\",\"amount\":\"122\",\"fees\":12.2,\"walletid\":\"1BRvh7XMuPXVCPGmvRaBm19SKaf2V64Hy6\",\"request_ip\":\"127.0.0.1\",\"request_date\":\"2020-11-03 09:22:54\",\"method\":\"bank_account\",\"balance_type\":\"roi_balance\"}');
+INSERT INTO `withdraw` (`user_id`, `amount`, `fees`, `walletid`, `request_ip`, `request_date`, `method`, `balance_type`) VALUES ('P1H21Z', '122', 12.2, '1BRvh7XMuPXVCPGmvRaBm19SKaf2V64Hy6', '127.0.0.1', '2020-11-03 09:22:54', 'bank_account', 'roi_balance');
+INSERT INTO `message` (`sender_id`, `receiver_id`, `subject`, `message`, `datetime`) VALUES (1, 'P1H21Z', 'Withdraw', 'You successfully withdraw the amount is $122. from your account. Your new balance is $3581.6', '2020-11-03 09:30:31');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('P1H21Z', 'P1H21Z', 'type2', 0, 0, -122, '2020-11-03', 'Withdraw id : 6 , type:  ROI, amount :122');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`) VALUES ('P1H21Z', 'withdraw', 6, '122', '2020-11-03 09:30:31');
+UPDATE `verify_tbl` SET `status` = 0
+WHERE `id` = '58'
+AND `session_id` = 1;
+UPDATE `transections` SET `status` = 0
+WHERE `transection_category` = 'withdraw'
+AND `user_id` = 'P1H21Z'
+AND `releted_id` = '6';
+UPDATE `withdraw` SET `cancel_date` = '2020-11-03 11:1622', `status` = '3'
+WHERE `withdraw_id` = '6'
+AND `user_id` = 'P1H21Z';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('P1H21Z', 'P1H21Z', 'type2', 0, 0, '122', '2020-11-03', 'Canceled , Withdraw id : 6 , type:  ROI, amount :122');
+UPDATE `withdraw` SET `success_date` = '2020-11-03 11:2000', `status` = '2'
+WHERE `withdraw_id` = '2'
+AND `user_id` = '7USI3X';
+UPDATE `withdraw` SET `success_date` = '2020-11-03 11:2005', `status` = '2'
+WHERE `withdraw_id` = '2'
+AND `user_id` = '7USI3X';
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', 'P1H21Z', 1, 'DYPRLW', '{\"language\":\"english\",\"f_name\":\"pak\",\"l_name\":\"786\",\"email\":\"marianaale023@gmail.com\",\"phone\":\"03365412122\",\"bank_account\":\"145115454545\"}');
+UPDATE `user_registration` SET `language` = 'english', `f_name` = 'pak', `l_name` = '786', `email` = 'marianaale023@gmail.com', `phone` = '03365412122', `bank_account` = '145115454545'
+WHERE `user_id` = 'P1H21Z';
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', 'P1H21Z', 1, '5V47PB', '{\"language\":\"english\",\"f_name\":\"pak\",\"l_name\":\"786\",\"email\":\"marianaale023@gmail.com\",\"phone\":\"03365412122\",\"bank_account\":\"14511545454511\"}');
+UPDATE `user_registration` SET `language` = 'english', `f_name` = 'pak', `l_name` = '786', `email` = 'marianaale023@gmail.com', `phone` = '03365412122', `bank_account` = '14511545454511'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `admin` SET `last_logout` = '2020-11-03 11:36:03'
+WHERE `id` = '1';
+UPDATE `admin` SET `last_login` = '2020-11-03 11:52:48', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+INSERT INTO `payment_metod_setting` (`user_id`, `method`, `wallet_id`) VALUES ('P1H21Z', 'bank_account', '32424324');
+UPDATE `payment_metod_setting` SET `user_id` = 'P1H21Z', `method` = 'bank_account', `wallet_id` = '32424324234234242'
+WHERE `user_id` = 'P1H21Z'
+AND `method` = 'bank_account';
+UPDATE `payment_metod_setting` SET `user_id` = 'P1H21Z', `method` = 'bank_account', `wallet_id` = '324243242342342422342423'
+WHERE `user_id` = 'P1H21Z'
+AND `method` = 'bank_account';
+UPDATE `payment_metod_setting` SET `user_id` = 'P1H21Z', `method` = 'bitcoin', `wallet_id` = '1BRvh7XMuPXVCPGmvRaBm19SKaf2V64Hy6'
+WHERE `user_id` = 'P1H21Z'
+AND `method` = 'bitcoin';
+UPDATE `user_registration` SET `language` = 'english'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `language` = 'english'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `admin` SET `last_logout` = '2020-11-03 12:23:30'
+WHERE `id` = '1';
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', '2xpowr', 1, 'BE70U6', '{\"sender_user_id\":\"2xpowr\",\"receiver_user_id\":\"S22N8Z\",\"amount\":\"1000\",\"fees\":0,\"request_ip\":\"127.0.0.1\",\"date\":\"2020-11-03 12:24:42\",\"comments\":\"Transfer for testing accouont cration. \",\"status\":1,\"transfer_type\":\"company_balance\"}');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `request_ip`, `date`, `comments`, `status`, `transfer_type`) VALUES ('2xpowr', 'S22N8Z', '1000', 0, '127.0.0.1', '2020-11-03 12:24:42', 'Transfer for testing accouont cration. ', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('2xpowr', 'transfer', 30, '1000', 'Transfer for testing accouont cration. ', '2020-11-03 12:24:46');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'reciver', 30, '1000', 'Transfer for testing accouont cration. ', '2020-11-03 12:24:46');
+UPDATE `verify_tbl` SET `status` = 0
+WHERE `id` = '61'
+AND `session_id` = 1;
+INSERT INTO `user_registration` (`uid`, `user_id`, `sponsor_id`, `position`, `parent`, `username`, `f_name`, `l_name`, `email`, `password`, `country`, `phone`, `reg_ip`, `status`, `points`, `business_points`, `created`, `modified`) VALUES ('', 'PNKT4G', 'S22N8Z', 'right', 'XQLRRK', 'test3434', 'test', 'last', 'test3434@gmail.com', '4b89592da96e67a615659040a0d0079a', '162', '3423424342', '127.0.0.1', 1, '80', 0, '2020-11-03 12:32:51', '2020-11-03 12:32:51');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'PNKT4G', '50', 0, 'company_balance', '127.0.0.1', '2020-11-03 12:32:51', 'Initial account create transfer from parent to child from company balance', 1);
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('S22N8Z', 'transfer', 31, '50', 'Initial account create transfer from parent to child from company balance', '2020-11-03 12:32:51');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `comments`, `transection_date_timestamp`) VALUES ('PNKT4G', 'reciver', 31, '50', 'Initial account create transfer from parent to child from company balance', '2020-11-03 12:32:51');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PNKT4G', 'S22N8Z', '11', '50', '2020-11-03', 1, 'company_balance');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PNKT4G', 'investment', 29, '50', '2020-11-03', 1, 'User PNKT4G Added');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'PNKT4G', '20', 0, 'commission', '127.0.0.1', '2020-11-03 12:32:51', 'Initial account create transfer from parent to child from commission balance', 1);
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('S22N8Z', 'PNKT4G', 'type1', 0, 32, -20, '2020-11-03');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('PNKT4G', 0, 'type1', 0, 32, '20', '2020-11-03');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PNKT4G', 'S22N8Z', '11', '20', '2020-11-03', 1, 'commission');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PNKT4G', 'investment', 30, '20', '2020-11-03', 1, 'User PNKT4G Added');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'PNKT4G', '10', 0, 'daily_roi', '127.0.0.1', '2020-11-03 12:32:51', 'Initial account create transfer from parent to child from roi ', 1);
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('S22N8Z', 0, 'type2', 0, 33, -10, '2020-11-03');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('PNKT4G', 0, 'type2', 0, 33, '10', '2020-11-03');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PNKT4G', 'S22N8Z', '11', '10', '2020-11-03', 1, 'daily_roi');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PNKT4G', 'investment', 31, '10', '2020-11-03', 1, 'User PNKT4G Added');
+INSERT INTO `transfer` (`sender_user_id`, `receiver_user_id`, `amount`, `fees`, `transfer_type`, `request_ip`, `date`, `comments`, `status`) VALUES ('S22N8Z', 'PNKT4G', '20', 0, 'binary_bonus', '127.0.0.1', '2020-11-03 12:32:51', 'Initial account create transfer from parent to child from binary bonus', 1);
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('S22N8Z', 'PNKT4G', 'type3', 0, 34, -20, '2020-11-03');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`) VALUES ('PNKT4G', 0, 'type3', 0, 34, '20', '2020-11-03');
+INSERT INTO `investment` (`user_id`, `sponsor_id`, `package_id`, `amount`, `invest_date`, `day`, `balance_type`) VALUES ('PNKT4G', 'S22N8Z', '11', '20', '2020-11-03', 1, 'binary_bonus');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`, `status`, `comments`) VALUES ('PNKT4G', 'investment', 32, '20', '2020-11-03', 1, 'User PNKT4G Added');
+INSERT INTO `team_bonus_details` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('PNKT4G', 0, 0, 1, '2020-11-03 12:32:51');
+INSERT INTO `team_bonus` (`user_id`, `sponser_commission`, `team_commission`, `level`, `last_update`) VALUES ('PNKT4G', 0, 0, 1, '2020-11-03 12:32:51');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `date`) VALUES ('S22N8Z', 'PNKT4G', 'type1', '11', 15, '2020-11-03');
+UPDATE `user_registration` SET `business_points` = 2480, `power_leg` = 'left'
+WHERE `user_id` = 'XQLRRK';
+UPDATE `user_registration` SET `business_points` = 5280, `power_leg` = 'left'
+WHERE `user_id` = 'S22N8Z';
+UPDATE `user_registration` SET `business_points` = 6080, `power_leg` = 'left'
+WHERE `user_id` = 'BR0VC6';
+UPDATE `user_registration` SET `business_points` = 6880, `power_leg` = 'left'
+WHERE `user_id` = 'R3LODO';
+UPDATE `user_registration` SET `business_points` = 8480, `power_leg` = 'left'
+WHERE `user_id` = 'DHSN30';
+UPDATE `user_registration` SET `business_points` = 12480, `power_leg` = 'right'
+WHERE `user_id` = '8NW04C';
+UPDATE `user_registration` SET `business_points` = 29360, `power_leg` = 'left'
+WHERE `user_id` = 'P1H21Z';
+UPDATE `user_registration` SET `business_points` = 37360, `power_leg` = 'left'
+WHERE `user_id` = 'UBH5FQ';
+UPDATE `user_registration` SET `business_points` = 37440, `power_leg` = 'left'
+WHERE `user_id` = 'FI0NJZ';
+UPDATE `user_registration` SET `business_points` = 37520, `power_leg` = 'left'
+WHERE `user_id` = 'DJI47I';
+UPDATE `user_registration` SET `business_points` = 38640, `power_leg` = 'left'
+WHERE `user_id` = '2xpowr';
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `amount`, `comments`, `date`) VALUES ('XQLRRK', 'PNKT4G', 'type3', '11', 8, 'Binary bonus on addition of user PNKT4G', '2020-11-03');
+UPDATE `user_registration` SET `used_points` = 80
+WHERE `user_id` = 'XQLRRK';
+UPDATE `admin` SET `last_login` = '2020-11-03 12:34:27', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+INSERT INTO `payment_metod_setting` (`user_id`, `method`, `wallet_id`) VALUES ('S22N8Z', 'bank_account', 'wrwrwerwer');
+INSERT INTO `payment_metod_setting` (`user_id`, `method`, `wallet_id`) VALUES ('S22N8Z', 'bitcoin', 'asdfadsfaf');
+UPDATE `admin` SET `last_logout` = '2020-11-04 10:45:04'
+WHERE `id` IS NULL;
+UPDATE `admin` SET `last_login` = '2020-11-04 11:16:02', `ip_address` = '127.0.0.1'
+WHERE `id` = '1';
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', 'P1H21Z', 1, 'VFGX1K', '{\"user_id  \":\"P1H21Z\",\"amount\":\"231\",\"fees\":23.1,\"walletid\":\"324243242342342422342423\",\"request_ip\":\"127.0.0.1\",\"request_date\":\"2020-11-04 11:26:27\",\"method\":\"bank_account\",\"balance_type\":\"roi_balance\"}');
+INSERT INTO `withdraw` (`user_id`, `amount`, `fees`, `walletid`, `request_ip`, `request_date`, `method`, `balance_type`) VALUES ('P1H21Z', '231', 23.1, '324243242342342422342423', '127.0.0.1', '2020-11-04 11:26:27', 'bank_account', 'roi_balance');
+INSERT INTO `message` (`sender_id`, `receiver_id`, `subject`, `message`, `datetime`) VALUES (1, 'P1H21Z', 'Withdraw', 'You successfully withdraw the amount is $231. from your account. Your new balance is $3338.4', '2020-11-04 11:26:42');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('P1H21Z', 'P1H21Z', 'type2', 0, 0, -231, '2020-11-04', 'Withdraw id : 7 , type:  ROI, amount :231');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`) VALUES ('P1H21Z', 'withdraw', 7, '231', '2020-11-04 11:26:42');
+UPDATE `verify_tbl` SET `status` = 0
+WHERE `id` = '62'
+AND `session_id` = 1;
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', 'P1H21Z', 1, 'JGZDRD', '{\"language\":\"english\",\"f_name\":\"pak\",\"l_name\":\"786\",\"email\":\"marianaale023@gmail.com\",\"phone\":\"03365412122\",\"bank_account\":null}');
+UPDATE `user_registration` SET `language` = 'english', `f_name` = 'pak', `l_name` = '786', `email` = 'marianaale023@gmail.com', `phone` = '03365412122', `bank_account` = NULL
+WHERE `user_id` = 'P1H21Z';
+UPDATE `notifications` SET `status` = 1
+WHERE `user_id` = 'P1H21Z'
+AND `notification_id` = '234';

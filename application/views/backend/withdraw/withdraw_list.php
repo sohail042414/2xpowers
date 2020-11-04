@@ -27,14 +27,14 @@
                             <?php foreach ($withdraw as $value) { ?>
                             <tr>
                                 <td><a><?php echo $value->user_id; ?></a></td>
-                                <td><?php echo $value->method; ?></td>
+                                <td><?php echo camelize($value->method); ?></td>
                                 <td><?php echo $value->walletid; ?></td>
                                 <td><?php echo $value->amount; ?></td>
                                 <td>
                                     <?php if($value->status==1){?>
                                      <a class="btn btn-warning btn-sm"><?php echo display('pending_withdraw')?></a>
                                      <?php } else if($value->status==2){?>
-                                     <a  class="btn btn-success btn-sm"><?php echo display('success')?></a>
+                                     <a  class="btn btn-success btn-sm"><?php //echo display('success') ?>Confirmed</a>
                                      <?php } else{ ?>
                                      <a  class="btn btn-danger btn-sm"><?php echo display('cancel')?></a>
                                      <?php } ?>
@@ -45,8 +45,9 @@
                                      <a href="<?php echo base_url()?>backend/withdraw/withdraw/confirm_withdraw?id=<?php echo $value->withdraw_id;?>&user_id=<?php echo $value->user_id;?>&set_status=2" class="btn btn-success btn-sm"><?php echo display('confirm')?></a>
                                      <?php }
                                       else if($value->status==2){?>
-                                     <!-- <a href="<?php echo base_url()?>backend/withdraw/withdraw/confirm_withdraw?id=<?php echo $value->withdraw_id;?>&user_id=<?php echo $value->user_id;?>&set_status=3" class="btn btn-danger btn-sm"><?php echo display('cancel')?></a> -->
-                                    
+                                     <?php /* ?> 
+                                     <a href="<?php echo base_url()?>backend/withdraw/withdraw/confirm_withdraw?id=<?php echo $value->withdraw_id;?>&user_id=<?php echo $value->user_id;?>&set_status=3" class="btn btn-danger btn-sm"><?php echo display('cancel')?></a> -->
+                                     <?php */ ?>
                                     <?php }?>
                                      <a href="#<?php echo $value->user_id;?>" class="AjaxModal btn btn-info btn-sm" data-toggle="modal" data-target="#newModal"> Information</a>
                                  </td>

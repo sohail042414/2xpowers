@@ -412,6 +412,7 @@ public function withdraw_details($id=NULL)
                     'order_id'      => 0,
                     'amount'        => (0-$t_data['amount']),
                     'date'          => date('Y-m-d'),
+                    'comments'      => 'Withdraw id : '.$result['withdraw_id'].' , type:  ROI, amount :'.$t_data['amount']
                 );
 
                 $this->db->insert('earnings',$paydata1);
@@ -427,6 +428,7 @@ public function withdraw_details($id=NULL)
                     'order_id'      => 0,
                     'amount'        => (0-$t_data['amount']),
                     'date'          => date('Y-m-d'),
+                    'comments'      => 'Withdraw id : '.$result['withdraw_id'].' , type:  Commission, amount :'.$t_data['amount']
                 );
 
                 $this->db->insert('earnings',$paydata1);

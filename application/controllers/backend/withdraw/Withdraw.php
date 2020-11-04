@@ -94,11 +94,30 @@ class Withdraw extends CI_Controller {
         /* ends of bootstrap */
         $this->pagination->initialize($config);
         $page = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
-        $data['withdraw'] = $this->db->select('*')->from('withdraw')
-        ->where('status',1)
+        
+        $records = $this->db->select('*')->from('withdraw')
+        //->join('user_registration', 'user_registration.user_id = withdraw.user_id')
+        ->where('withdraw.status',1)
         ->limit($config["per_page"], $page)
         ->get()
         ->result();
+
+
+
+        foreach($records as $item){
+       
+            $result = $this->db->select('*')
+            ->from('payment_metod_setting')
+            ->where('method','bank_account')
+            ->where('user_id',$item->user_id)
+            ->get()
+            ->row();
+
+            $item->bank_account = is_object($result) ? $result->wallet_id : '';
+            $data['withdraw'][] = $item; 
+        }
+        
+
         $data["links"] = $this->pagination->create_links();
         #
         #pagination ends
@@ -145,7 +164,41 @@ class Withdraw extends CI_Controller {
         $this->db->where('withdraw_id',$id)
         ->where('user_id',$user_id)
         ->update('withdraw',$data);
-        
+
+        $withdraw_data = $this->db->from('withdraw')->where('withdraw_id',$id)
+        ->where('user_id',$user_id)->get()->row();
+
+
+        if($withdraw_data->balance_type == 'roi_balance'){
+               
+            $paydata1 = array(
+                'user_id'       => $withdraw_data->user_id,
+                'Purchaser_id'  => $withdraw_data->user_id,
+                'earning_type'  => 'type2',
+                'package_id'    => 0,
+                'order_id'      => 0,
+                'amount'        => $withdraw_data->amount,
+                'date'          => date('Y-m-d'),
+                'comments'      => 'Canceled , Withdraw id : '.$withdraw_data->withdraw_id.' , type:  ROI, amount :'.$withdraw_data->amount
+            );
+
+            $this->db->insert('earnings',$paydata1);
+        }else  if($withdraw_data->balance_type == 'commission'){
+
+            $paydata1 = array(
+                'user_id'       => $withdraw_data->user_id,
+                'Purchaser_id'  => $withdraw_data->user_id,
+                'earning_type'  => 'type1',
+                'package_id'    => 0,
+                'order_id'      => 0,
+                'amount'        => $withdraw_data->amount,
+                'date'          => date('Y-m-d'),
+                'comments'      => 'Canceled , Withdraw id : '.$withdraw_data->withdraw_id.' , type:  Commission, amount :'.$withdraw_data->amount
+            );
+            
+            $this->db->insert('earnings',$paydata1);
+        }
+
         redirect('backend/withdraw/withdraw/withdraw_list');
     }
  

@@ -31,11 +31,16 @@
                                 ?>
                                 <table class="table">
                                     <tbody>
-
                                         <tr>
                                             <th><?php echo display('enter_verify_code');?></th>
                                             <td><input class="form-control" type="text" name="code" id="code"></td>
                                         </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                Your verificaiton code is :<?php echo $ver->verify_code; ?>
+                                            </td>
+                                        </tr>
+
 
                                     </tbody>
                                 </table>

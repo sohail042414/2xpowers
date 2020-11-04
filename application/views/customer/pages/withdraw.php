@@ -95,6 +95,35 @@
             'success': function(data) { 
 
                 if(data){
+                    $('[name="walletid"]').val(data.wallet_id);
+                    $('button[type=submit]').prop('disabled', false);
+                    $('#walletidis').text('Your Wallet Id Is '+data.wallet_id);
+                
+                } else {
+                    $('button[type=submit]').prop('disabled', true);
+                    $('#walletidis').text('Your Have No Wallet Id ');
+                }  
+            }
+        });
+    }
+
+
+    /**@abstract
+     * 
+     *     function WalletId_232(method){
+        
+        var csrf_test_name = document.forms['withdraw'].elements['csrf_test_name'].value;
+
+        if (method=='phone') { method = 'phone'; }
+
+        $.ajax({
+            'url': '<?php echo base_url('customer/ajaxload/walletid'); ?>',
+            'type': 'POST', //the way you want to send data to your URL
+            'data': {'method': method,'csrf_test_name':csrf_test_name },
+            'dataType':'JSON',
+            'success': function(data) { 
+
+                if(data){
 
                     if(method == 'bank_account'){
                         
@@ -123,4 +152,6 @@
             }
         });
     }
+     * 
+     */
 </script>

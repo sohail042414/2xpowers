@@ -42,11 +42,12 @@
                             <label><?php echo display("mobile") ?> *</label>
                             <input type="text" value="<?php echo $profile->phone ?>" id="mobile" class="form-control" name="mobile" placeholder="<?php echo display("mobile") ?>">
                         </div>
-
+                        <?php /* ?>
                         <div class="form-group col-lg-6">
                             <label>Bank Account Number (IBAN)</label>
                             <input type="text" value="<?php echo $profile->bank_account ?>" id="bank-account" class="form-control" name="bank_account" placeholder="Bank Account IBAN">
                         </div>
+                        <?php */ ?>
 
                         <div class="form-group col-lg-6" style="display: none;">
                                 <label><?php echo display('language') ?></label>
