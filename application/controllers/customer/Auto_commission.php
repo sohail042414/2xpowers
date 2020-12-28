@@ -23,9 +23,9 @@ class Auto_commission extends CI_Controller
 
         $day = date('N');
 
-        $investment = $this->db->select("*")
+        $investment = $this->db->select("DISTINCT(user_id),order_id,sponsor_id,package_id,amount,invest_date,day,balance_type")
         ->from('investment')
-        //->where('day',$day)
+        ->where('balance_type','company_balance')
         ->order_by('order_id','DESC')
         ->get()
         ->result();            
@@ -38,7 +38,6 @@ class Auto_commission extends CI_Controller
                 $user_info = $this->db->select('*')->from('user_registration')->where('user_id',$value->user_id)->get()->row();
                 
                 if((int) $user_info->roi_status == 1){
-
                 
                     //current date.
                     $date_1 = date_create(date('Y-m-d'));
@@ -138,6 +137,7 @@ class Auto_commission extends CI_Controller
                             $appSetting = $this->common_model->get_setting();
 
                             #-----------------------------------------------------
+                            $send_email = FALSE;
 
                             #----------------------------
                             #      email verify
@@ -161,7 +161,7 @@ class Auto_commission extends CI_Controller
                                 'to'                => $user_info->email,
                                 'message'           => 'You received your payout. Your new balance is $'.$balance['balance'],
                             );                      
-                            $send_email = $this->common_model->send_email($post);
+                            //$send_email = $this->common_model->send_email($post);
                             #-------------------------------
 
                             #----------------------------

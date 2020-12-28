@@ -21,7 +21,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php if (!empty($withdraw)) ?>
+                            <?php if (!empty($withdraw)){ ?>
                             <?php $sl = 1; ?>
                             <?php foreach ($withdraw as $value) { ?>
                             <tr>
@@ -45,6 +45,7 @@
                                  </td>
                                 
                             </tr>
+                            <?php } ?> 
                             <?php } ?> 
                         </tbody>
                     </table>

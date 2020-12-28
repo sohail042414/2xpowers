@@ -42,6 +42,8 @@ class Deshboard_model extends CI_Model {
 			->row();
 
 
+		//echo $negative_roi_sum; exit;
+
 		$pack_commission = $commission->earns1;
 
 		// Deductions from Commission (negative transections)
@@ -133,7 +135,8 @@ class Deshboard_model extends CI_Model {
 
 		$commission_used= 0;
 		$roi_used= 0;
-
+		$roi_withdraw = 0;
+		$commission_withdraw = 0;
 		foreach ($data as $value) {
 
 			if(@$value->transection_category=='deposit'){
@@ -142,8 +145,7 @@ class Deshboard_model extends CI_Model {
 				@$dep_f = $dep_f + $deposit->fees;
 				$individule['d_fees'] = $dep_f;
 
-				$dep = $dep + $value->amount;
-				
+				$dep = $dep + $value->amount;				
 
 				if(is_object($deposit) && $deposit->deposit_type == 'company_balance'){
 					$company_balance+=$value->amount; 
@@ -153,9 +155,20 @@ class Deshboard_model extends CI_Model {
 
 			}
 
+
 			if(@$value->transection_category=='withdraw'){
 
 				$withdraw = $this->getFees('withdraw',$value->releted_id);
+
+				if($withdraw->balance_type == 'roi_balance'){
+					$roi_withdraw = $roi_withdraw+$value->amount+$withdraw->fees;
+				}
+
+				if($withdraw->balance_type == 'commission'){
+					$commission_withdraw = $commission_withdraw+$value->amount+$withdraw->fees;
+				}
+
+
 				@$w_f = $w_f + $withdraw->fees;
 				$individule['w_fees'] = $w_f;
 
@@ -277,6 +290,16 @@ class Deshboard_model extends CI_Model {
 
 			$individule['binary_bonus'] = $binary_bonus;
 			$individule['balance'] = $individule['balance'] + $binary_bonus;
+			$individule['roi_withdraw'] = $roi_withdraw; 
+			$individule['commission_withdraw'] = $commission_withdraw; 
+
+			//to adjust double deduction of withdraw roi. 
+			$individule['balance'] = $individule['balance'] + abs($roi_withdraw);
+			$individule['balance'] = $individule['balance'] + abs($commission_withdraw);
+
+			// echo '<pre>';
+			// print_r($individule);
+			// exit; 
 
 			return $individule;
 		

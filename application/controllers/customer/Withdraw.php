@@ -219,9 +219,10 @@ public function withdraw_details($id=NULL)
                     // get withdraw fees
                     $fees = $this->fees_load($this->input->post('amount'),$this->input->post('method'),'withdraw');
                     #-----------------------
+                    $send_amount = $this->input->post('amount') -@$fees;
                     $withdraw = array(
                         'user_id  ' => $this->session->userdata('user_id'),
-                        'amount' => $this->input->post('amount'),
+                        'amount' => $send_amount,
                         'fees' => @$fees,
                         'walletid' => !empty($this->input->post('walletid')) ? $this->input->post('walletid'): 'bank_account' ,
                         'request_ip' => $this->input->ip_address(),
@@ -311,7 +312,6 @@ public function withdraw_details($id=NULL)
         $code = $this->input->post('code');
         $id = $this->input->post('id');
 
-
         // check verify code
         $data = $this->db->select('*')
         ->from('verify_tbl')
@@ -326,45 +326,59 @@ public function withdraw_details($id=NULL)
         if($data!=NULL) {
 
             $t_data = ((array) json_decode($data->data));
- 
+
             $result = $this->withdraw_model->withdraw($t_data);
 
             $set = $this->common_model->email_sms('email');
-            $appSetting = $this->common_model->get_setting();
+            
+            $appSetting = $this->common_model->get_setting();    
 
             if($set->withdraw!=NULL){
-
-                $balance = $this->transections_model->get_cata_wais_transections();
-
-                $new_balance = ($balance['balance']-$t_data['amount']);
-                #----------------------------
-                #      email verify smtp
-                #----------------------------
-                $post = array(
-                    'title'             => $appSetting->title,
-                    'subject'           => 'Withdraw',
-                    'to'                => $this->session->userdata('email'),
-                    'message'           => 'You successfully withdraw the amount Is $'.$t_data['amount'].'. from your account. Your new balance is $'.$new_balance,
-                );
-                $send = $this->common_model->send_email($post);
                 
-                if($send){
-                        $n = array(
-                        'user_id'                => $this->session->userdata('user_id'),
-                        'subject'                => display('withdraw'),
-                        'notification_type'      => 'withdraw',
-                        'details'                => 'You successfully withdraw the amount Is $'.$t_data['amount'].'. from your account. Your new balance is $'.$new_balance,
-                        'date'                   => date('Y-m-d h:i:s'),
-                        'status'                 => '0'
-                    );
-                    $this->db->insert('notifications',$n);    
-                }
+                $balance = $this->transections_model->get_cata_wais_transections();
+                $new_balance = ($balance['balance']-$t_data['amount']);
 
-                #----------------------------
-                #      Sms verify
-                #----------------------------
+                $n = array(
+                    'user_id'                => $this->session->userdata('user_id'),
+                    'subject'                => display('withdraw'),
+                    'notification_type'      => 'withdraw',
+                    'details'                => 'You successfully withdraw the amount Is $'.$t_data['amount'].'. from your account. Your new balance is $'.$new_balance,
+                    'date'                   => date('Y-m-d h:i:s'),
+                    'status'                 => '0'
+                );
+                $this->db->insert('notifications',$n);    
+
+                /*
+                    $balance = $this->transections_model->get_cata_wais_transections();
+
+                    $new_balance = ($balance['balance']-$t_data['amount']);
+                    #----------------------------
+                    #      email verify smtp
+                    #----------------------------
+                    $post = array(
+                        'title'             => $appSetting->title,
+                        'subject'           => 'Withdraw',
+                        'to'                => $this->session->userdata('email'),
+                        'message'           => 'You successfully withdraw the amount Is $'.$t_data['amount'].'. from your account. Your new balance is $'.$new_balance,
+                    );
                     
-                    $this->load->library('sms_lib');
+                    //$send = $this->common_model->send_email($post);   
+                    $send = true;
+
+                    if($send){
+                            $n = array(
+                            'user_id'                => $this->session->userdata('user_id'),
+                            'subject'                => display('withdraw'),
+                            'notification_type'      => 'withdraw',
+                            'details'                => 'You successfully withdraw the amount Is $'.$t_data['amount'].'. from your account. Your new balance is $'.$new_balance,
+                            'date'                   => date('Y-m-d h:i:s'),
+                            'status'                 => '0'
+                        );
+                        $this->db->insert('notifications',$n);    
+                    }
+
+                
+                     $this->load->library('sms_lib');
 
                         $template = array( 
                             'name'      => $this->session->userdata('fullname'),
@@ -373,12 +387,13 @@ public function withdraw_details($id=NULL)
                             'date'      => date('d F Y')
                         );
 
-                     $send_sms = $this->sms_lib->send(array(
+                        $send_sms = $this->sms_lib->send(array(
                         'to'       => $this->session->userdata('phone'), 
                         'subject'         => 'Withdraw',
                         'template'         => 'You successfully withdraw the amount is $%amount% from your account. Your new balance is $%new_balance%', 
                         'template_config' => $template, 
                     ));
+
                     if($send_sms){
                         $message_data = array(
                             'sender_id' =>1,
@@ -390,8 +405,9 @@ public function withdraw_details($id=NULL)
 
                         $this->db->insert('message',$message_data);
                     }
+                    */
             }
-
+            
             $transections_data = array(
                 'user_id'                   => $this->session->userdata('user_id'),
                 'transection_category'      => 'withdraw',
@@ -417,6 +433,20 @@ public function withdraw_details($id=NULL)
 
                 $this->db->insert('earnings',$paydata1);
 
+                //deduct fees from sender
+                $paydata2 = array(
+                    'user_id'       => $this->session->userdata('user_id'),
+                    'Purchaser_id'  => $this->session->userdata('user_id'),
+                    'earning_type'  => 'type2',
+                    'package_id'    => 0,
+                    'order_id'      => 0,
+                    'amount'        => (0-$t_data['fees']),
+                    'date'          => date('Y-m-d'),
+                    'comments'      => 'Withdraw Fees for : '.$result['withdraw_id'].' , type:  ROI, amount :'.$t_data['fees']
+                );
+
+                $this->db->insert('earnings',$paydata2);
+
             }else if($t_data['balance_type'] == 'commission'){
 
                 //deduct from sender
@@ -429,6 +459,20 @@ public function withdraw_details($id=NULL)
                     'amount'        => (0-$t_data['amount']),
                     'date'          => date('Y-m-d'),
                     'comments'      => 'Withdraw id : '.$result['withdraw_id'].' , type:  Commission, amount :'.$t_data['amount']
+                );
+
+                $this->db->insert('earnings',$paydata1);
+
+                //deduct fees from sender
+                $paydata1 = array(
+                    'user_id'       => $this->session->userdata('user_id'),
+                    'Purchaser_id'  => $this->session->userdata('user_id'),
+                    'earning_type'  => 'type1',
+                    'package_id'    => 0,
+                    'order_id'      => 0,
+                    'amount'        => (0-$t_data['fees']),
+                    'date'          => date('Y-m-d'),
+                    'comments'      => 'Withdraw Fees for id : '.$result['withdraw_id'].' , type:  Commission, amount :'.$t_data['fees']
                 );
 
                 $this->db->insert('earnings',$paydata1);
