@@ -36,7 +36,9 @@ $settings = $this->db->select("*")
                             <tr>
                                 <th><?php echo display('payment_method')?></th>
                                 <th><?php echo display('wallet_id')?></th>
+                                <th>Withdraw Type</th>
                                 <th><?php echo display('amount')?></th>
+                                <th><?php echo display('fees')?></th>
                                 <th><?php echo display('status')?></th>
                             </tr>
                         </thead>
@@ -44,7 +46,9 @@ $settings = $this->db->select("*")
                             <tr>
                                 <td><div><strong><?php echo $withdraw->method;?></strong></div>
                                 <td><?php echo $withdraw->walletid;?></td>
+                                <td><?php echo camelize($withdraw->withdraw_type); ?></td>    
                                 <td>$<?php echo $withdraw->amount;?></td>
+                                <td><?php echo $withdraw->fees;?></td>
                                 <td>
                                     <?php 
                                         if($withdraw->status==1){

@@ -10441,3 +10441,39 @@ INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `am
 UPDATE `verify_tbl` SET `status` = 0
 WHERE `id` = '198'
 AND `session_id` = 1;
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', 'P1H21Z', 1, 'UBIRBC', '{\"user_id  \":\"P1H21Z\",\"amount\":90,\"fees\":10,\"walletid\":\"03450958075\",\"request_ip\":\"127.0.0.1\",\"request_date\":\"2021-01-01 09:12:27\",\"method\":\"bank_account\",\"balance_type\":\"roi_balance\",\"withdraw_type\":\"normal\"}');
+INSERT INTO `withdraw` (`user_id`, `amount`, `fees`, `walletid`, `request_ip`, `request_date`, `method`, `balance_type`, `withdraw_type`) VALUES ('P1H21Z', 90, 10, '03450958075', '127.0.0.1', '2021-01-01 09:12:27', 'bank_account', 'roi_balance', 'normal');
+INSERT INTO `notifications` (`user_id`, `subject`, `notification_type`, `details`, `date`, `status`) VALUES ('P1H21Z', 'Withdraw', 'withdraw', 'You successfully withdraw the amount Is $90. from your account. Your new balance is $17228.3', '2021-01-01 09:12:32', '0');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('P1H21Z', 'P1H21Z', 'type2', 0, 0, -90, '2021-01-01', 'Withdraw id : 18 , type:  ROI, amount :90');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('P1H21Z', 'P1H21Z', 'type2', 0, 0, -10, '2021-01-01', 'Withdraw Fees for : 18 , type:  ROI, amount :10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`) VALUES ('P1H21Z', 'withdraw', 18, 90, '2021-01-01 09:12:32');
+UPDATE `verify_tbl` SET `status` = 0
+WHERE `id` = '208'
+AND `session_id` = 1;
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', 'P1H21Z', 1, '6W3YEZ', '{\"user_id  \":\"P1H21Z\",\"amount\":90,\"fees\":10,\"walletid\":\"03450958075\",\"request_ip\":\"127.0.0.1\",\"request_date\":\"2021-01-01 09:13:15\",\"method\":\"bank_account\",\"balance_type\":\"roi_balance\",\"withdraw_type\":\"free\"}');
+INSERT INTO `withdraw` (`user_id`, `amount`, `fees`, `walletid`, `request_ip`, `request_date`, `method`, `balance_type`, `withdraw_type`) VALUES ('P1H21Z', 90, 10, '03450958075', '127.0.0.1', '2021-01-01 09:13:15', 'bank_account', 'roi_balance', 'free');
+INSERT INTO `notifications` (`user_id`, `subject`, `notification_type`, `details`, `date`, `status`) VALUES ('P1H21Z', 'Withdraw', 'withdraw', 'You successfully withdraw the amount Is $90. from your account. Your new balance is $17028.3', '2021-01-01 09:13:18', '0');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('P1H21Z', 'P1H21Z', 'type2', 0, 0, -90, '2021-01-01', 'Withdraw id : 19 , type:  ROI, amount :90');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('P1H21Z', 'P1H21Z', 'type2', 0, 0, -10, '2021-01-01', 'Withdraw Fees for : 19 , type:  ROI, amount :10');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`) VALUES ('P1H21Z', 'withdraw', 19, 90, '2021-01-01 09:13:18');
+UPDATE `verify_tbl` SET `status` = 0
+WHERE `id` = '209'
+AND `session_id` = 1;
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', 'P1H21Z', 1, 'B2EK42', '{\"user_id  \":\"P1H21Z\",\"amount\":100,\"fees\":0,\"walletid\":\"03450958075\",\"request_ip\":\"127.0.0.1\",\"request_date\":\"2021-01-02 11:36:09\",\"method\":\"bank_account\",\"balance_type\":\"roi_balance\",\"withdraw_type\":\"free\"}');
+INSERT INTO `withdraw` (`user_id`, `amount`, `fees`, `walletid`, `request_ip`, `request_date`, `method`, `balance_type`, `withdraw_type`) VALUES ('P1H21Z', 100, 0, '03450958075', '127.0.0.1', '2021-01-02 11:36:09', 'bank_account', 'roi_balance', 'free');
+INSERT INTO `notifications` (`user_id`, `subject`, `notification_type`, `details`, `date`, `status`) VALUES ('P1H21Z', 'Withdraw', 'withdraw', 'You successfully withdraw the amount Is $100. from your account. Your new balance is $16818.3', '2021-01-02 11:46:32', '0');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('P1H21Z', 'P1H21Z', 'type2', 0, 0, -100, '2021-01-02', 'Withdraw id : 20 , type:  ROI, amount :100');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('P1H21Z', 'P1H21Z', 'type2', 0, 0, 0, '2021-01-02', 'Withdraw Fees for : 20 , type:  ROI, amount :0');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`) VALUES ('P1H21Z', 'withdraw', 20, 100, '2021-01-02 11:46:32');
+UPDATE `verify_tbl` SET `status` = 0
+WHERE `id` = '210'
+AND `session_id` = 1;
+INSERT INTO `verify_tbl` (`ip_address`, `user_id`, `session_id`, `verify_code`, `data`) VALUES ('127.0.0.1', 'P1H21Z', 1, 'YW9LV4', '{\"user_id  \":\"P1H21Z\",\"amount\":170,\"fees\":30,\"walletid\":\"03450958075\",\"request_ip\":\"127.0.0.1\",\"request_date\":\"2021-01-02 11:49:11\",\"method\":\"bank_account\",\"balance_type\":\"roi_balance\",\"withdraw_type\":\"very_urgent\"}');
+INSERT INTO `withdraw` (`user_id`, `amount`, `fees`, `walletid`, `request_ip`, `request_date`, `method`, `balance_type`, `withdraw_type`) VALUES ('P1H21Z', 170, 30, '03450958075', '127.0.0.1', '2021-01-02 11:49:11', 'bank_account', 'roi_balance', 'very_urgent');
+INSERT INTO `notifications` (`user_id`, `subject`, `notification_type`, `details`, `date`, `status`) VALUES ('P1H21Z', 'Withdraw', 'withdraw', 'You successfully withdraw the amount Is $170. from your account. Your new balance is $16548.3', '2021-01-02 11:52:18', '0');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('P1H21Z', 'P1H21Z', 'type2', 0, 0, -170, '2021-01-02', 'Withdraw id : 21 , type:  ROI, amount :170');
+INSERT INTO `earnings` (`user_id`, `Purchaser_id`, `earning_type`, `package_id`, `order_id`, `amount`, `date`, `comments`) VALUES ('P1H21Z', 'P1H21Z', 'type2', 0, 0, -30, '2021-01-02', 'Withdraw Fees for : 21 , type:  ROI, amount :30');
+INSERT INTO `transections` (`user_id`, `transection_category`, `releted_id`, `amount`, `transection_date_timestamp`) VALUES ('P1H21Z', 'withdraw', 21, 170, '2021-01-02 11:52:18');
+UPDATE `verify_tbl` SET `status` = 0
+WHERE `id` = '211'
+AND `session_id` = 1;

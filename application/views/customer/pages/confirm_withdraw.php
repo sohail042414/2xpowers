@@ -26,7 +26,15 @@
                                             <th><?php echo display('payment_method');?></th>
                                             <td><?php echo $data->method;?></td>
                                         </tr>
-                                       
+                                        <tr>
+                                            <th>Type</th>
+                                            <td><?php echo camelize($data->withdraw_type); ?></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>Fees</th>
+                                            <td><?php echo $data->fees;?></td>
+                                        </tr>
                                          <tr>
                                             <th><?php echo display('enter_verify_code'); ?></th>
                                             <td><input class="form-control" type="text" name="code" id="code"></td>

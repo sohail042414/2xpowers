@@ -11,6 +11,18 @@
                     <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                         <?php echo form_open('customer/withdraw/store',array('name'=>'withdraw'));?>
                         <div class="border_preview">
+                            
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Withdraw Type</label>
+                                <div class="col-sm-8">
+                                    <select name="withdraw_type" class="form-control">
+                                        <?php foreach($rates  as $id => $data){ ?>
+                                        <option value="<?php echo $id; ?>" ><?php echo $data['title']." | ".$data['days']." Days @ ".$data['rate']."% Fees"; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                        
                             <div class="form-group row">
                                 <label for="amount" class="col-sm-4 col-form-label"><?php echo display('amount');?></label>
                                 <div class="col-sm-8">

@@ -21,11 +21,15 @@ class Withdraw extends CI_Controller
             'common_model',
         ));
 
+        $this->config->load('rates');
+
 	}
 
 
     public function index()
     {   
+
+        $data['rates'] = $this->config->item('withdraw');
 
         $this->load->model('customer/deshboard_model');
         $vallets = $this->deshboard_model->get_cata_wais_transections();
@@ -136,8 +140,10 @@ public function withdraw_details($id=NULL)
 
     public function store()
     {
-        
+        $data['rates'] = $this->config->item('withdraw');
+
         $balance_type = $this->input->post('balance_type');  
+        $withdraw_type = $this->input->post('withdraw_type'); 
 
         $this->load->model('customer/deshboard_model');
         
@@ -217,9 +223,13 @@ public function withdraw_details($id=NULL)
                 if($code_send!=NULL){
 
                     // get withdraw fees
-                    $fees = $this->fees_load($this->input->post('amount'),$this->input->post('method'),'withdraw');
+                    //$fees = $this->fees_load($this->input->post('amount'),$this->input->post('method'),'withdraw');
+                    $amount = $this->input->post('amount');
+                    
+                    $fees = $this->getFeesAmount($withdraw_type,$amount);
+
                     #-----------------------
-                    $send_amount = $this->input->post('amount') -@$fees;
+                    $send_amount = $amount -@$fees;
                     $withdraw = array(
                         'user_id  ' => $this->session->userdata('user_id'),
                         'amount' => $send_amount,
@@ -229,6 +239,7 @@ public function withdraw_details($id=NULL)
                         'request_date' => date('Y-m-d h:i:s'),
                         'method' => $this->input->post('method'),
                         'balance_type' => $balance_type,
+                        'withdraw_type' => $withdraw_type,
                     );
 
 
@@ -509,6 +520,18 @@ public function withdraw_details($id=NULL)
         
         $this->load->view('customer/layout/main_wrapper', $data);
     }
+
+    private function getFeesAmount($type,$amount){
+        
+        $withdraw_rates = $this->config->item('withdraw');
+
+        $rate = $withdraw_rates[$type]['rate'];
+        $fees = ($rate/100)*$amount;
+
+        return $fees; 
+
+    }
+
 
     /*
     |-----------------------------------
